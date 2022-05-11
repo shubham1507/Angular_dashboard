@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+
+
+
+
+
+/* You can add global styles to this file, and also import other style files */
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+.datagrid-row-flex {
+    min-height: 44px;
+}
+
+.dropdown-menu{
+    width: 100%;
+}
+
+.datagrid .datagrid-column-title{
+    font-size: 16px;
+    font-weight: 600;
+}
+.datagrid .datagrid-cell{
+    font-size: 14px;
+    font-weight: 500;
+}
+.datagrid-body .datagrid-row:hover {
+  background-color: #e5f4fa !important;
+}
+
+
+.blue-button{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #0095d3;
+    height: 39px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+.blue-table-data{
+    font-size: 12px;
+    font-weight: 500;
+    color: #0075b6;
+    cursor: pointer;
+}
+
+.hideBlock{
+    display: none;
+}
+
+.showBlock{
+    display: block;
+}
+
+.datagrid-placeholder.datagrid-empty:after {
+    content: "No data available!" !important;
+  }

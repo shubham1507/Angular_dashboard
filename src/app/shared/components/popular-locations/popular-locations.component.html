@@ -1,0 +1,59 @@
+<div class="row" *ngIf='popularLocations.length'>
+  <div
+    class="col-xs-12 col-md-12 col-lg-6 col-xl-4"
+    *ngIf="firstColCells.length > 0"
+  >
+    <table class="table table-noborder first">
+      <tbody>
+        <tr
+          class="location-name"
+          (click)="locationClick($event)"
+          *ngFor="let country of firstColCells"
+        >
+          <td>
+            <a >{{ country }}</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="col-xs-12 col-md-12 col-lg-6 col-xl-4"
+    *ngIf="secondColCells.length > 0"
+  >
+    <table class="table table-noborder second">
+      <tbody>
+        <tr
+          class="location-name"
+          (click)="locationClick($event)"
+          *ngFor="let country of secondColCells"
+        >
+          <td>
+            <a >{{ country }}</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="col-xs-12 col-md-12 col-lg-6 col-xl-4"
+    *ngIf="thirdColCells.length > 0"
+  >
+    <table class="table table-noborder third">
+      <tbody>
+        <tr
+          class="location-name"
+          (click)="locationClick($event)"
+          *ngFor="let country of thirdColCells"
+        >
+          <td>
+            <a >{{ country }}</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="no-recent-search-txt" *ngIf='!popularLocations.length'>
+  No recently searched locations.
+</div>

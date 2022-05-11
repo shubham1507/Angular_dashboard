@@ -1,0 +1,54 @@
+@import "../../../app-styles/variables.scss";
+@import "../../../app-styles/timeline.scss";
+@import "../../../app-styles/mixins.scss";
+@import "../../../../styles.scss";
+
+// .timeline-container {
+//   margin-bottom: 1rem;
+  .addevent-btn {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    color: $onetwofour-navyblue;
+    &:focus {
+      outline: -webkit-focus-ring-color auto 0px ;
+    }
+    // clr-icon{
+    //   border: 1px solid;border-radius: 6px;padding: 1px;margin-right: 5px;
+    // }
+  }
+  .timeline-date-oper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .timeline-caret-btns {
+      width: 12%;
+      display: flex;
+      justify-content: space-between;
+      .timeline-caret-prev,
+      .timeline-caret-next {
+        border: solid $onezerotwo-grey 1px;
+        background-color: white;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        clr-icon {
+          width: 12px;
+          height: 12px;
+          position: relative;
+          transform: rotate(-90deg);
+          left:-1px;
+          bottom: 1px;
+        }
+      }
+      .timeline-caret-next {
+        clr-icon {
+          transform: rotate(90deg);
+          position: relative;
+          left:0px;
+        }
+      }
+    }
+  }
+// }

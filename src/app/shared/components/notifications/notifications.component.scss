@@ -1,0 +1,110 @@
+@import "../../../app-styles/variables.scss";
+@import "../../../app-styles/mixins.scss";
+
+.notif-wrapper {
+  z-index: 1041;
+  position: absolute;
+  right: 0;
+  top: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 26px 15px;
+    border-color: transparent transparent $white-color transparent;
+  }
+  .notif-popup {
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    overflow-y: auto;
+    background: $white-color;
+    right: 0px;
+    top: 65px;
+    z-index: 10000;
+    .notif-header {
+      @include flexCenterdisplay();
+      justify-content: space-between;
+      margin: 14px;
+      margin-bottom: 0;
+      border-bottom: 1px solid $twoonefive-grey;
+      .notif-label {
+        font-size: 16px;
+        font-weight: 600;
+        color: $onezerotwo-grey;
+      }
+      .notif-no {
+        color: $orange-color;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+      button.clear-btn {
+        margin-bottom: 15px;
+        margin-right: 0;
+        color: $dark-hue;
+        border-color: $no-magneta-grey;
+      }
+    }
+    .notif-body {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $twotwoone-grey;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      .event-profile {
+        min-width: 40px;
+        img {
+          width: 30px;
+          height: 30px;
+          margin: 0 17px;
+        }
+      }
+      .event-details {
+        width: 350px;
+        p {
+          margin-top: 0;
+          min-width: 310px;
+        }
+        .name {
+          font-size: 12px;
+          font-weight: 600;
+          color: $fourtysix-grey;
+          opacity: 0.5
+        }
+        .details {
+          font-size: 14px;
+          font-weight: 500;
+          color: $onetwofour-navyblue;
+        }
+        .time {
+          font-size: 14px;
+          font-weight: 500;
+          color: $dove_grey;
+        }
+        .passed-hours {
+          font-size: 12px;
+          font-weight: 500;
+          opacity: 0.5;
+          color: $fourtysix-grey;
+          margin-bottom: 15px;
+        }
+      }
+      .event-status {
+        min-width: 40px;
+        text-align: right;
+        clr-icon {
+          fill: $orange-color;
+        }
+      }
+    }
+    .no-notif{
+      font-size: 16px;
+      color: #666666;
+      margin: 14px;
+    }
+  }
+}

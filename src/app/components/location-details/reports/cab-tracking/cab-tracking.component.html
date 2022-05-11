@@ -1,0 +1,358 @@
+<div *ngIf="!dataError; else nodata_content">
+<clr-tab-content>
+  <div class="reports-tabs-content" *ngIf="cabOverViewData; else data_loading">
+    <div class="item">
+      <div class="entries-header">
+        <span class="overview-desc" l10nTranslate> overviewtabtext </span>
+      </div>
+      <div class="item-track clr-row">
+        <div class="clr-col-3">
+          <div class="card item-card">
+            <div class="card-block">
+              <div class="card-value">
+                {{ cabOverViewData?.issuesReported }}
+              </div>
+              <div
+                class="card-data-1"
+                title="{{ issuesReportedText }}"
+                l10nTranslate
+              >
+                issuesReportedText
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value">{{ cabOverViewData?.escortGuard }}</div>
+              <div
+                class="card-data-1"
+                title="{{ cabsWithEscortText }}"
+                l10nTranslate
+              >
+                cabsWithEscortText
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value">
+                {{ cabOverViewData?.tripsCompleted }}
+              </div>
+              <div
+                class="card-data-1"
+                title="{{ tripsCompletedText }}"
+                l10nTranslate
+              >
+                tripsCompletedText
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value">
+                {{ cabOverViewData?.womanPassanger }}
+              </div>
+              <div
+                class="card-data-1"
+                title="{{ womenPassengersText }}"
+                l10nTranslate
+              >
+                womenPassengersText
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-header"><span l10nTranslate>tripsStatusText</span> ({{tripStatusTotal}})</div>
+            <div class="card-center-wrapper">
+              <div class="card-block card-center">
+                <div
+                  class="chart-center"
+                  id="{{ tripStatusConstants_chartid }}"
+                >
+                  <physicalsecurity-custom-chart
+                    [rightAlign]="tripStatusConstants_rightAlign"
+                    [chartid]="tripStatusConstants_chartid"
+                    [addClearBtn]="tripStatusConstants_addClearBtn"
+                    [legendColors]="tripStatusConstants_legendColors"
+                    [chartOptions]="tripStatusConstants_options"
+                    [legendData]="tripStatusData"
+                  >
+                  </physicalsecurity-custom-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-header"><span l10nTranslate>cabTypeDistText</span> ({{cabDistTotal}})</div>
+            <div class="card-center-wrapper">
+              <div class="card-block card-center">
+                <div id="{{ cabTypeDistr_chartid }}">
+                  <physicalsecurity-custom-chart
+                    [rightAlign]="cabTypeDistr_rightAlign"
+                    [chartid]="cabTypeDistr_chartid"
+                    [addClearBtn]="cabTypeDistr_addClearBtn"
+                    [legendColors]="cabTypeDistr_legendColors"
+                    [chartOptions]="cabTypeDistr_options"
+                    [legendData]="cabTypeDistrData"
+                  >
+                  </physicalsecurity-custom-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-report-list-header">
+        <div class="rep-list-details">
+          <span class="rep-list-header" l10nTranslate>reportsListText</span>
+          <span class="rep-total" *ngIf="cabLogData"
+            >{{ cabLogData.pageDetails?.totalCount }}
+            <span l10nTranslate>totalText</span></span
+          >
+        </div>
+        <button
+          class="btn btn-outline rep-list-button"
+          (click)="openCabModal()"
+          l10nTranslate
+        >
+          generateReportText
+        </button>
+      </div>
+      <div class="filters-container">
+        <div class="filter">
+          <div class="filter-title" l10nTranslate>byTypeText</div>
+          <clr-dropdown>
+            <button
+              type="button"
+              class="btn btn-outline-primary dropdown-btn"
+              clrDropdownTrigger
+            >
+              {{ selectedByType }}
+              <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+              <div *ngFor="let serviceType of cabServiceTypes">
+                <button
+                  type="button"
+                  clrDropdownItem
+                  (click)="selectByType($event)"
+                >
+                  {{ serviceType }}
+                </button>
+              </div>
+            </clr-dropdown-menu>
+          </clr-dropdown>
+        </div>
+        <div class="filter">
+          <div class="filter-title" l10nTranslate>byOtherParamsText</div>
+          <clr-dropdown>
+            <button
+              type="button"
+              class="btn btn-outline-primary dropdown-btn"
+              clrDropdownTrigger
+            >
+              {{ selectedParameterType }}
+              <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+              <div *ngFor="let paramterType of cabAllParameters">
+                <button
+                  type="button"
+                  clrDropdownItem
+                  (click)="selectParameterType($event)"
+                >
+                  {{ paramterType }}
+                </button>
+              </div>
+            </clr-dropdown-menu>
+          </clr-dropdown>
+        </div>
+        <div class="filter">
+          <div class="filter-title" l10nTranslate>timePeriodText</div>
+          <p-calendar
+            [(ngModel)]="cabDateRange"
+            selectionMode="range"
+            [maxDate]="maxDateValue"
+            (onSelect)="selectDateRange($event)"
+            [readonlyInput]="true"
+            [locale]="calLocale"
+            [showIcon]="true"
+          ></p-calendar>
+        </div>
+      </div>
+      <div class="vehicle-track-table" *ngIf="cabLogData && cabLogData['data']">
+        <clr-datagrid
+          (clrDgRefresh)="refresh($event)"
+          [clrDgLoading]="cabLogTableLoading"
+        >
+          <clr-dg-column l10nTranslate>cabNoText</clr-dg-column>
+          <clr-dg-column l10nTranslate>routeNoText</clr-dg-column>
+
+          <clr-dg-column l10nTranslate>outTimeText</clr-dg-column>
+          <clr-dg-column l10nTranslate>inTimeText</clr-dg-column>
+          <clr-dg-column l10nTranslate>pickupText</clr-dg-column>
+          <clr-dg-column l10nTranslate>dropText</clr-dg-column>
+          <clr-dg-column l10nTranslate>issuesReportedText</clr-dg-column>
+          <clr-dg-row *ngFor="let cab of cabLogData.data">
+            <clr-dg-cell>{{ cab.vehicleNum }} </clr-dg-cell>
+            <clr-dg-cell>{{ cab.routeNo }} </clr-dg-cell>
+
+            <clr-dg-cell
+              >{{ cab.outTime | l10nDate: defaultLocale:"shortTime" }}
+            </clr-dg-cell>
+            <clr-dg-cell
+              >{{ cab.inTime | l10nDate: defaultLocale:"shortTime" }}
+            </clr-dg-cell>
+            <clr-dg-cell>{{ cab.pickupCount }} </clr-dg-cell>
+            <clr-dg-cell>{{ cab.dropCount }} </clr-dg-cell>
+            <clr-dg-cell>{{ cab.issueReported? 'Yes': 'No' }} </clr-dg-cell>
+          </clr-dg-row>
+          <clr-dg-footer>
+            <clr-dg-pagination
+              #pagination
+              [clrDgPageSize]="cabLogData?.pageDetails?.size"
+              [clrDgTotalItems]="cabLogData?.pageDetails?.totalCount"
+              [(clrDgPage)]="cabLogTablePageNo"
+            >
+              {{ pagination.firstItem + 1 }} - {{ pagination.lastItem + 1 }}
+              <span l10nTranslate>ofText</span> {{ pagination.totalItems }}
+            </clr-dg-pagination>
+          </clr-dg-footer>
+        </clr-datagrid>
+      </div>
+    </div>
+  </div>
+</clr-tab-content>
+<div class="reports-modal">
+  <clr-modal [(clrModalOpen)]="cabModal.opencabModal" [clrModalSize]="'lg'">
+    <h3 class="modal-title">
+      <div class="reports-modal-title" l10nTranslate>generateReportText</div>
+    </h3>
+    <div class="modal-body">
+      <div class="reports-section">
+        <div class="success-popup">
+          <clr-alert
+            *ngIf="showSuccessAlert"
+            [clrAlertType]="'alert-success'"
+            l10nTranslate
+          >
+            <div class="alert-item">
+              <span class="alert-text"> generateReport.successMsg </span>
+            </div>
+          </clr-alert>
+        </div>
+        <div *ngIf="showErrorAlert" class="error-popup">
+          <clr-alert [clrAlertType]="'alert-danger'">
+            <div class="alert-item">
+              <span class="alert-text"> {{ fileDownloadError }} </span>
+            </div>
+          </clr-alert>
+        </div>
+        <form [formGroup]="cabReportForm" (ngSubmit)="generateCabReport()">
+          <div class="reports-section1">
+            <section class="content form-block">
+              <p class="reports-date-title" l10nTranslate>
+                selectDateRangeText
+              </p>
+              <div class="row date-wrapper">
+                <div class="col-sm-8">
+                  <p-calendar
+                    formControlName="reportDateRange"
+                    [maxDate]="maxDateValue"
+                    selectionMode="range"
+                    [locale]="calLocale"
+                    required
+                    [showIcon]="true"
+                  ></p-calendar>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="reports-section3">
+            <section class="content">
+              <p class="reports-date-title">Other Parameters</p>
+              <div class="row other-param-wrapper">
+                <div class="col-sm-6">
+                  <div class="clr-select-wrapper">
+                    <select
+                      class="clr-select"
+                      formControlName="serviceType"
+                      required
+                    >
+                      <option
+                        value="{{ serviceType }}"
+                        *ngFor="let serviceType of cabServiceTypes"
+                        >{{ serviceType }}</option
+                      >
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="clr-select-wrapper">
+                    <select
+                      class="clr-select"
+                      formControlName="paramterType"
+                      required
+                    >
+                      <option
+                        value="{{ paramterType }}"
+                        *ngFor="let paramterType of cabAllParameters"
+                        >{{ paramterType }}</option
+                      >
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="reports-modal-btn">
+            <button
+              class="btn btn-primary"
+              [disabled]="!cabReportForm.valid || showReportLoader"
+              l10nTranslate
+            >
+              generateText
+            </button>
+            <span *ngIf="showReportLoader" class="spinner spinner-sm">
+              Loading...
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </clr-modal>
+</div>
+</div>
+<ng-template #data_loading>
+  <div class="report-loader-wrapper">
+    <span class="spinner"> Loading... </span>
+  </div>
+</ng-template>
+<ng-template #nodata_content>
+    <div class="nodata-alert">
+        <div class="alert alert-danger" role="alert">
+            <div class="alert-items">
+                <div class="alert-item static">
+                    <div class="alert-icon-wrapper">
+                        <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                    </div>
+                    <span class="alert-text">Error occurred while retrieving data.</span>
+                    <div class="alert-actions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

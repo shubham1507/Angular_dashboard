@@ -1,0 +1,404 @@
+{
+  "weeklyRoaster": {
+    "pageSize": 10,
+    "roasterWeeklyWise": {
+      "All Duties ": 87,
+      "Patrolling": 15,
+      "Cab Tracking": 9,
+      "Vehicle Parking": 5,
+      "Escort": 6,
+      "Unallocated": 3
+    },
+    "data": [
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      },
+      {
+        "guardName": "Medical",
+        "rank": "12 oct",
+        "empid": "Kalyani Vista, Bengaluru",
+        "duty": "India",
+        "sun": "High",
+        "mon": "W/O",
+        "tue": "A",
+        "wed": "A",
+        "thu": "A",
+        "fri": "A",
+        "sat": "A"
+      }
+    ]
+  },
+
+  "complianceRoaster": {
+    "pageSize": 10,
+    "complianceWeeklyWise": {
+      "All Tasks ": 87,
+      "PV Expired": 15,
+      "PV Pending": 9,
+      "PV Expiring in 30 days": 5
+    },
+    "data": [
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      },
+      {
+        "guardName": "Mukesh Kumar",
+        "guardRole": "Security Guard",
+        "taskType": "PV Pending",
+        "status": "Requested on Oct 29",
+        "DOJ": "14 May 2018"
+      }
+    ]
+  },
+  "allStaffRoaster": {
+    "pageSize": 10,
+    "allStaffWeeklyWise": {
+      "All Employees": 87,
+      "Guards": 15,
+      "Supervisors": 9,
+      "Managers": 5
+    },
+    "data": [
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      },
+      {
+        "name": "Mukesh Kumar",
+        "empid": "Security Guard",
+        "rank": "PV Pending",
+        "DOJ": "14 May 2018",
+        "contact": "0153 4390435",
+        "viewProfile": "View Profile"
+      }
+    ]
+  }
+}

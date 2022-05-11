@@ -1,0 +1,756 @@
+//Mixins for the physical security App
+
+@mixin twentyFourPXFont($fontcolor) {
+  font-size: 24px;
+  font-weight: 500;
+  color: $fontcolor;
+}
+
+@mixin topLeftAbsolPos($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin staffHeaderDashboard() {
+  @include twentyFourPXFont($dove_grey);
+  .card {
+    .table-container {
+      background-color: $white-color;
+      border-radius: 3px;
+      box-shadow: 0 3px 0 0 $white_light_grey;
+      padding: 16px 24px 20px 24px;
+      .table-header {
+        // height: 102px;
+        height: 70px;
+        border-bottom: 1px solid #d7d7d7;
+        .roaster-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h2 {
+            margin: 0px 0px 12px 0px;
+            font-size: 24px;
+            font-weight: 500;
+            color: $dove_grey;
+            float: left;
+            margin-bottom: 0;
+          }
+          input:focus,
+          input:hover {
+            border-color: $dark-grey;
+            background: linear-gradient(
+                to bottom,
+                transparent 95%,
+                $white-color 95%
+              )
+              no-repeat;
+          }
+          .btn {
+            border-color: $dark-grey;
+          }
+          .dropdown {
+            margin: 0px 0px 0px 0px;
+            float: right;
+            .btn {
+              border-radius: 3px;
+              border: solid 1px $no-magneta-grey;
+              font-size: 10px;
+              font-weight: 600;
+              color: $dark-hue;
+              text-align: left;
+            }
+            .dropdown-menu {
+              width: 100%;
+              .dropdown-btn {
+                border-radius: 3px;
+                border: solid 1px $no-magneta-grey;
+                font-size: 10px;
+                font-weight: 600;
+                color: $dark-hue;
+              }
+            }
+          }
+          .date-calendar-view {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .btn {
+              margin: 0.5rem;
+              min-width: 0;
+              box-shadow: none;
+            }
+            .ui-calendar {
+              .ui-calendar-button {
+                background: $white-color;
+                color: $black-grey;
+                position: relative;
+                top: 3.6px;
+                width: 24px;
+                height: 24px;
+                border: 1px solid $dark-grey;
+                border-left: 0;
+                .pi-calendar {
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+            .caret-next {
+              height: 24px;
+              width: 24px;
+              margin-bottom: 9px;
+              line-height: 0;
+              padding: 0;
+              clr-icon {
+                transform: rotate(95deg);
+                fill: $dark-grey;
+              }
+            }
+            .caret-prev {
+              height: 24px;
+              width: 24px;
+              margin-bottom: 9px;
+              line-height: 0;
+              padding: 0;
+              clr-icon {
+                transform: rotate(-95deg);
+                fill: $dark-grey;
+              }
+            }
+          }
+          .month-calendar-view {
+            .view-tltle {
+              font-size: 16px;
+              font-weight: 500;
+              color: $cerulean-blue;
+              text-decoration: none;
+              clr-icon {
+                transform: rotate(95deg);
+              }
+            }
+            .ui-calendar {
+              .ui-calendar-button {
+                background: $white-color;
+                color: $black-grey;
+                position: relative;
+                top: 3.6px;
+                width: 24px;
+                height: 24px;
+                border: 1px solid $dark-grey;
+                border-left: 0;
+                .pi-calendar {
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+          }
+          .ui-datepicker {
+            table {
+              tr {
+                td.ui-datepicker-today {
+                  a {
+                    background-color: $white-color;
+                    color: $black-color;
+                  }
+                  a.ui-state-active {
+                    background-color: $cyan-blue;
+                    color: $white-color;
+                  }
+                }
+              }
+              tr:hover {
+                td {
+                  a {
+                    background-color: $lavender-blue;
+                    color: $black-color;
+                  }
+                  a.ui-state-active {
+                    background-color: $cyan-blue;
+                    color: $white-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .tabs {
+          border-bottom: 1px solid;
+          .tablist {
+            border-bottom: 1px solid;
+          }
+          .nav-item.active {
+            box-shadow: 0 -3px 0 $cerulean-blue inset;
+          }
+          button {
+            font-size: 14px;
+            color: $green-dark-grey;
+          }
+        }
+      }
+      .table-body {
+        border: 0;
+        padding-top: 10px;
+        .table-data {
+          .datagrid-host {
+            padding-top: 0;
+            .datagrid {
+              margin-top: 0;
+              border: 0;
+              box-shadow: none;
+              .datagrid-column-title {
+                font-size: 16px;
+                font-weight: 600;
+                color: $dove-grey;
+              }
+              .datagrid-cell {
+                font-size: 14px;
+                font-weight: 500;
+              }
+              .datagrid-column-separator {
+                display: none;
+              }
+              .datagrid-foot {
+                border-top: 0;
+                background: $white-color;
+                box-shadow: none;
+              }
+              .datagrid-head,
+              .datagrid-foot-description {
+                border: 0;
+                background: $white-color;
+                box-shadow: none;
+              }
+              .pagination {
+                background: $white-color;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+        .guard-contact-wrapper {
+          margin-top: 0.5rem;
+          display: flex;
+          justify-content: flex-end;
+          .btn {
+            margin-bottom: 0.5rem;
+          }
+        }
+        .guard-details {
+          text-decoration: none;
+          cursor: pointer;
+          color: $cerulean-light-blue;
+        }
+      }
+    }
+  }
+}
+@mixin modal-header() {
+  position: relative;
+  padding: 1rem;
+  background-color: #007cbb;
+  .close {
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid #fff;
+    fill: #fff !important;
+    margin: 0;
+    clr-icon {
+      fill: #fff;
+    }
+  }
+  .modal-title {
+    height: 26px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}
+@mixin flexCenterdisplay() {
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+  align-items: center;
+}
+@mixin dropdown {
+  .dropdown {
+    margin: 0px 0px 0px 0px;
+    float: right;
+    background-color: #ffffff;
+    .btn {
+      border-radius: 3px;
+      border: solid 1px #cccccc;
+      font-size: 10px;
+      font-weight: 600;
+      color: #565656;
+      text-align: left;
+    }
+    .dropdown-menu {
+      width: 100%;
+      .dropdown-btn {
+        border-radius: 3px;
+        border: solid 1px #cccccc;
+        font-size: 10px;
+        font-weight: 600;
+        color: #565656;
+      }
+    }
+  }
+}
+@mixin staffHeader() {
+  font-size: 24px;
+  font-weight: 500;
+  color: #737373;
+  .card {
+    .table-container {
+      background-color: #ffffff;
+      border-radius: 3px;
+      box-shadow: 0 3px 0 0 #d7d7d7;
+      padding: 16px 24px 20px 24px;
+      .table-header {
+        height: 102px;
+        .roaster-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h2 {
+            margin: 0px 0px 12px 0px;
+            font-size: 24px;
+            font-weight: 500;
+            color: #737373;
+            float: left;
+            margin-bottom: 0;
+          }
+          input:focus,
+          input:hover {
+            border-color: #a6a6a6;
+            background: linear-gradient(to bottom, transparent 95%, #fff 95%)
+              no-repeat;
+          }
+          .btn {
+            border-color: #a6a6a6;
+          }
+          .dropdown {
+            margin: 0px 0px 0px 0px;
+            float: right;
+            .btn {
+              border-radius: 3px;
+              border: solid 1px #cccccc;
+              font-size: 10px;
+              font-weight: 600;
+              color: #565656;
+            }
+            .dropdown-menu {
+              width: 100%;
+              .dropdown-btn {
+                border-radius: 3px;
+                border: solid 1px #cccccc;
+                font-size: 10px;
+                font-weight: 600;
+                color: #565656;
+              }
+            }
+          }
+          .date-calendar-view {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .btn {
+              margin: 0.5rem;
+              min-width: 0;
+              box-shadow: none;
+            }
+            .ui-calendar {
+              .ui-calendar-button {
+                background: #fff;
+                color: #7a7a7a;
+                position: relative;
+                top: 3.6px;
+                width: 24px;
+                height: 24px;
+                border: 1px solid #a6a6a6;
+                border-left: 0;
+                .pi-calendar {
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+            }
+            .caret-next {
+              height: 24px;
+              width: 24px;
+              margin-bottom: 9px;
+              line-height: 0;
+              padding: 0;
+              clr-icon {
+                transform: rotate(95deg);
+                fill: #a6a6a6;
+              }
+            }
+            .caret-prev {
+              height: 24px;
+              width: 24px;
+              margin-bottom: 9px;
+              line-height: 0;
+              padding: 0;
+              clr-icon {
+                transform: rotate(-95deg);
+                fill: #a6a6a6;
+              }
+            }
+          }
+          .ui-datepicker {
+            table {
+              tr {
+                td.ui-datepicker-today {
+                  a {
+                    background-color: #fff;
+                    color: #333333;
+                  }
+                  a.ui-state-active {
+                    background-color: #007ad9;
+                    color: #fff;
+                  }
+                }
+              }
+              tr:hover {
+                td {
+                  a {
+                    background-color: #ccccff;
+                    color: #333333;
+                  }
+                  a.ui-state-active {
+                    background-color: #007ad9;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .tabs {
+          border-bottom: 1px solid;
+          .tablist {
+            border-bottom: 1px solid;
+          }
+          .nav-item.active {
+            box-shadow: 0 -3px 0 #0079b8 inset;
+          }
+          button {
+            font-size: 14px;
+            color: #4c4c4c;
+          }
+        }
+      }
+      .table-body {
+        border: 0;
+        .table-data {
+          .datagrid-host {
+            padding-top: 0;
+            .datagrid {
+              margin-top: 0;
+              border: 0;
+              box-shadow: none;
+              .datagrid-column-title {
+                font-size: 16px;
+                font-weight: 600;
+                color: #737373;
+              }
+              .datagrid-cell {
+                font-size: 14px;
+                font-weight: 500;
+              }
+              .datagrid-column-separator {
+                display: none;
+              }
+              .datagrid-foot {
+                border-top: 0;
+                background: #fff;
+                box-shadow: none;
+              }
+              .datagrid-head,
+              .datagrid-foot-description {
+                border: 0;
+                background: #fff;
+                box-shadow: none;
+              }
+              .pagination {
+                background: #fff;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+        .guard-contact-wrapper {
+          margin-top: 0.5rem;
+          display: flex;
+          justify-content: flex-end;
+          .btn {
+            margin-bottom: 0.5rem;
+          }
+        }
+        .guard-details {
+          text-decoration: none;
+          cursor: pointer;
+          color: #0075b6;
+        }
+      }
+    }
+  }
+}
+@mixin shiftHeader() {
+  height: 58px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: $white-color;
+  font-size: 16px;
+  font-weight: 500;
+  color: #777777;
+  line-height: 58px;
+  border: 1px solid #d7d7d7;
+  .shift-det {
+    margin-left: 24px;
+    float: left;
+    .border-line {
+      margin-left: 17px;
+      margin-right: 17px;
+      height: 35px;
+      display: inline-block;
+      @include borderLinePos(1px solid #737373, 0.5, relative, 10px);
+    }
+    .clock {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      top: -2px;
+      margin-right: 13px;
+    }
+    .next-shift {
+      margin-right: 8px;
+    }
+  }
+  .time-det {
+    margin-right: 24px;
+    float: right;
+  }
+}
+@mixin reportsDateRange() {
+  height: 19px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555555;
+  margin-bottom: 1rem;
+}
+@mixin reportsDateLabel() {
+  height: 17px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+  padding-right: 1em;
+}
+@mixin reportsCalendarButton() {
+  background: #fff;
+  color: #7a7a7a;
+  position: relative;
+  width: 24px;
+  height: 36px;
+  border: 1px solid #a6a6a6;
+  border-left: 0;
+}
+@mixin borderLinePos($borderProp, $opacProp, $pos, $top) {
+  border-left: $borderProp;
+  opacity: $opacProp;
+  position: $pos;
+  top: $top;
+}
+@mixin top-cards {
+  border-left: 5px solid $def-btm-border;
+  cursor: pointer;
+  .card-value {
+    font-size: 40px;
+    font-weight: 500;
+    color: $def-btm-border;
+    line-height: 50px;
+    text-align: center;
+    &.coming-soon-txt{
+      font-size: 18px;
+    }
+  }
+  .card-data-1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #565656;
+    text-align: center;
+    max-width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@mixin incident-table() {
+  .table-container {
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 0 #d7d7d7;
+    .table-header {
+      height: 102px;
+      border-bottom: solid 1px #dddddd;
+      padding: 16px 24px 0px 24px;
+      h2 {
+        margin: -10px 0px 12px 0px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #737373;
+        float: left;
+      }
+      .dropdown {
+        margin: 0px 0px 0px 0px;
+        float: right;
+        .dropdown-btn {
+          border-radius: 3px;
+          border: solid 1px #cccccc;
+          font-size: 10px;
+          font-weight: 600;
+          color: #565656;
+        }
+      }
+      .tabs {
+        button {
+          font-size: 14px;
+          color: #4c4c4c;
+        }
+      }
+    }
+    .table-body {
+      display: -webkit-flex;
+      /* Safari */
+      display: flex;
+      // padding-bottom: 20px;
+      .donut-chart-container {
+        -webkit-flex: 0.4; /* Safari 6.1+ */
+        -ms-flex: 0.4; /* IE 10 */
+        flex: 0.4;
+        width: 255px;
+        height: 420px;
+        overflow-y: auto;
+        border-right: solid 1px #dddddd;
+      }
+      .table-data {
+        -webkit-flex: 1;
+        /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */
+        flex: 1;
+        font-weight: 500;
+        .datagrid .datagrid-body {
+            height: 315px;
+          .datagrid-row:hover {
+            background-color: #e5f4fa;
+          }
+        }
+        .data-ellipsis{
+          max-width: 135px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+@mixin selecttext($property) {
+  -webkit-user-select: $property;
+  -moz-user-select: $property;
+  -ms-user-select: $property;
+  user-select: $property;
+}
+@mixin setFontSizeWeight($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin no-table-border() {
+  border: none;
+  box-shadow: none;
+  background: #fff;
+}
+/* * Custom CSS for the Application * */
+.datagrid {
+  @include no-table-border();
+  .datagrid-head {
+    @include no-table-border();
+    border-bottom :1px solid !important;
+  }
+  .datagrid-column-separator {
+    &:after {
+      width: 0 !important;
+    }
+  }
+}
+
+.bar {
+  position: relative;
+  height: 2px;
+  width: 500px;
+  margin: 0 auto;
+  background: $cerulean-blue;
+  margin-top: 25%;
+
+  .circle {
+    position: absolute;
+    top: -30px;
+    margin-left: -30px;
+    height: 60px;
+    width: 60px;
+    left: 0;
+    background: $cerulean-blue;
+    border-radius: 30%;
+    -webkit-animation: move 5s infinite;
+    animation: move 5s infinite;
+  }
+
+  p {
+    position: absolute;
+    top: -35px;
+    right: -85px;
+    text-transform: uppercase;
+    color: $white-color;
+    font-weight: bold;
+  }
+
+  @keyframes move {
+    0% {left: 0;}
+    50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+    75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+    100% {right: 100%;}
+  }
+}
+
+.first-letter-upcase {
+  text-transform: capitalize !important;
+}
+
+@mixin timeline-news-container {
+  margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .timeline-container{
+        width: 50%;
+     }
+     .news-feed-container{
+       width: 50%;
+       .news-feed-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        line-height: 48px;
+        .heading {
+          color: $color_1;
+          font-weight: bold;
+          font-size: 24px;
+        }
+      }
+     }
+}

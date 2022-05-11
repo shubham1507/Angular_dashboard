@@ -1,0 +1,78 @@
+{
+    "broadcast": {
+        "modaltitle": "Neue Sendung",
+        "autocompletetext": "Bürostandort hinzufügen",
+        "writehere": "Hier schreiben",
+
+        "saveSuccess": "Broadcast-Daten erfolgreich gespeichert",
+        "saveFailure": "Beim Speichern der Broadcast-Daten ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut",
+        "submit": "einreichen"
+    },
+    "briefing": {
+        "briefingReportText": "Kurzbericht",
+        "chooseOfficeLocationText": "Wählen Sie einen Bürostandort",
+        "recentlySharedText": "Kürzlich gesucht",
+        "editText": "Bearbeiten",
+        "updateText": "Aktualisieren",
+        "typeContentHereText": "Geben Sie hier den Inhalt ein",
+        "searchForOfcLocText": "Suchen Sie nach Bürostandort",
+        "saveSuccess": "Kurzbericht gespeichert erfolgreich gespeichert",
+        "lastUpdated": "Letzte Aktualisierung"
+    },
+    "menusearch": {
+        "searchtext": "Suche",
+        "loadingText": "Wird geladen",
+        "reportsText": "Berichte"
+    },
+    "notif": {
+        "notificationsText": "Benachrichtigungen",
+        "newText": "Neu",
+        "clearBtnText": "Alles löschen"
+    },
+    "timeline": {
+        "eventTimelineText": "Ereignis-Timeline",
+        "noDataTimelineText": "Keine Daten in der Timeline vorhanden",
+        "newEventText": "Neues Event",
+        "toText": "zu",
+        "createText": "ERSTELLEN",
+        "addEventTitleText": "Event-Titel hinzufügen",
+        "addNewLocText": "Neuen Standort hinzufügen",
+        "writeHereText": "Hier schreiben"
+    },
+    "chart": {
+        "noDataText": "Diagramm kann nicht gerendert werden, da keine Daten verfügbar sind"
+    },
+    "incidentDetails": {
+        "openIncidentDetailsText": "Vorfalldetails öffnen",
+        "incidentTypeText": "Vorfallstyp",
+        "areaText": "Bereich",
+        "floorText": "Fußboden",
+        "statusText": "Status",
+        "shiftText": "Umschalttaste",
+        "dateText": "Datum",
+        "startTimeText": "Startzeit",
+        "overrideStatusText": "Status überschreiben",
+        "officeLocationText": "Bürostandort",
+        "regionText": "Region",
+        "additionalDescriptionText": "zusätzliche Beschreibung",
+        "addCommentsText": "Füge Kommentare hinzu",
+        "staffText": "Mitarbeiter",
+        "activityLogText": "Aktivitätsprotokoll"
+    },
+    "generateReport": {
+      "successMsg" : "Bericht erfolgreich heruntergeladen"
+    },
+    "initialisingText" : "Initialisierung",
+    "locationNotFound" : "Standort nicht gefunden",
+    "timeUnit": {
+      "now": "jetzt",
+      "min": "Minute",
+      "mins": "Vor ein paar Minuten",
+      "hour": "Stunde",
+      "hours": "Vor Stunden",
+      "day": "Tag",
+      "days": "Vor Tagen",
+      "week": "Woche",
+      "weeks": "vor Wochen"
+    }
+}

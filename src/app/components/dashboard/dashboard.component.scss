@@ -1,0 +1,187 @@
+@import "../../app-styles/variables.scss";
+@import "../../app-styles/timeline.scss";
+@import "../../app-styles/mixins.scss";
+@import "../../../styles.scss";
+
+.dashboard-area {
+  .custom-header {
+    margin-left: 265px;
+    height: 176px;
+    background-color: $lighten-dark-navyblue;
+    padding: 35px 25px 0px 25px;
+    .search-bar-container {
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      .search-bar {
+        height: 42px;
+        padding: 7px 28px;
+        -webkit-flex: 1; /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */
+        flex: 1;
+        margin-right: 73px;
+        display: flex;
+        align-items: center;
+        .search-icon {
+          -webkit-flex-basis: 20px; /* Safari 6.1+ */
+          -ms-flex-basis: 20px; /* IE 10 */
+          flex-basis: 20px;
+        }
+        .keyword-wrapper {
+          max-width: 100%;
+          position: relative;
+          flex-basis: 100%;
+          .search-input-wrapper {
+            width: 100%;
+            .search-input {
+              width: 100%;
+              &:focus {
+                width: 100%;
+                border-bottom: 0;
+                background: transparent;
+              }
+            }
+          }
+          .results-wrapper {
+            top: 40px;
+          }
+        }
+      }
+      .header-btn-wrapper {
+        -webkit-flex-basis: 69px; /* Safari 6.1+ */
+        -ms-flex-basis: 69px; /* IE 10 */
+        flex-basis: 69px;
+        padding-left: 27px;
+        .header-btn {
+          cursor: pointer;
+          height: 42px;
+          width: 42px;
+          border-radius: 21px;
+          border: solid 1px $white-color;
+          .header-btn-icon {
+            margin: 9px 9px;
+          }
+          &.header-btn-svg {
+            border: none;
+          }
+          .notif-badge {
+            position: absolute;
+            top: -5px;
+            right: -15px;
+            padding: 10px 10px;
+            border-radius: 50%;
+          }
+        }
+      }
+      .notif-par-wrapper {
+        position: relative;
+      }
+    }
+    .header-text {
+      margin-top: 27px;
+      font-size: 32px;
+      font-weight: 500;
+      color: $twothreeeightlight-grey;
+    }
+  }
+  .main-container {
+    font-family: "Metropolis";
+    margin-left: 265px;
+    padding: 37px 25px 0px 25px;
+    background-color: $twoFouronelight-grey;
+    height: auto;
+    .dashboard-overview {
+      margin-top: -125px;
+      margin-bottom: 30px;
+      min-height: 170px;
+      .overview-card {
+        border-left: 5px solid $cerulean-blue;
+        cursor: pointer;
+        .card-value {
+          font-size: 40px;
+          font-weight: 500;
+          color: $cerulean-blue;
+          line-height: 50px;
+          text-align: center;
+          &.coming-soon-txt{
+            font-size: 18px;
+          }
+        }
+        .card-data-1 {
+          font-size: 18px;
+          font-weight: 500;
+          color: $green-red-grey;
+          text-align: center;
+          max-width: inherit;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .Line-3 {
+          width: 180px;
+          height: 1px;
+          border-style: solid;
+          border-width: 1px;
+          border-image-source: linear-gradient(
+            to left,
+            rgba(255, 255, 255, 0),
+            $green-red-grey 50%,
+            rgba(255, 255, 255, 0)
+          );
+          border-image-slice: 1;
+          margin: 9px auto 6px auto;
+        }
+        .card-data-2 {
+          font-size: 15px;
+          text-align: center;
+          color: $green-red-grey;
+        }
+      }
+    }
+    .incidents-table {
+      @include incident-table();
+    }
+    .shortage-table {
+      @include staffHeaderDashboard();
+      .profile-picture {
+        vertical-align: middle;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 0 30px;
+        margin-left:0;
+      }
+    }
+
+    .compliance-roaster {
+      @include staffHeaderDashboard();
+      .profile-picture {
+        vertical-align: middle;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 0 30px;
+        margin-left:0;
+      }
+    }
+    .timeline-news-container {
+      @include timeline-news-container();
+    }
+  }
+}
+
+.coming-soon-template{
+  .coming-soon-icon{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/assets/images/coming-soon.png");
+  }
+  .coming-soon-text{
+    color: #565656;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}

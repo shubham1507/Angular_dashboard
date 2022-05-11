@@ -1,0 +1,7 @@
+{
+  "apperror" : {
+    "youAreLost" : "vous êtes perdu",
+    "pageNotAvailableText" : "la page que vous recherchez n'est pas disponible!",
+    "gotoHomeText" : "aller à la maison"
+  }
+}

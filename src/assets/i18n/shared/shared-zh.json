@@ -1,0 +1,78 @@
+{
+  "broadcast": {
+    "modaltitle": "新的广播",
+    "autocompletetext": "添加Office位置o",
+    "writehere": "写在这里",
+    "addTitle" : "添加标题",
+    "saveSuccess": "广播数据已成功保存",
+    "saveFailure": "保存广播数据时出错，请重试",
+    "submit": "提交"
+  },
+  "briefing": {
+    "briefingReportText": "简报",
+    "chooseOfficeLocationText": "选择办公地点",
+    "recentlySharedText": "最近搜索过",
+    "editText": "编辑",
+    "updateText": "更新",
+    "typeContentHereText": "在此输入内容",
+    "searchForOfcLocText": "搜索办公地点",
+    "saveSuccess": "简报成功保存",
+    "lastUpdated": "最近更新时间"
+  },
+  "menusearch": {
+    "searchtext": "搜索",
+    "loadingText": "载入中",
+    "reportsText": "报告"
+  },
+  "notif": {
+    "notificationsText": "通知",
+    "newText": "新",
+    "clearBtnText": "全部清除"
+  },
+  "timeline": {
+    "eventTimelineText": "事件时间表",
+    "noDataTimelineText": "时间轴中没有数据",
+    "newEventText": "新事件",
+    "toText": "至",
+    "createText": "创建",
+    "addEventTitleText": "添加活动标题",
+    "addNewLocText": "添加新位置",
+    "writeHereText": "写在这里"
+  },
+  "chart": {
+    "noDataText": "无法呈现图表，因为没有可用的数据"
+  },
+  "incidentDetails": {
+    "openIncidentDetailsText": "打开事件详情",
+    "incidentTypeText": "事件类型",
+    "areaText": "区域",
+    "floorText": "地板",
+    "statusText": "状态",
+    "shiftText": "轮班",
+    "dateText": "日期",
+    "startTimeText": "开始时间",
+    "overrideStatusText": "覆盖状态",
+    "officeLocationText": "办公地点",
+    "regionText": "区域",
+    "additionalDescriptionText": "附加说明",
+    "addCommentsText": "添加评论",
+    "staffText": "员工",
+    "activityLogText": "活动日志"
+  },
+  "generateReport": {
+    "successMsg" : "报告已成功下载"
+  },
+  "initialisingText" : "初始化",
+  "locationNotFound" : "找不到位置",
+  "timeUnit": {
+    "now": "现在",
+    "min": "分钟",
+    "mins": "分钟",
+    "hour": "小时",
+    "hours": "小时",
+    "day": "天",
+    "days": "天",
+    "week": "周",
+    "weeks": "周"
+  }
+}

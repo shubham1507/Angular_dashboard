@@ -1,0 +1,7 @@
+{
+  "apperror" : {
+    "youAreLost" : "あなたは迷っています",
+    "pageNotAvailableText" : "探しているページはありません",
+    "gotoHomeText" : "ホームへ"
+  }
+}

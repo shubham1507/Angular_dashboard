@@ -1,0 +1,388 @@
+<div *ngIf="!dataError; else nodata_content">
+    <clr-tab-content>
+        <div
+          class="reports-tabs-content"
+          *ngIf="vehicleParkingOverview; else data_loading"
+        >
+          <div class="item">
+            <div class="entries-header">
+              <span class="overview-desc" l10nTranslate> overviewtabtext </span>
+              <!-- <span class="entries-details">
+                {{vehicleParkingOverview.totalCurrentEntries}} Total
+                entries
+                <clr-icon size="8" shape="circle" class="is-solid"></clr-icon>
+                Today
+              </span> -->
+            </div>
+            <div class="item-track clr-row">
+              <div class="clr-col-3">
+                <div class="card item-card">
+                  <div class="card-block">
+                    <div class="card-value">
+                      {{ vehicleParkingOverview.normalIssues }}
+                    </div>
+                    <div
+                      class="card-data-1"
+                      title="{{ issuesReportedText }}"
+                      l10nTranslate
+                    >
+                      issuesReportedText
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr-col-3">
+                <div class="card  item-card">
+                  <div class="card-block">
+                    <div class="card-value">
+                      {{ vehicleParkingOverview.overNightParkingViolations }}
+                    </div>
+                    <div
+                      class="card-data-1"
+                      title="{{ overnightParkingText }}"
+                      l10nTranslate
+                    >
+                      overnightParkingText
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr-col-3">
+                <div class="card  item-card">
+                  <div class="card-block">
+                    <div class="card-value">
+                      {{ vehicleParkingOverview.carpoolParkingViolations }}
+                    </div>
+                    <div
+                      class="card-data-1"
+                      title="{{ poolParkingViolationText }}"
+                      l10nTranslate
+                    >
+                      poolParkingViolationText
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr-col-3">
+                <div class="card  item-card">
+                  <div class="card-block">
+                    <div class="card-value coming-soon-txt" l10nTranslate>comingSoonText
+                    </div>
+                    <div
+                      class="card-data-1"
+                      title="{{ vipParkingViolationText }}"
+                      l10nTranslate
+                    >
+                      vipParkingViolationText
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                <div class="card">
+                  <div class="card-header">
+                    <span l10nTranslate>parkingOccupancyText</span> ({{totalParkingSlots}})
+                  </div>
+                  <div class="card-center-wrapper">
+                    <div class="card-block card-center">
+                      <div class="chart-center" id="{{ parkOccConstants_chartid }}">
+                        <physicalsecurity-custom-chart
+                          [rightAlign]="parkOccConstants_rightAlign"
+                          [chartid]="parkOccConstants_chartid"
+                          [addClearBtn]="parkOccConstants_addClearBtn"
+                          [legendColors]="parkOccConstants_legendColors"
+                          [chartOptions]="parkOccConstants_options"
+                          [legendData]="parkOccList"
+                        >
+                        </physicalsecurity-custom-chart>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                <div class="card">
+                  <div class="card-header">
+                    <span l10nTranslate>vehicleTypeDistText</span> ({{totalVehicles}})
+                  </div>
+                  <div class="card-center-wrapper">
+                    <div class="card-block card-center">
+                      <div id="{{ vehTypeDistrData_chartid }}">
+                        <physicalsecurity-custom-chart
+                          [rightAlign]="vehTypeDistrData_rightAlign"
+                          [chartid]="vehTypeDistrData_chartid"
+                          [addClearBtn]="vehTypeDistrData_addClearBtn"
+                          [legendColors]="vehTypeDistrData_legendColors"
+                          [chartOptions]="vehTypeDistrData_options"
+                          [legendData]="vehTypeDistList"
+                        >
+                        </physicalsecurity-custom-chart>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-report-list-header">
+              <div class="rep-list-details">
+                <span class="rep-list-header" l10nTranslate>reportsListText</span>
+                <span class="rep-total"
+                  >{{ vehTrackData?.total }}
+                  <span l10nTranslate>totalText</span></span
+                >
+              </div>
+              <button
+                class="btn btn-outline rep-list-button "
+                (click)="openVehicleModal()"
+                l10nTranslate
+              >
+                generateReportText
+              </button>
+            </div>
+            <div class="filters-container">
+              <div class="filter" *ngIf="parkingTypes">
+                <div class="filter-title" l10nTranslate>byParkingSpacesText</div>
+                <clr-dropdown>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary dropdown-btn"
+                    clrDropdownTrigger
+                  >
+                    {{ selectedParkingType }}
+                    <clr-icon shape="caret down"></clr-icon>
+                  </button>
+                  <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                    <button
+                      type="button"
+                      (click)="selectParkingType('All Parking Spaces')"
+                      clrDropdownItem
+                    >
+                      All Parking Spaces
+                    </button>
+                    <button
+                      type="button"
+                      [ngClass]="{'disabled': parkingType=='VIP'}"
+                      (click)="selectParkingType(parkingType)"
+                      clrDropdownItem
+                      *ngFor="let parkingType of parkingTypes"
+                    >
+                      {{ parkingType == "VIP" ? "VIP - Coming Soon" : parkingType }}
+                    </button>
+                  </clr-dropdown-menu>
+                </clr-dropdown>
+              </div>
+              <div class="filter" *ngIf="vehicleTypes">
+                <div class="filter-title" l10nTranslate>byVehicleTypeText</div>
+                <clr-dropdown>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary dropdown-btn"
+                    clrDropdownTrigger
+                  >
+                    {{ selectedVehicleType }}
+                    <clr-icon shape="caret down"></clr-icon>
+                  </button>
+                  <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                    <button
+                      type="button"
+                      (click)="selectVehicleType('All Vehicles')"
+                      clrDropdownItem
+                    >
+                      All Vehicles
+                    </button>
+                    <button
+                      type="button"
+                      (click)="selectVehicleType(vehicleType)"
+                      clrDropdownItem
+                      *ngFor="let vehicleType of vehicleTypes"
+                    >
+                      {{ vehicleType }}
+                    </button>
+                  </clr-dropdown-menu>
+                </clr-dropdown>
+              </div>
+              <div class="filter">
+                <div class="filter-title" l10nTranslate>timePeriodText</div>
+                <p-calendar
+                  [(ngModel)]="dateRange"
+                  [maxDate]="maxDateValue"
+                  selectionMode="range"
+                  [readonlyInput]="true"
+                  (onSelect)="selectDateRange($event)"
+                  [locale]="calLocale"
+                  [showIcon]="true"
+                ></p-calendar>
+              </div>
+            </div>
+            <div class="vehicle-track-table" *ngIf="vehTrackData?.report">
+              <clr-datagrid
+                (clrDgRefresh)="refresh($event)"
+                [clrDgLoading]="tableLoading"
+              >
+                <clr-dg-column l10nTranslate>vehicleNoText</clr-dg-column>
+                <clr-dg-column l10nTranslate>vehicleTypeText</clr-dg-column>
+                <clr-dg-column l10nTranslate>emailIdText</clr-dg-column>
+                <clr-dg-column l10nTranslate>dateText</clr-dg-column>
+                <clr-dg-column l10nTranslate>timeText</clr-dg-column>
+                <clr-dg-column l10nTranslate>shiftText</clr-dg-column>
+                <clr-dg-column l10nTranslate>issuesReportedText</clr-dg-column>
+                <clr-dg-row *ngFor="let vehicle of vehTrackData.report">
+                  <clr-dg-cell>{{ vehicle.vehicleNum }} </clr-dg-cell>
+                  <clr-dg-cell>{{ vehicle.vehicleType }} </clr-dg-cell>
+                  <clr-dg-cell>{{ vehicle.ownerEmailId }} </clr-dg-cell>
+                  <clr-dg-cell
+                    >{{ vehicle.timeStamp | l10nDate: defaultLocale:dateOptions }}
+                  </clr-dg-cell>
+                  <clr-dg-cell
+                    >{{ vehicle.timeStamp | l10nDate: defaultLocale:"shortTime" }}
+                  </clr-dg-cell>
+                  <clr-dg-cell>{{ vehicle.shiftName }} </clr-dg-cell>
+                  <clr-dg-cell>{{ vehicle.issueReported }} </clr-dg-cell>
+                </clr-dg-row>
+                <clr-dg-footer>
+                  <clr-dg-pagination
+                    #pagination
+                    [clrDgPageSize]="4"
+                    [clrDgTotalItems]="vehTrackData.total"
+                    [(clrDgPage)]="selectedPageNo"
+                  >
+                    {{ pagination.firstItem + 1 }} - {{ pagination.lastItem + 1 }}
+                    <span l10nTranslate>ofText</span> {{ pagination.totalItems }}
+                  </clr-dg-pagination>
+                </clr-dg-footer>
+              </clr-datagrid>
+            </div>
+          </div>
+        </div>
+      </clr-tab-content>
+      <div class="reports-modal">
+        <clr-modal
+          [(clrModalOpen)]="vehicleModal.openvehicleModal"
+          [clrModalSize]="'lg'"
+        >
+          <h3 class="modal-title">
+            <div class="reports-modal-title" l10nTranslate>generateReportText</div>
+          </h3>
+          <div class="modal-body">
+            <div class="reports-section">
+              <div class="success-popup">
+                <clr-alert
+                  *ngIf="showSuccessAlert"
+                  [clrAlertType]="'alert-success'"
+                  l10nTranslate
+                >
+                  <div class="alert-item">
+                    <span class="alert-text"> generateReport.successMsg </span>
+                  </div>
+                </clr-alert>
+              </div>
+              <div *ngIf="showErrorAlert" class="error-popup">
+                <clr-alert [clrAlertType]="'alert-danger'">
+                  <div class="alert-item">
+                    <span class="alert-text"> {{ fileDownloadError }} </span>
+                  </div>
+                </clr-alert>
+              </div>
+              <form [formGroup]="newReportForm" (ngSubmit)="onReportFormSubmit()">
+                <div class="reports-section1">
+                  <section class="content form-block">
+                    <p class="reports-date-title" l10nTranslate>
+                      selectDateRangeText
+                    </p>
+                    <div class="row date-wrapper">
+                      <div class="col-sm-8">
+                        <p-calendar
+                          formControlName="reportDateRange"
+                          [maxDate]="maxDateValue"
+                          selectionMode="range"
+                          [locale]="calLocale"
+                          required
+                          [showIcon]="true"
+                        ></p-calendar>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="reports-section3">
+                  <section class="content">
+                    <p class="reports-date-title" l10nTranslate>otherParamsText</p>
+                    <div class="row other-param-wrapper">
+                      <div class="col-sm-6">
+                        <div class="clr-select-wrapper">
+                          <select
+                            id="select-basic"
+                            formControlName="parkingType"
+                            class="clr-select"
+                            required
+                          >
+                            <option value="All" selected>All Parking Spaces</option>
+                            <option
+                              [value]="parkingType"
+                              *ngFor="let parkingType of parkingTypes"
+                              >{{ parkingType }}</option
+                            >
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="clr-select-wrapper">
+                          <select
+                            id="select-basic"
+                            formControlName="vehicleType"
+                            class="clr-select"
+                            required
+                          >
+                            <option value="All" selected>All Vehicles</option>
+                            <option
+                              [value]="vehicleType"
+                              *ngFor="let vehicleType of vehicleTypes"
+                              >{{ vehicleType }}</option
+                            >
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="reports-modal-btn">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    [disabled]="!newReportForm.valid || showReportLoader"
+                    l10nTranslate
+                  >
+                    generateText
+                  </button>
+                  <span *ngIf="showReportLoader" class="spinner spinner-sm">
+                    Loading...
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </clr-modal>
+      </div>
+</div>
+<ng-template #data_loading>
+  <div class="report-loader-wrapper">
+    <span class="spinner"> Loading... </span>
+  </div>
+</ng-template>
+<ng-template #nodata_content>
+    <div class="nodata-alert">
+        <div class="alert alert-danger" size="40" role="alert">
+            <div class="alert-items">
+                <div class="alert-item static">
+                    <div class="alert-icon-wrapper">
+                        <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                    </div>
+                    <span class="alert-text">Error occurred while retrieving data.</span>
+                    <div class="alert-actions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

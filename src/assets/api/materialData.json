@@ -1,0 +1,32 @@
+{
+    "pageDetails": {
+        "page": 1,
+        "size": 10,
+        "totalPages": 1,
+        "totalCount": 2
+    },
+    "data": [
+        {
+            "id": "5c0a2f3eaa28c2478bc7f860",
+            "itemId": "ABF2223",
+            "entryTime": 1543402274477,
+            "itemName": "Coffee Machine",
+            "itemQuantity": 5,
+            "materialMovementType": "INWARD",
+            "receivedBy": "akumar@vmware.com",
+            "issueReported": false
+        },
+        {
+            "id": "5c0a3337aa28c2478bc7f867",
+            "itemId": "ABL2223",
+            "entryTime": 1543738262000,
+            "itemName": "Coffee Machine",
+            "itemQuantity": 5,
+            "materialMovementType": "INWARD",
+            "receivedBy": null,
+            "issueReported": false
+        }
+    ],
+    "message": "Success",
+    "success": true
+}

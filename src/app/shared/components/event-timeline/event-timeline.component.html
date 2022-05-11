@@ -1,0 +1,104 @@
+<div class="timeline-feed-container">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div
+      class="card"
+      *ngIf="timeLineData && timeLineData.length > 0; else noTimeLineData"
+    >
+      <div class="card-header">
+        <div class="event-header">
+          <div class="event-heading" l10nTranslate>
+            timeline.eventTimelineText
+          </div>
+          <div class="event-apps">
+            <!-- <button class="btn btn-link first-letter-upcase addevent-btn"  (click)="openEventTimeLine()">
+              <clr-icon
+                shape="plus-circle" size="20"
+              ></clr-icon
+              >&nbsp;Add Event
+            </button> -->
+            <button class="btn btn-link first-letter-upcase addevent-btn" title="Coming Soon!">
+              <clr-icon shape="plus-circle" size="20"></clr-icon>&nbsp;Add Event
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-block">
+        <!-- <div class="card-title">
+          <div class="timeline-header">
+            <div class="timeline-date-oper">
+              <div class="timeline-heading">
+                {{ timeLineStartWeek | l10nDate: defaultLocale:options }} -
+                {{ timeLineEndWeek | l10nDate: defaultLocale:options }}
+              </div>
+              <div class="timeline-caret-btns">
+                <button
+                  class="timeline-caret-prev"
+                  (click)="getTimeLinePreviousWeek()"
+                >
+                  <clr-icon shape="angle" size="12"></clr-icon>
+                </button>
+                <button
+                  class=" timeline-caret-next"
+                  (click)="getTimeLineNextWeek()"
+                >
+                  <clr-icon shape="angle" size="12"></clr-icon>
+                </button>
+              </div>
+            </div>
+            <div class="timeline-oper"></div>
+          </div>
+        </div>
+        <div class="card-text">
+          <section class="evt-timeline">
+            <div class="evt-timeline__container">
+              <div
+                class="evt-timeline__block "
+                *ngFor="let timeLine of timeLineData"
+              >
+                <div class="evt-timeline__icon"></div>
+                <div class="evt-timeline__content ">
+                  <div class="activity-heading">
+                    <h2>{{ timeLine.title }}</h2>
+                    <p>
+                      <span>{{
+                        timeLine.timeActivityStart
+                          | l10nDate: defaultLocale:"shortTime"
+                      }}</span>
+                      <span
+                        >&nbsp; -
+                        {{
+                          timeLine.timeActivityEnd
+                            | l10nDate: defaultLocale:"shortTime"
+                        }}</span
+                      >
+                      <span>&nbsp; <clr-icon shape="circle" class="is-solid" size="8"></clr-icon>&nbsp;  <span>{{ timeLine.timeActivityLocation }}</span></span>
+                    </p>
+                    <ul
+                      class="activityItems"
+                      *ngFor="let activityItem of timeLine.activities"
+                    >
+                      <li>{{ activityItem }}</li>
+                    </ul>
+                  </div>
+                  <span class="evt-timeline__date">{{
+                    timeLine.dateVal | l10nDate: defaultLocale:options
+                  }}</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div> -->
+        <div class="coming-soon-template">
+            <div class="coming-soon-icon"></div>
+            <div class="coming-soon-text">Coming Soon!</div>
+          </div>
+      </div>
+    </div>
+    <ng-template #noTimeLineData>
+      <div class="card" l10nTranslate>timeline.noDataTimelineText</div>
+    </ng-template>
+  </div>
+  <physicalsecurity-add-event
+    [openAddEventModalSubject]="openAddEventModalSubject"
+  ></physicalsecurity-add-event>
+</div>

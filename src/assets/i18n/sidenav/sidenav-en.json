@@ -1,0 +1,12 @@
+{
+  "selectLanguageText": "Select Language",
+  "myDashboardText": "My Dashboard",
+  "addLocationText": "Add Location",
+  "chooseLocationText": "Choose Location",
+  "popOfcLocationText": "Popular Office Locations",
+  "searchForOfcLocText":"Search for Office Location",
+  "logOutTitleText" : "Log Out",
+  "logOutMsgText" : "Are you sure you want to logout of your profile",
+  "logOutYesOptText" : "Yes",
+  "logOutNoOptText" : "No"
+}

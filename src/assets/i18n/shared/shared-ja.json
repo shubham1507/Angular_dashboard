@@ -1,0 +1,78 @@
+{
+  "broadcast": {
+    "modaltitle": "新しい放送",
+    "autocompletetext": "オフィス所在地を追加",
+    "writehere": "ここに書く",
+    "addTitle" : "表題を加える",
+    "saveSuccess": "ブロードキャストデータを保存しました",
+    "saveFailure": "放送データの保存中にエラーが発生しました。もう一度お試しください",
+    "submit": "提出する"
+  },
+  "briefing": {
+    "briefingReportText": "説明会レポート",
+    "chooseOfficeLocationText": "オフィス所在地を選択",
+    "recentlySharedText": "最近検索された",
+    "editText": "編集する",
+    "updateText": "更新",
+    "typeContentHereText": "ここにコンテンツを入力",
+    "searchForOfcLocText": "オフィス所在地の検索",
+    "saveSuccess": "ブリーフィングレポートを保存しました",
+    "lastUpdated": "最終更新"
+  },
+  "menusearch": {
+    "searchtext": "サーチ",
+    "loadingText": "ロード中",
+    "reportsText": "レポート"
+  },
+  "notif": {
+    "notificationsText": "通知",
+    "newText": "新しい",
+    "clearBtnText": "すべてクリア"
+  },
+  "timeline": {
+    "eventTimelineText": "イベントタイムライン",
+    "noDataTimelineText": "タイムラインにデータがありません",
+    "newEventText": "新しいイベント",
+    "toText": "に",
+    "createText": "作成",
+    "addEventTitleText": "予定のタイトルを追加",
+    "addNewLocText": "新しい場所を追加",
+    "writeHereText": "ここに書く"
+  },
+  "chart": {
+    "noDataText": "利用可能なデータがないため、チャートをレンダリングできません"
+  },
+  "incidentDetails": {
+    "openIncidentDetailsText": "オープンインシデントの詳細",
+    "incidentTypeText": "インシデントタイプ",
+    "areaText": "エリア",
+    "floorText": "床",
+    "statusText": "状態",
+    "shiftText": "シフト",
+    "dateText": "日付",
+    "startTimeText": "始まる時間",
+    "overrideStatusText": "オーバーライドステータス",
+    "officeLocationText": "オフィスの場所",
+    "regionText": "領域",
+    "additionalDescriptionText": "追加の説明",
+    "addCommentsText": "コメントを追加",
+    "staffText": "スタッフ",
+    "activityLogText": "活動記録"
+  },
+  "generateReport": {
+    "successMsg" : "レポートをダウンロードしました"
+  },
+  "initialisingText" : "初期化中",
+  "locationNotFound" : "場所が見つかりません",
+  "timeUnit": {
+    "now": "今",
+    "min": "分",
+    "mins": "議事録",
+    "hour": "時",
+    "hours": "時間",
+    "day": "日",
+    "days": "日々",
+    "week": "週間",
+    "weeks": "週"
+  }
+}

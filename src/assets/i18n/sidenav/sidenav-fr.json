@@ -1,0 +1,12 @@
+{
+  "selectLanguageText": "Choisir la langue",
+  "myDashboardText": "Mon tableau de bord",
+  "addLocationText": "Ajouter un emplacement",
+  "chooseLocationText": "Choisissez l'emplacement",
+  "popOfcLocationText": "Emplacements de bureau populaires",
+  "searchForOfcLocText":"Rechercher un bureau",
+  "logOutTitleText" : "Connectez - Out",
+  "logOutMsgText" : "Êtes-vous sûr de vouloir vous déconnecter de votre profil?",
+  "logOutYesOptText" : "Oui",
+  "logOutNoOptText" : "Non"
+}

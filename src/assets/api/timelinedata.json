@@ -1,0 +1,26 @@
+[
+  {
+    "title" : "CEO Visit - Pune",
+    "timeActivityStart" : 1546096260,
+    "timeActivityEnd" : 1546096260,
+    "timeActivityLocation" : "Eco Tower",
+    "activities" : ["Brief staff regarding escalations","Provide clarity on the tasks for the next Quarter ","Provide additional walkie talkies to the guards"],
+    "dateVal" : 1546096260
+  },
+  {
+    "title" : "Fire Drill",
+    "timeActivityStart" : 1546096260,
+    "timeActivityEnd" : 1546096260,
+    "timeActivityLocation" : "Eco Tower",
+    "activities" : ["Brief staff regarding escalations","Provide clarity on the tasks for the next Quarter ","Provide additional walkie talkies to the guards"],
+    "dateVal" : 1546096260
+  },
+  {
+    "title" : "Security training",
+    "timeActivityStart" : 1546096260,
+    "timeActivityEnd" : 1546096260,
+    "timeActivityLocation" : "Eco Tower",
+    "activities" : ["Brief staff regarding escalations","Provide clarity on the tasks for the next Quarter "],
+    "dateVal" : 1546096260
+  }
+]

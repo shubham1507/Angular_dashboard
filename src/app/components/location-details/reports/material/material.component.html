@@ -1,0 +1,408 @@
+<div *ngIf="!dataError; else nodata_content">
+    <clr-tab-content>
+        <div class="reports-tabs-content" *ngIf="!pageLoading; else data_loading">
+          <div class="item">
+            <div class="entries-header">
+              <span class="overview-desc" l10nTranslate> overviewtabtext </span>
+              <!-- <span class="entries-details">
+                974 Total entries
+                <clr-icon size="8" shape="circle" class="is-solid"></clr-icon>
+                Today
+              </span> -->
+            </div>
+            <div class="item-track clr-row">
+              <div class="clr-col-3">
+                <div class="card item-card">
+                  <div class="card-block">
+                    <div class="card-value">
+                      {{ materialOverviewData["issuesLogCount"] }}
+                    </div>
+                    <div
+                      class="card-data-1"
+                      title="{{ issuesReportedText }}"
+                      l10nTranslate
+                    >
+                      issuesReportedText
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr-col-3">
+                <div class="card  item-card">
+                  <div class="card-block">
+                    <div class="card-value">
+                      {{ materialOverviewData["incompleteTransLogCount"] }}
+                    </div>
+                    <div
+                      class="card-data-1"
+                      title="{{ incompleteTransText }}"
+                      l10nTranslate
+                    >
+                      incompleteTransText
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr-col-3">
+                <div class="card  item-card">
+                  <div class="card-block">
+                    <div class="card-value">
+                      {{ materialOverviewData["inwardLogCount"] }}
+                    </div>
+                    <div
+                      class="card-data-1"
+                      title="{{ inwardMatEntriesText }}"
+                      l10nTranslate
+                    >
+                      inwardMatEntriesText
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clr-col-3">
+                <div class="card  item-card">
+                  <div class="card-block">
+                    <div class="card-value">
+                      {{ materialOverviewData["outwardLogCount"] }}
+                    </div>
+                    <div
+                      class="card-data-1"
+                      title="{{ outwardMatEntriesText }}"
+                      l10nTranslate
+                    >
+                      outwardMatEntriesText
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                <div class="card">
+                  <div class="card-header" l10nTranslate>matTransStatusText</div>
+                  <div class="card-center-wrapper">
+                    <div class="card-block card-center">
+                      <div
+                        class="chart-center"
+                        id="{{ matTransStatusConstant_chartid }}"
+                      >
+                        <physicalsecurity-custom-chart
+                          [rightAlign]="matTransStatusConstant_rightAlign"
+                          [chartid]="matTransStatusConstant_chartid"
+                          [addClearBtn]="matTransStatusConstant_addClearBtn"
+                          [legendColors]="matTransStatusConstant_legendColors"
+                          [chartOptions]="matTransStatusConstant_options"
+                          [legendData]="matTransStatusData"
+                        >
+                        </physicalsecurity-custom-chart>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+                <div class="card">
+                  <div class="card-header"><span l10nTranslate>matTransTypeText</span> ({{matTransTotal}})</div>
+                  <div class="card-center-wrapper">
+                    <div class="card-block card-center">
+                      <div id="{{ matTransTypeConstant_chartid }}">
+                        <physicalsecurity-custom-chart
+                          [rightAlign]="matTransTypeConstant_rightAlign"
+                          [chartid]="matTransTypeConstant_chartid"
+                          [addClearBtn]="matTransTypeConstant_addClearBtn"
+                          [legendColors]="matTransTypeConstant_legendColors"
+                          [chartOptions]="matTransTypeConstant_options"
+                          [legendData]="matTransTypeData"
+                        >
+                        </physicalsecurity-custom-chart>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-report-list-header">
+              <div class="rep-list-details">
+                <span class="rep-list-header" l10nTranslate>reportsListText</span>
+                <span class="rep-total"
+                  >{{ materialData?.pageDetails?.totalCount || 0 }}
+                  <span l10nTranslate>totalText</span></span
+                >
+              </div>
+              <button
+                class="btn btn-outline rep-list-button "
+                (click)="openMaterialModal()"
+                l10nTranslate
+              >
+                generateReportText
+              </button>
+            </div>
+            <div class="filters-container">
+              <div class="filter">
+                <div class="filter-title" l10nTranslate>byTypeText</div>
+                <clr-dropdown>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary dropdown-btn"
+                    clrDropdownTrigger
+                  >
+                    {{ selectedFilterValue }}
+                    <clr-icon shape="caret down"></clr-icon>
+                  </button>
+                  <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                    <button
+                      type="button"
+                      (click)="selectMovementType('', $event)"
+                      clrDropdownItem
+                      l10nTranslate
+                    >
+                      allTypesText
+                    </button>
+                    <button
+                      type="button"
+                      (click)="selectMovementType('INWARD', $event)"
+                      clrDropdownItem
+                      l10nTranslate
+                    >
+                      inwardText
+                    </button>
+                    <button
+                      type="button"
+                      (click)="selectMovementType('OUTWARD', $event)"
+                      clrDropdownItem
+                      l10nTranslate
+                    >
+                      outwardText
+                    </button>
+                  </clr-dropdown-menu>
+                </clr-dropdown>
+              </div>
+              <div class="filter">
+                <div class="filter-title" l10nTranslate>byEntryTypeText</div>
+                <clr-dropdown>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary dropdown-btn"
+                    clrDropdownTrigger
+                  >
+                    {{ selectedFilterValue1 }}
+                    <clr-icon shape="caret down"></clr-icon>
+                  </button>
+                  <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                    <button
+                      type="button"
+                      (click)="selectEntryType('', $event)"
+                      clrDropdownItem
+                      l10nTranslate
+                    >
+                      allEntriesText
+                    </button>
+                    <button
+                      type="button"
+                      (click)="selectEntryType('RETURNABLE', $event)"
+                      clrDropdownItem
+                      l10nTranslate
+                    >
+                      returnablesText
+                    </button>
+                    <button
+                      type="button"
+                      (click)="selectEntryType('NONRETURNABLE', $event)"
+                      clrDropdownItem
+                      l10nTranslate
+                    >
+                      nonReturnablesText
+                    </button>
+                  </clr-dropdown-menu>
+                </clr-dropdown>
+              </div>
+              <div class="filter">
+                <div class="filter-title" l10nTranslate>timePeriodText</div>
+                <p-calendar
+                  [(ngModel)]="materialDateRange"
+                  [maxDate]="maxDateValue"
+                  selectionMode="range"
+                  [readonlyInput]="true"
+                  (onSelect)="selectDateRange($event)"
+                  [locale]="calLocale"
+                  [showIcon]="true"
+                ></p-calendar>
+              </div>
+            </div>
+            <div class="vehicle-track-table" *ngIf="materialData?.data">
+              <clr-datagrid
+                (clrDgRefresh)="refresh($event)"
+                [clrDgLoading]="materialTableLoading"
+              >
+                <clr-dg-column l10nTranslate
+                  >matNameText</clr-dg-column
+                >
+                <clr-dg-column l10nTranslate>podcNoText</clr-dg-column>
+                <clr-dg-column l10nTranslate>typeText</clr-dg-column>
+                <clr-dg-column l10nTranslate>quantityText</clr-dg-column>
+                <clr-dg-column l10nTranslate>dateText</clr-dg-column>
+                <clr-dg-column l10nTranslate>timeText</clr-dg-column>
+                <clr-dg-column l10nTranslate>issuesReportedText</clr-dg-column>
+                <clr-dg-row *ngFor="let material of materialData?.data">
+                  <clr-dg-cell>{{ material.itemName }} </clr-dg-cell>
+                  <clr-dg-cell>{{ material.itemId }} </clr-dg-cell>
+                  <clr-dg-cell>{{ material.materialMovementType }} </clr-dg-cell>
+                  <clr-dg-cell>{{ material.itemQuantity }} </clr-dg-cell>
+                  <clr-dg-cell
+                    >{{ material.entryTime | l10nDate: defaultLocale:dateOptions }}
+                  </clr-dg-cell>
+                  <clr-dg-cell
+                    >{{ material.entryTime | l10nDate: defaultLocale:"shortTime" }}
+                  </clr-dg-cell>
+                  <clr-dg-cell
+                    >{{ material.issueReported ? "YES" : "NO" }}
+                  </clr-dg-cell>
+                </clr-dg-row>
+                <clr-dg-footer>
+                  <clr-dg-pagination
+                    #pagination
+                    [clrDgPageSize]="5"
+                    [clrDgTotalItems]="materialData?.pageDetails?.totalCount"
+                    [(clrDgPage)]="materialTablePageNo"
+                  >
+                    {{ pagination.firstItem + 1 }} - {{ pagination.lastItem + 1 }}
+                    <span l10nTranslate>ofText</span> {{ pagination.totalItems }}
+                  </clr-dg-pagination>
+                </clr-dg-footer>
+              </clr-datagrid>
+            </div>
+          </div>
+        </div>
+      </clr-tab-content>
+      <div class="reports-modal">
+        <clr-modal
+          [(clrModalOpen)]="materialModal.openmaterialModal"
+          [clrModalSize]="'lg'"
+        >
+          <h3 class="modal-title">
+            <div class="reports-modal-title" l10nTranslate>generateReportText</div>
+          </h3>
+          <div class="modal-body">
+            <div class="reports-section">
+              <div class="success-popup">
+                <clr-alert
+                  *ngIf="showSuccessAlert"
+                  [clrAlertType]="'alert-success'"
+                  l10nTranslate
+                >
+                  <div class="alert-item">
+                    <span class="alert-text"> generateReport.successMsg </span>
+                  </div>
+                </clr-alert>
+              </div>
+              <div *ngIf="showErrorAlert" class="error-popup">
+                <clr-alert [clrAlertType]="'alert-danger'">
+                  <div class="alert-item">
+                    <span class="alert-text"> {{ fileDownloadError }} </span>
+                  </div>
+                </clr-alert>
+              </div>
+              <form [formGroup]="newMaterialForm" (ngSubmit)="onMaterialSubmit()">
+                <div class="reports-section1">
+                  <section class="content form-block">
+                    <p class="reports-date-title" l10nTranslate>
+                      selectDateRangeText
+                    </p>
+                    <div class="row date-wrapper">
+                      <div class="col-sm-8">
+                        <p-calendar
+                          formControlName="reportDateRange"
+                          [maxDate]="maxDateValue"
+                          selectionMode="range"
+                          [locale]="calLocale"
+                          required
+                          [showIcon]="true"
+                        ></p-calendar>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="reports-section3">
+                  <section class="content">
+                    <p class="reports-date-title" l10nTranslate>otherParamsText</p>
+                    <div class="row other-param-wrapper">
+                      <div class="col-sm-6">
+                        <div class="clr-select-wrapper">
+                          <select
+                            id="select-basic"
+                            formControlName="movementType"
+                            class="clr-select"
+                            required
+                          >
+                            <option value="All" selected l10nTranslate
+                              >allTypesText</option
+                            >
+                            <option value="INWARD" l10nTranslate>inwardText</option>
+                            <option value="OUTWARD" l10nTranslate>outwardText</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="clr-select-wrapper">
+                          <select
+                            id="select-basic"
+                            formControlName="itemType"
+                            class="clr-select"
+                            required
+                          >
+                            <option value="All" selected l10nTranslate
+                              >allEntriesText</option
+                            >
+                            <option value="RETURNABLE" l10nTranslate
+                              >returnablesText</option
+                            >
+                            <option value="NONRETURNABLE" l10nTranslate
+                              >nonReturnablesText</option
+                            >
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="reports-modal-btn">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    [disabled]="!newMaterialForm.valid || showReportLoader"
+                    l10nTranslate
+                  >
+                    generateText
+                  </button>
+                  <span *ngIf="showReportLoader" class="spinner spinner-sm">
+                    Loading...
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </clr-modal>
+      </div>
+</div>
+
+<ng-template #data_loading>
+  <div class="report-loader-wrapper">
+    <span class="spinner"> Loading... </span>
+  </div>
+</ng-template>
+<ng-template #nodata_content>
+    <div class="nodata-alert">
+        <div class="alert alert-danger" role="alert">
+            <div class="alert-items">
+                <div class="alert-item static">
+                    <div class="alert-icon-wrapper">
+                        <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                    </div>
+                    <span class="alert-text">Error occurred while retrieving data.</span>
+                    <div class="alert-actions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

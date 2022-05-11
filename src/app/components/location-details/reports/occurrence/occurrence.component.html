@@ -1,0 +1,318 @@
+<div *ngIf="!dataError; else nodata_content">
+<clr-tab-content>
+  <div class="reports-tabs-content" *ngIf="occurrenceOverview; else data_loading">
+    <div class="item">
+      <div class="entries-header">
+        <span class="overview-desc" l10nTranslate>
+          overviewtabtext
+        </span>
+        <!-- <span class="entries-details">
+          974 Total entries
+          <clr-icon size="8" shape="circle" class="is-solid"></clr-icon>
+          Today
+        </span> -->
+      </div>
+      <div class="item-track clr-row">
+        <div class="clr-col-3">
+          <div class="card item-card">
+            <div class="card-block">
+              <div class="card-value">{{highPriorityOccCount}}</div>
+              <div class="card-data-1" title="{{incidentsReportedText}}" l10nTranslate>
+                incidentsReportedText
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value">{{lowPriorityOccCount}}</div>
+              <div class="card-data-1" title="{{bussinessAsUsualText}}" l10nTranslate>
+                bussinessAsUsualText
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value">{{highPriorityOccCount}}</div>
+              <div class="card-data-1" title="{{highPriorityIncText}}" l10nTranslate>
+                highPriorityIncText
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value coming-soon-txt" l10nTranslate>comingSoonText</div>
+              <div class="card-data-1" title="{{recentlyClosedIncText}}" l10nTranslate>
+                recentlyClosedIncText
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12" l10nTranslate>
+          <div class="card">
+            <div class="card-header">
+              incDistByType
+            </div>
+            <div class="card-center-wrapper">
+              <div class="card-block card-center">
+                <div class="chart-center" id="{{incDistrConstantsByType_chartid}}">
+                  <physicalsecurity-custom-chart [rightAlign]="
+                          incDistrConstantsByType_rightAlign
+                          "
+                    [chartid]="
+                          incDistrConstantsByType_chartid
+                          "
+                    [addClearBtn]="
+                          incDistrConstantsByType_addClearBtn
+                          "
+                    [legendColors]="
+                          incDistrConstantsByType_legendColors
+                          "
+                    [chartOptions]="
+                          incDistrConstantsByType_options
+                          "
+                    [legendData]="incDistrDataByType">
+                  </physicalsecurity-custom-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-header" l10nTranslate>
+              occDistByPriority
+            </div>
+            <div class="card-center-wrapper">
+              <div class="card-block card-center">
+                <div id="{{incDistrConstantsByPrior_chartid}}">
+                  <physicalsecurity-custom-chart [rightAlign]="
+                          incDistrConstantsByPrior_rightAlign
+                          "
+                    [chartid]="
+                          incDistrConstantsByPrior_chartid
+                          "
+                    [addClearBtn]="
+                          incDistrConstantsByPrior_addClearBtn
+                          "
+                    [legendColors]="
+                          incDistrConstantsByPrior_legendColors
+                          "
+                    [chartOptions]="
+                          incDistrConstantsByPrior_options
+                          "
+                    [legendData]="incDistrDataByPriority">
+                  </physicalsecurity-custom-chart>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="item-report-list-header">
+        <div class="rep-list-details">
+          <span class="rep-list-header" l10nTranslate>reportsListText</span>
+          <span class="rep-total"> {{occData?.pageDetails?.totalCount || 0}} <span l10nTranslate>totalText</span></span>
+        </div>
+        <button class="btn btn-outline rep-list-button " (click)="openOccurenceModal()" l10nTranslate>
+          generateReportText
+        </button>
+      </div>
+      <div class="filters-container two-filters-container">
+        <div class="filter">
+          <div class="filter-title" l10nTranslate>byGuardNameText</div>
+          <p-autoComplete 
+          [(ngModel)]="selectedStaff" 
+          [suggestions]="staffSearchData" 
+          field="fullName" 
+          (completeMethod)="searchStaff($event)"
+          (onSelect)="selectStaff($event)"
+          placeholder="Guard Name">
+          </p-autoComplete>
+          <div class="clear-filter" *ngIf="clearSearchButtonFlag" (click)="clearSearchFilter()">
+              <clr-icon shape="times"></clr-icon>
+          </div>
+        </div>
+        <!-- <div class="filter">
+          <div class="filter-title" l10nTranslate>byDutyText</div>
+          <clr-dropdown>
+            <button type="button" class="btn btn-outline-primary dropdown-btn" clrDropdownTrigger>
+              All Duties
+              <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+              <button type="button" clrDropdownItem>All Duties</button>
+              <button type="button" clrDropdownItem>Patrolling Duty (Floor 1,2,3)</button>
+              <button type="button" clrDropdownItem>Patrolling Duty (Floor 4,5,6)</button>
+              <button type="button" clrDropdownItem>Patrolling Duty (Terrace)</button>
+            </clr-dropdown-menu>
+          </clr-dropdown>
+        </div> -->
+        <div class="filter">
+          <div class="filter-title" l10nTranslate>timePeriodText</div>
+          <p-calendar
+            [(ngModel)]="dateRange"
+            selectionMode="range"
+            [maxDate]="maxDateValue"
+            [readonlyInput]="true"
+            (onSelect)="selectDateRange($event)"
+            [locale]="calLocale"
+            [showIcon]="true"
+          ></p-calendar>
+        </div>
+      </div>
+      <div class="vehicle-track-table">
+        <clr-datagrid (clrDgRefresh)="refresh($event)"
+        [clrDgLoading]="tableLoading">
+          <clr-dg-column l10nTranslate>guardNameText</clr-dg-column>
+          <clr-dg-column l10nTranslate>floorText</clr-dg-column>
+          <!-- <clr-dg-column l10nTranslate>dutyText</clr-dg-column> -->
+          <clr-dg-column l10nTranslate>dateText</clr-dg-column>
+          <clr-dg-column l10nTranslate>timeText</clr-dg-column>
+          <clr-dg-column l10nTranslate>incidentReportedText</clr-dg-column>
+          <clr-dg-row *ngFor="
+               let occurence of occData?.data">
+            <clr-dg-cell><img alt="" class="profile-picture" src="assets/images/test1.png">
+              {{occurence.firstName + " " + occurence.lastName}}
+            </clr-dg-cell>
+            <clr-dg-cell><span class="vertical-align-data">{{
+              occurence.floor? "" + occurence.floor : "-"
+              }}</span>
+            </clr-dg-cell>
+            <!-- <clr-dg-cell>{{
+              occurence.Duty
+              }}
+            </clr-dg-cell> -->
+            <clr-dg-cell><span class="vertical-align-data">{{
+              occurence.occurrenceStartedTime | l10nDate: defaultLocale:dateOptions
+              }}</span>
+            </clr-dg-cell>
+            <clr-dg-cell><span class="vertical-align-data">{{
+              occurence.occurrenceStartedTime | l10nDate: defaultLocale:"shortTime"
+              }}</span>
+            </clr-dg-cell>
+            <clr-dg-cell><span class="vertical-align-data">{{
+              occurence.occurrenceType=='BAU-Event-Normal'?'No':'Yes'
+              }}</span>
+            </clr-dg-cell>
+          </clr-dg-row>
+          <clr-dg-footer>
+            <clr-dg-pagination #pagination [clrDgPageSize]="5" [(clrDgPage)]="selectedPageNo" [clrDgTotalItems]="
+               occData?.pageDetails?.totalCount
+               ">
+              {{ pagination.firstItem + 1 }} -
+              {{ pagination.lastItem + 1 }} <span l10nTranslate>ofText</span>
+              {{ pagination.totalItems }}
+            </clr-dg-pagination>
+          </clr-dg-footer>
+        </clr-datagrid>
+      </div>
+    </div>
+  </div>
+</clr-tab-content>
+<div class="reports-modal">
+  <clr-modal [(clrModalOpen)]="occurenceModal.openOccurenceModal" [clrModalSize]="'lg'">
+    <h3 class="modal-title">
+      <div class="reports-modal-title" l10nTranslate>
+        generateReportText
+      </div>
+    </h3>
+    <div class="modal-body">
+      <div class="reports-section">
+          <div class="success-popup">
+            <clr-alert *ngIf="showSuccessAlert" [clrAlertType]="'alert-success'" l10nTranslate>
+              <div class="alert-item">
+                <span class="alert-text"> generateReport.successMsg </span>
+              </div>
+            </clr-alert>
+          </div>
+          <div *ngIf="showErrorAlert" class="error-popup">
+            <clr-alert [clrAlertType]="'alert-danger'">
+              <div class="alert-item">
+                <span class="alert-text"> {{ fileDownloadError }} </span>
+              </div>
+            </clr-alert>
+          </div>
+          <form [formGroup]="newOccurrenceForm" (ngSubmit)="generateOccReport()">
+              <div class="reports-section1">
+                <section class="content form-block">
+                  <p class="reports-date-title" l10nTranslate>
+                    selectDateRangeText
+                  </p>
+                  <div class="row date-wrapper">
+                    <div class="col-sm-8">
+                      <p-calendar formControlName="reportDateRange" selectionMode="range" [maxDate]="maxDateValue" [locale]="calLocale" required [showIcon]="true"></p-calendar>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            <div class="reports-section3">
+              <section class="content">
+                <p class="reports-date-title">
+                  Other Parameters
+                </p>
+                <div class="row other-param-wrapper">
+                  <div class="col-sm-6">
+                    <div class="clr-select-wrapper">
+                      <select id="select-basic" class="clr-select">
+                        <option value="1" selected>All Guards</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="clr-select-wrapper">
+                      <select id="select-basic" class="clr-select">
+                        <option value="1" selected>All Duities</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="reports-modal-btn">
+              <button class="btn btn-primary" type="submit" [disabled]="!newOccurrenceForm.valid || showReportLoader" l10nTranslate>
+                generateText
+              </button>
+              <span *ngIf="showReportLoader" class="spinner spinner-sm">
+                Loading...
+              </span>
+            </div>
+          </form>
+      </div>
+    </div>
+  </clr-modal>
+</div>
+</div>
+<ng-template #data_loading>
+  <div class="report-loader-wrapper">
+    <span class="spinner"> Loading... </span>
+  </div>
+</ng-template>
+<ng-template #nodata_content>
+<div class="nodata-alert">
+    <div class="alert alert-danger" role="alert">
+        <div class="alert-items">
+            <div class="alert-item static">
+                <div class="alert-icon-wrapper">
+                    <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                </div>
+                <span class="alert-text">Error occurred while retrieving data.</span>
+                <div class="alert-actions">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</ng-template>

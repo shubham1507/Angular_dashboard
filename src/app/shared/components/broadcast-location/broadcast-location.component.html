@@ -1,0 +1,73 @@
+<div class="location-broadcast">
+  <clr-modal [(clrModalOpen)]="locBroadCastFlag" [clrModalSize]="'lg'">
+    <h3 class="modal-title" l10nTranslate>broadcast.modaltitle</h3>
+    <div class="modal-body">
+      <div>
+        <div *ngIf="showSuccessAlert" class="success-popup">
+          <clr-alert [clrAlertType]="'alert-success'">
+            <div class="alert-item">
+              <span class="alert-text" l10nTranslate>
+                broadcast.saveSuccess
+              </span>
+            </div>
+          </clr-alert>
+        </div>
+        <div *ngIf="showErrorAlert" class="error-popup">
+          <clr-alert [clrAlertType]="'alert-danger'">
+            <div class="alert-item">
+              <span class="alert-text" l10nTranslate>
+                broadcast.saveFailure
+              </span>
+            </div>
+          </clr-alert>
+        </div>
+        <form  [formGroup]="broadCastForm" (ngSubmit)="onSubmit()">
+          <label _ngcontent-c1="" class="searchbar-label">
+            <div class="location-auto-complete">
+              <p-autoComplete
+                autoFocus
+                #addOfficeLocationInput
+                formControlName="officeLocation"
+                [forceSelection]="true"
+                [suggestions]="filteredOfcLocations"
+                (completeMethod)="filterOfcLocationComplete($event)"
+                field="name"
+                [size]="30"
+                placeholder=" + {{ autocompletetext }}"
+                [minLength]="1"
+                [multiple]="true"
+                [emptyMessage]="emptyMessage"
+              ></p-autoComplete>
+            </div>
+          </label>
+          <div class="title-label">
+              <input type="text" class="broadcast-title" placeholder="* Add Title" formControlName="broadcastTitle">
+          </div>
+          <div class="desc-label">
+            <textarea
+              class="form-control"
+              [rows]="5"
+              [cols]="30"
+              pInputTextarea
+              placeholder=" * {{ writeheretext }} ..."
+              formControlName="descText"
+            ></textarea>
+          </div>
+          <div class="center-align">
+            <button
+              class="btn btn-primary"
+              type="submit"
+              [disabled]="!broadCastForm.valid"
+              l10nTranslate
+            >
+              broadcast.submit
+            </button>
+            <span *ngIf="showLoadSpinner" class="spinner spinner-sm">
+              Loading...
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </clr-modal>
+</div>

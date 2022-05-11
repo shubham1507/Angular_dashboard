@@ -1,0 +1,51 @@
+{
+    "count": 1,
+    "users": [
+        {
+            "principal": "rchetry@vmware.com",
+            "cn": "Rameshwar Chetry",
+            "email": "rchetry@vmware.com",
+            "firstName": "Rameshwar",
+            "lastName": "Chetry",
+            "displayName": "Rameshwar Chetry (c)",
+            "company": "VMware, Inc.",
+            "userPrincipalName": "rchetry@vmware.com",
+            "department": "Physical Sec - HQ - IN1019802",
+            "title": "Senior Security Executive",
+            "managerDn": "CN=Raghavendra K P,CN=Users,DC=vmware,DC=com",
+            "distinguishedName": "CN=Rameshwar Chetry,CN=Users,DC=vmware,DC=com",
+            "samAccountName": "rchetry",
+            "lastLogonTime": null,
+            "street": "Remote Office",
+            "country": "India",
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "zipCode": "560076",
+            "physicalLocation": "Remote Office - India",
+            "locationUrl": null,
+            "image": null,
+            "locale": null,
+            "telephoneNumber": null,
+            "mobileNumber": "+91 (91136) 32271 x08067043469",
+            "dateJoined": null,
+            "extensionAttribute1": "rchetry.jpg",
+            "extensionAttribute2": "AWF",
+            "directReports": null,
+            "employeeNumber": null,
+            "memberOf": null,
+            "jobHistory": [],
+            "skills": [],
+            "highlights": {
+                "email": [
+                    "<em>rchetry@vmware.com</em>"
+                ]
+            },
+            "fullImage": null,
+            "skypeID": "rchetry@vmware.com",
+            "socialConnection": {},
+            "proxyAddresses": null,
+            "tenantID": "tn-63abc8b9",
+            "action": null
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+  "apperror" : {
+    "youAreLost" : "你迷路了",
+    "pageNotAvailableText" : "您正在寻找的页面不可用",
+    "gotoHomeText" : "回家"
+  }
+}

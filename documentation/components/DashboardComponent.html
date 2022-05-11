@@ -1,0 +1,3214 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>physical-security documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">physical-security documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DashboardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/dashboard/dashboard.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>dashboard component for the dashboard view
+includes the consolidated view for the eventtime line
+news feed incident data</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>physicalSecurity-dashboard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./dashboard.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./dashboard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addClearBtn">addClearBtn</a>
+                            </li>
+                            <li>
+                                <a href="#chartid">chartid</a>
+                            </li>
+                            <li>
+                                <a href="#clearText">clearText</a>
+                            </li>
+                            <li>
+                                <a href="#complianceDataRegions">complianceDataRegions</a>
+                            </li>
+                            <li>
+                                <a href="#complianceSub">complianceSub</a>
+                            </li>
+                            <li>
+                                <a href="#defaultLocale">defaultLocale</a>
+                            </li>
+                            <li>
+                                <a href="#filteredIncidentSub">filteredIncidentSub</a>
+                            </li>
+                            <li>
+                                <a href="#hideBadge">hideBadge</a>
+                            </li>
+                            <li>
+                                <a href="#incidentDetailsModal">incidentDetailsModal</a>
+                            </li>
+                            <li>
+                                <a href="#incidentsData">incidentsData</a>
+                            </li>
+                            <li>
+                                <a href="#incidentSub">incidentSub</a>
+                            </li>
+                            <li>
+                                <a href="#incidentTypeList">incidentTypeList</a>
+                            </li>
+                            <li>
+                                <a href="#lang">lang</a>
+                            </li>
+                            <li>
+                                <a href="#legendColors">legendColors</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#locale">locale</a>
+                            </li>
+                            <li>
+                                <a href="#newsFeedText">newsFeedText</a>
+                            </li>
+                            <li>
+                                <a href="#notificationCount">notificationCount</a>
+                            </li>
+                            <li>
+                                <a href="#notificationSubject">notificationSubject</a>
+                            </li>
+                            <li>
+                                <a href="#openBriefingModalSubject">openBriefingModalSubject</a>
+                            </li>
+                            <li>
+                                <a href="#openBroadcastModalSubject">openBroadcastModalSubject</a>
+                            </li>
+                            <li>
+                                <a href="#openIncidentsText">openIncidentsText</a>
+                            </li>
+                            <li>
+                                <a href="#options">options</a>
+                            </li>
+                            <li>
+                                <a href="#peopleFinderSub">peopleFinderSub</a>
+                            </li>
+                            <li>
+                                <a href="#pfAccessTokenSub">pfAccessTokenSub</a>
+                            </li>
+                            <li>
+                                <a href="#regionList">regionList</a>
+                            </li>
+                            <li>
+                                <a href="#regions">regions</a>
+                            </li>
+                            <li>
+                                <a href="#resourceShortageData">resourceShortageData</a>
+                            </li>
+                            <li>
+                                <a href="#resourceShortageText">resourceShortageText</a>
+                            </li>
+                            <li>
+                                <a href="#rightAlign">rightAlign</a>
+                            </li>
+                            <li>
+                                <a href="#shortageSub">shortageSub</a>
+                            </li>
+                            <li>
+                                <a href="#staffComplianceData">staffComplianceData</a>
+                            </li>
+                            <li>
+                                <a href="#staffCompTasksText">staffCompTasksText</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translation">translation</a>
+                            </li>
+                            <li>
+                                <a href="#userData">userData</a>
+                            </li>
+                            <li>
+                                <a href="#welcomeText">welcomeText</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clearFunction">clearFunction</a>
+                            </li>
+                            <li>
+                                <a href="#getNotificationsCount">getNotificationsCount</a>
+                            </li>
+                            <li>
+                                <a href="#getUserDataFromPeopleFinder">getUserDataFromPeopleFinder</a>
+                            </li>
+                            <li>
+                                <a href="#hideNotifications">hideNotifications</a>
+                            </li>
+                            <li>
+                                <a href="#legendClick">legendClick</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openBriefingModal">openBriefingModal</a>
+                            </li>
+                            <li>
+                                <a href="#openBroadcastModal">openBroadcastModal</a>
+                            </li>
+                            <li>
+                                <a href="#openIncidentModal">openIncidentModal</a>
+                            </li>
+                            <li>
+                                <a href="#showNotifications">showNotifications</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(locale: LocaleService, translation: TranslationService, reportsService: <a href="../injectables/ReportsService.html">ReportsService</a>, peopleFinderService: <a href="../injectables/PeopleFinderService.html">PeopleFinderService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:123</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>*
+Constructor function used to initialise the dashboard component</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>locale</td>
+                                                  
+                                                        <td>
+                                                                    <code>LocaleService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>reportsService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ReportsService.html" target="_self" >ReportsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>peopleFinderService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/PeopleFinderService.html" target="_self" >PeopleFinderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clearFunction"></a>
+                        <span class="name">
+                            <b>
+                            clearFunction
+                            </b>
+                            <a href="#clearFunction"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>clearFunction()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="181" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:181</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>clear the incident and reset the chart type data
+ for the incidents</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getNotificationsCount"></a>
+                        <span class="name">
+                            <b>
+                            getNotificationsCount
+                            </b>
+                            <a href="#getNotificationsCount"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getNotificationsCount(notifCount)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:155</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>get the total notifications count for the notifications</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>notifCount</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getUserDataFromPeopleFinder"></a>
+                        <span class="name">
+                            <b>
+                            getUserDataFromPeopleFinder
+                            </b>
+                            <a href="#getUserDataFromPeopleFinder"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getUserDataFromPeopleFinder()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="228" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:228</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get the user data from the people finder access token</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hideNotifications"></a>
+                        <span class="name">
+                            <b>
+                            hideNotifications
+                            </b>
+                            <a href="#hideNotifications"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>hideNotifications()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:172</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Hide the notifications when user clicks out side the notifications container</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="legendClick"></a>
+                        <span class="name">
+                            <b>
+                            legendClick
+                            </b>
+                            <a href="#legendClick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>legendClick(selectedIncidentType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="201" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:201</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Populated the chart data for the selected incident type</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>selectedIncidentType</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="296" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:296</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Unsubscribe all the service methods</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="247" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:247</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get the user data for the people finder
+incident data and compliance data</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openBriefingModal"></a>
+                        <span class="name">
+                            <b>
+                            openBriefingModal
+                            </b>
+                            <a href="#openBriefingModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openBriefingModal()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:139</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>open the briefing modal component from dashboard</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openBroadcastModal"></a>
+                        <span class="name">
+                            <b>
+                            openBroadcastModal
+                            </b>
+                            <a href="#openBroadcastModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openBroadcastModal()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:146</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>open the  broadcasr modal component from dashboard</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openIncidentModal"></a>
+                        <span class="name">
+                            <b>
+                            openIncidentModal
+                            </b>
+                            <a href="#openIncidentModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openIncidentModal(incident: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="221" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:221</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>open the incident modal</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>incident</td>
+                                                        <td>
+                                                                    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showNotifications"></a>
+                        <span class="name">
+                            <b>
+                            showNotifications
+                            </b>
+                            <a href="#showNotifications"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showNotifications(evt)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:163</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Show the notification messages for the logged in user</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>evt</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addClearBtn"></a>
+                        <span class="name">
+                            <b>
+                            addClearBtn
+                            </b>
+                            <a href="#addClearBtn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>addClearBtn:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.incConstants.CHARTPROPERTIES.ADDCLEARBTN</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:111</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="chartid"></a>
+                        <span class="name">
+                            <b>
+                            chartid
+                            </b>
+                            <a href="#chartid"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>chartid:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.incConstants.CHARTPROPERTIES.CHARTID</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:116</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clearText"></a>
+                        <span class="name">
+                            <b>
+                            clearText
+                            </b>
+                            <a href="#clearText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>clearText:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.incConstants.CLEAR</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:114</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="complianceDataRegions"></a>
+                        <span class="name">
+                            <b>
+                            complianceDataRegions
+                            </b>
+                            <a href="#complianceDataRegions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>complianceDataRegions:     <code>Object[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Object[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:68</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array Place holder for storing the compliance data regions</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="complianceSub"></a>
+                        <span class="name">
+                            <b>
+                            complianceSub
+                            </b>
+                            <a href="#complianceSub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>complianceSub:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:119</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultLocale"></a>
+                        <span class="name">
+                            <b>
+                            defaultLocale
+                            </b>
+                            <a href="#defaultLocale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>defaultLocale:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @DefaultLocale()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredIncidentSub"></a>
+                        <span class="name">
+                            <b>
+                            filteredIncidentSub
+                            </b>
+                            <a href="#filteredIncidentSub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>filteredIncidentSub:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:121</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hideBadge"></a>
+                        <span class="name">
+                            <b>
+                            hideBadge
+                            </b>
+                            <a href="#hideBadge"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>hideBadge:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:109</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>conditional flag for showing and hiding the notification badge count</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="incidentDetailsModal"></a>
+                        <span class="name">
+                            <b>
+                            incidentDetailsModal
+                            </b>
+                            <a href="#incidentDetailsModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>incidentDetailsModal:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>conditional flag for opening the incident details modal</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="incidentsData"></a>
+                        <span class="name">
+                            <b>
+                            incidentsData
+                            </b>
+                            <a href="#incidentsData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>incidentsData:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>TODO: Need to add documentation for place holders with actual purpose after
+data integration</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="incidentSub"></a>
+                        <span class="name">
+                            <b>
+                            incidentSub
+                            </b>
+                            <a href="#incidentSub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>incidentSub:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:118</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="incidentTypeList"></a>
+                        <span class="name">
+                            <b>
+                            incidentTypeList
+                            </b>
+                            <a href="#incidentTypeList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>incidentTypeList:     <code>any[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the incident Type list</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lang"></a>
+                        <span class="name">
+                            <b>
+                            lang
+                            </b>
+                            <a href="#lang"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>lang:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Language()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="legendColors"></a>
+                        <span class="name">
+                            <b>
+                            legendColors
+                            </b>
+                            <a href="#legendColors"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>legendColors:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.incConstants.LEGENDCOLORS</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:115</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locale"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            locale
+                            </b>
+                            <a href="#locale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>locale:     <code>LocaleService</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>LocaleService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:130</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newsFeedText"></a>
+                        <span class="name">
+                            <b>
+                            newsFeedText
+                            </b>
+                            <a href="#newsFeedText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>newsFeedText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notificationCount"></a>
+                        <span class="name">
+                            <b>
+                            notificationCount
+                            </b>
+                            <a href="#notificationCount"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>notificationCount:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" >Number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" >Number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:104</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the notifications count</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notificationSubject"></a>
+                        <span class="name">
+                            <b>
+                            notificationSubject
+                            </b>
+                            <a href="#notificationSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>notificationSubject:     <code>Subject&lt;any&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subject&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:94</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Conditional subject instance for opening the notifications</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openBriefingModalSubject"></a>
+                        <span class="name">
+                            <b>
+                            openBriefingModalSubject
+                            </b>
+                            <a href="#openBriefingModalSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>openBriefingModalSubject:     <code>Subject&lt;any&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subject&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:89</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Conditional subject instance for opening the briefing modal</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openBroadcastModalSubject"></a>
+                        <span class="name">
+                            <b>
+                            openBroadcastModalSubject
+                            </b>
+                            <a href="#openBroadcastModalSubject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>openBroadcastModalSubject:     <code>Subject&lt;any&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subject&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:99</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Conditional subject instance for opening the broadcast modal</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openIncidentsText"></a>
+                        <span class="name">
+                            <b>
+                            openIncidentsText
+                            </b>
+                            <a href="#openIncidentsText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>openIncidentsText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <span class="name">
+                            <b>
+                            options
+                            </b>
+                            <a href="#options"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>options:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:113</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="peopleFinderSub"></a>
+                        <span class="name">
+                            <b>
+                            peopleFinderSub
+                            </b>
+                            <a href="#peopleFinderSub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>peopleFinderSub:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:123</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pfAccessTokenSub"></a>
+                        <span class="name">
+                            <b>
+                            pfAccessTokenSub
+                            </b>
+                            <a href="#pfAccessTokenSub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>pfAccessTokenSub:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:122</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="regionList"></a>
+                        <span class="name">
+                            <b>
+                            regionList
+                            </b>
+                            <a href="#regionList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>regionList:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Place holder for storing the region list</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="regions"></a>
+                        <span class="name">
+                            <b>
+                            regions
+                            </b>
+                            <a href="#regions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>regions:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&quot;All Regions&quot;, &quot;APAC&quot;, &quot;AMER&quot;, &quot;EMEA&quot;, &quot;INDIA&quot;, &quot;PALO ALTO&quot;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:79</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the regions</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resourceShortageData"></a>
+                        <span class="name">
+                            <b>
+                            resourceShortageData
+                            </b>
+                            <a href="#resourceShortageData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>resourceShortageData:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:74</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the resource shortage data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resourceShortageText"></a>
+                        <span class="name">
+                            <b>
+                            resourceShortageText
+                            </b>
+                            <a href="#resourceShortageText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>resourceShortageText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rightAlign"></a>
+                        <span class="name">
+                            <b>
+                            rightAlign
+                            </b>
+                            <a href="#rightAlign"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>rightAlign:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.incConstants.CHARTPROPERTIES.RIGHTALIGN</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:112</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shortageSub"></a>
+                        <span class="name">
+                            <b>
+                            shortageSub
+                            </b>
+                            <a href="#shortageSub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>shortageSub:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:120</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="staffComplianceData"></a>
+                        <span class="name">
+                            <b>
+                            staffComplianceData
+                            </b>
+                            <a href="#staffComplianceData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>staffComplianceData:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:63</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the staff Compliance data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="staffCompTasksText"></a>
+                        <span class="name">
+                            <b>
+                            staffCompTasksText
+                            </b>
+                            <a href="#staffCompTasksText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>staffCompTasksText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="translation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            translation
+                            </b>
+                            <a href="#translation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>translation:     <code>TranslationService</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TranslationService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:131</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userData"></a>
+                        <span class="name">
+                            <b>
+                            userData
+                            </b>
+                            <a href="#userData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>userData:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the user data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="welcomeText"></a>
+                        <span class="name">
+                            <b>
+                            welcomeText
+                            </b>
+                            <a href="#welcomeText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>welcomeText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/dashboard/dashboard.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef } from &#x27;@angular/core&#x27;;
+import { PeopleFinderService } from &#x27;src/app/services/people-finder.service&#x27;;
+import { Subject } from &#x27;rxjs&#x27;;
+import { ReportsService } from &#x27;src/app/services/reports.service&#x27;;
+import { environment } from &#x27;src/environments/environment&#x27;;
+
+import {
+  Language,
+  DefaultLocale,
+  LocaleService,
+  TranslationService
+} from &#x27;angular-l10n&#x27;;
+
+
+/**
+ * dashboard component for the dashboard view
+ * includes the consolidated view for the eventtime line
+ * news feed incident data
+ */
+@Component({
+  selector: &#x27;physicalSecurity-dashboard&#x27;,
+  templateUrl: &#x27;./dashboard.component.html&#x27;,
+  styleUrls: [&#x27;./dashboard.component.scss&#x27;],
+  encapsulation: ViewEncapsulation.None
+})
+export class DashboardComponent implements OnInit, OnDestroy {
+
+  @Language() lang: string;
+  @DefaultLocale() defaultLocale: string;
+  welcomeText: string;
+  openIncidentsText: string;
+  resourceShortageText: string;
+  staffCompTasksText: string;
+  newsFeedText: string;
+  /**
+   * TODO: Need to add documentation for place holders with actual purpose after
+   * data integration
+   */
+
+  /**
+   * place holder for storing incidents data
+   */
+  incidentsData: any;
+
+  /**
+   * place holder for storing the incident Type list
+   */
+  incidentTypeList: any[] &#x3D; [];
+
+  /**
+   * Place holder for storing the region list
+   */
+  regionList &#x3D; [];
+
+  /**
+   * conditional flag for opening the incident details modal
+   */
+  incidentDetailsModal: boolean &#x3D; false;
+
+  /**
+   * place holder for storing the staff Compliance data
+   */
+  staffComplianceData: any;
+
+  /**
+  * Array Place holder for storing the compliance data regions
+   */
+  complianceDataRegions: Object[];
+
+
+  /**
+   * place holder for storing the resource shortage data
+   */
+  resourceShortageData: any;
+
+  /**
+   * place holder for storing the regions
+   */
+  regions &#x3D; [&quot;All Regions&quot;, &quot;APAC&quot;, &quot;AMER&quot;, &quot;EMEA&quot;, &quot;INDIA&quot;, &quot;PALO ALTO&quot;];
+
+  /**
+   * place holder for storing the user data
+   */
+  userData: any;
+
+  /**
+   * Conditional subject instance for opening the briefing modal
+   */
+  openBriefingModalSubject: Subject&lt;any&gt; &#x3D; new Subject();
+
+  /**
+   * Conditional subject instance for opening the notifications
+   */
+  notificationSubject: Subject&lt;any&gt; &#x3D; new Subject();
+
+  /**
+   * Conditional subject instance for opening the broadcast modal
+   */
+  openBroadcastModalSubject: Subject&lt;any&gt; &#x3D; new Subject();
+
+  /**
+   * place holder for storing the notifications count
+   */
+  notificationCount: Number;
+
+  /**
+   * conditional flag for showing and hiding the notification badge count
+   */
+  hideBadge: boolean &#x3D; true;
+
+  addClearBtn: boolean &#x3D; environment.incConstants.CHARTPROPERTIES.ADDCLEARBTN;
+  rightAlign: boolean &#x3D; environment.incConstants.CHARTPROPERTIES.RIGHTALIGN;
+  options: any;
+  clearText &#x3D; environment.incConstants.CLEAR;;
+  legendColors &#x3D; environment.incConstants.LEGENDCOLORS;
+  chartid &#x3D; environment.incConstants.CHARTPROPERTIES.CHARTID;
+
+  incidentSub: any;
+  complianceSub: any;
+  shortageSub: any;
+  filteredIncidentSub: any;
+  pfAccessTokenSub: any;
+  peopleFinderSub: any;
+
+  /***
+   * Constructor function used to initialise the dashboard component
+   * @param reportsService
+   * @param peopleFinderService
+   */
+  constructor(public locale: LocaleService,
+    public translation: TranslationService,
+    private reportsService: ReportsService,
+    private peopleFinderService: PeopleFinderService) { }
+
+
+  /**
+   * open the briefing modal component from dashboard
+   */
+  openBriefingModal() {
+    this.openBriefingModalSubject.next();
+  }
+
+  /**
+    * open the  broadcasr modal component from dashboard
+    */
+  openBroadcastModal() {
+    this.openBroadcastModalSubject.next();
+  }
+
+
+
+  /**
+    * get the total notifications count for the notifications
+    */
+  getNotificationsCount(notifCount) {
+    this.notificationCount &#x3D; notifCount;
+  }
+
+  /**
+   * Show the notification messages for the logged in user
+   * @param evt
+   */
+  showNotifications(evt) {
+    evt.stopPropagation();
+    this.hideBadge &#x3D; false;
+    this.notificationSubject.next(true);
+  }
+
+  /**
+   * Hide the notifications when user clicks out side the notifications container
+   */
+  hideNotifications() {
+    this.notificationSubject.next(false);
+  }
+
+
+  /**
+   *clear the incident and reset the chart type data
+   * for the incidents
+   */
+  clearFunction() {
+    this.reportsService.getIncidents()
+      .subscribe(incidentsData &#x3D;&gt; {
+        this.incidentTypeList &#x3D; [];
+        this.regionList &#x3D; Object.keys(incidentsData.incidentsRegionWise);
+        for (let incidentType in incidentsData.incidentTypes) {
+          this.incidentTypeList.push({
+            key: incidentType,
+            y: incidentsData.incidentTypes[incidentType]
+          });
+        }
+        this.incidentsData &#x3D; incidentsData;
+      }
+      )
+  }
+
+  /**
+   * Populated the chart data for the selected incident type
+   * @param selectedIncidentType
+   */
+  legendClick(selectedIncidentType: string) {
+    this.filteredIncidentSub &#x3D; this.reportsService.getFilteredIncidents()
+      .subscribe(incidentsData &#x3D;&gt; {
+        this.incidentTypeList &#x3D; [];
+        this.regionList &#x3D; Object.keys(incidentsData.incidentsRegionWise);
+        for (let incidentType in incidentsData.incidentTypes) {
+          this.incidentTypeList.push({
+            key: incidentType,
+            y: incidentsData.incidentTypes[incidentType]
+          });
+        }
+        this.incidentsData &#x3D; incidentsData;
+      }
+      )
+  }
+
+  /**
+   * open the incident modal
+   * @param incident
+   */
+  openIncidentModal(incident: any) {
+    this.incidentDetailsModal &#x3D; true;
+  }
+
+  /**
+   * Get the user data from the people finder access token
+   */
+  getUserDataFromPeopleFinder() {
+    this.pfAccessTokenSub &#x3D; this.peopleFinderService.getPeopleFinderAccessToken()
+      .subscribe((response: any) &#x3D;&gt; {
+        if (typeof response &#x3D;&#x3D; &quot;object&quot;) {
+          this.peopleFinderService.setPeopleFinderTokenInLocalStorage(response);
+        }
+        //hardcoded person ID has to be removed
+        this.peopleFinderSub &#x3D; this.peopleFinderService.getPersonData(&quot;rchetry&quot;)
+          .subscribe((userData: any) &#x3D;&gt; {
+            if (userData)
+              this.userData &#x3D; userData.users[0];
+          })
+      });
+  }
+
+  /**
+   * Get the user data for the people finder
+   * incident data and compliance data
+   */
+  ngOnInit() {
+    this.options &#x3D; environment.incConstants.CHARTPROPERTIES;
+    this.getUserDataFromPeopleFinder();
+
+    this.incidentSub &#x3D; this.reportsService.getIncidents()
+      .subscribe(incidentsData &#x3D;&gt; {
+        this.regionList &#x3D; Object.keys(incidentsData.incidentsRegionWise);
+        for (let incidentType in incidentsData.incidentTypes) {
+          this.incidentTypeList.push({
+            key: incidentType,
+            y: incidentsData.incidentTypes[incidentType]
+          });
+        }
+        this.incidentsData &#x3D; incidentsData;
+      }
+      )
+
+    this.complianceSub &#x3D; this.reportsService.getComplianceData()
+      .subscribe(staffData &#x3D;&gt; {
+        this.staffComplianceData &#x3D; staffData;
+        this.complianceDataRegions &#x3D; Object.keys(staffData.complianceRegions);
+      });
+
+    this.shortageSub &#x3D; this.reportsService.getShortageData()
+      .subscribe(response &#x3D;&gt; {
+        this.resourceShortageData &#x3D; response;
+      })
+
+    this.translation.translationChanged().subscribe(
+      () &#x3D;&gt; {
+        this.welcomeText &#x3D; this.translation.translate(&#x27;welcomeText&#x27;);
+        this.openIncidentsText&#x3D;this.translation.translate(&#x27;openIncidentsText&#x27;);
+        this.resourceShortageText&#x3D;this.translation.translate(&#x27;resourceShortageText&#x27;);
+        this.staffCompTasksText&#x3D;this.translation.translate(&#x27;staffCompTasksText&#x27;);
+        this.newsFeedText&#x3D;this.translation.translate(&#x27;newsFeedText&#x27;);
+      }
+    );
+
+    this.translation.translationError.subscribe((error) &#x3D;&gt; {
+      if (error) {
+        console.log(error);
+      }
+    });
+
+  }
+
+  /**
+   * Unsubscribe all the service methods
+   */
+  ngOnDestroy() {
+    if (this.incidentSub)
+      this.incidentSub.unsubscribe();
+    if (this.complianceSub)
+      this.complianceSub.unsubscribe();
+    if (this.shortageSub)
+      this.shortageSub.unsubscribe();
+    if (this.filteredIncidentSub)
+      this.filteredIncidentSub.unsubscribe();
+    if (this.peopleFinderSub)
+      this.peopleFinderSub.unsubscribe();
+    if (this.pfAccessTokenSub)
+      this.pfAccessTokenSub.unsubscribe();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;physicalsecurity-errorscomponent&gt;&lt;/physicalsecurity-errorscomponent&gt;
+&lt;physicalsecurity-sidenav&gt;&lt;/physicalsecurity-sidenav&gt;
+&lt;div class&#x3D;&quot;dashboard-area&quot;&gt;
+  &lt;div class&#x3D;&quot;custom-header&quot;&gt;
+    &lt;div class&#x3D;&quot;search-bar-container&quot;&gt;
+      &lt;physicalsecurity-firebasenotification&gt;&lt;/physicalsecurity-firebasenotification&gt;
+      &lt;div class&#x3D;&quot;search-bar&quot;&gt;
+        &lt;clr-icon shape&#x3D;&quot;search&quot; size&#x3D;&quot;18&quot; class&#x3D;&quot;is-inverse search-icon&quot;&gt;&lt;/clr-icon&gt;
+        &lt;div class&#x3D;&quot;keyword-wrapper&quot;&gt;
+          &lt;physicalsecurity-menusearch&gt;&lt;/physicalsecurity-menusearch&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;header-btn-wrapper&quot; (click)&#x3D;&quot;openBroadcastModal()&quot;&gt;
+        &lt;img src&#x3D;&quot;assets/images/group.svg&quot; class&#x3D;&quot;header-btn header-btn-svg&quot; alt&#x3D;&quot;&quot;&gt;
+
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;header-btn-wrapper&quot;&gt;
+        &lt;div class&#x3D;&quot;header-btn&quot; (click)&#x3D;&quot;openBriefingModal()&quot;&gt;
+          &lt;clr-icon shape&#x3D;&quot;details&quot; size&#x3D;&quot;22&quot; class&#x3D;&quot;header-btn-icon is-inverse is-solid&quot;&gt;&lt;/clr-icon&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;header-btn-wrapper notif-par-wrapper&quot;&gt;
+        &lt;div class&#x3D;&quot;header-btn&quot; (click)&#x3D;&quot;showNotifications($event);&quot; (document:click)&#x3D;&quot;hideNotifications();&quot;&gt;
+          &lt;clr-icon shape&#x3D;&quot;bell&quot; size&#x3D;&quot;22&quot; class&#x3D;&quot;header-btn-icon is-inverse is-solid&quot;&gt;&lt;/clr-icon&gt;
+          &lt;span *ngIf&#x3D;&quot;hideBadge&quot; class&#x3D;&quot;badge badge-warning notif-badge&quot;&gt;{{notificationCount}}&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;physicalsecurity-notifications [notificationSubject]&#x3D;&quot;notificationSubject&quot; (notifCount)&#x3D;&quot;getNotificationsCount($event)&quot;&gt;&lt;/physicalsecurity-notifications&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;h1 class&#x3D;&quot;header-text&quot;&gt;{{welcomeText}}, {{userData?.displayName||&quot;Abhishek Joshi&quot;}}
+    &lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;main-container&quot;&gt;
+    &lt;div class&#x3D;&quot;dashboard-overview clr-row&quot;&gt;
+      &lt;div class&#x3D;&quot;clr-col-3&quot;&gt;
+        &lt;div class&#x3D;&quot;card overview-card&quot;&gt;
+          &lt;div class&#x3D;&quot;card-block&quot;&gt;
+            &lt;div class&#x3D;&quot;card-value&quot;&gt;10&lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-data-1&quot; title&#x3D;&quot;{{openIncidentsText}}&quot; l10nTranslate&gt;openIncidentsText&lt;/div&gt;
+            &lt;div class&#x3D;&quot;Line-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-data-2&quot; l10nTranslate&gt;6 officesText&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;clr-col-3&quot;&gt;
+        &lt;div class&#x3D;&quot;card overview-card&quot;&gt;
+          &lt;div class&#x3D;&quot;card-block&quot;&gt;
+            &lt;div class&#x3D;&quot;card-value&quot;&gt;21&lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-data-1&quot; title&#x3D;&quot;{{resourceShortageText}}&quot; l10nTranslate&gt;resourceShortageText&lt;/div&gt;
+            &lt;div class&#x3D;&quot;Line-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-data-2&quot; l10nTranslate&gt;4 officesText&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;clr-col-3&quot;&gt;
+        &lt;div class&#x3D;&quot;card overview-card&quot;&gt;
+          &lt;div class&#x3D;&quot;card-block&quot;&gt;
+            &lt;div class&#x3D;&quot;card-value&quot;&gt;12&lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-data-1&quot; title&#x3D;&quot;{{staffCompTasksText}}&quot; l10nTranslate&gt;staffCompTasksText&lt;/div&gt;
+            &lt;div class&#x3D;&quot;Line-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-data-2&quot; l10nTranslate&gt;6 officesText&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;clr-col-3&quot;&gt;
+        &lt;div class&#x3D;&quot;card overview-card&quot;&gt;
+          &lt;div class&#x3D;&quot;card-block&quot;&gt;
+            &lt;div class&#x3D;&quot;card-value&quot;&gt;7&lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-data-1&quot; title&#x3D;&quot;{{newsFeedText}}&quot; l10nTranslate&gt;newsFeedText&lt;/div&gt;
+            &lt;div class&#x3D;&quot;Line-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-data-2&quot; l10nTranslate&gt;2 officesText&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;incidents-table&quot;&gt;
+      &lt;div class&#x3D;&quot;table-container&quot; *ngIf&#x3D;&quot;incidentsData&quot;&gt;
+        &lt;div class&#x3D;&quot;table-header&quot;&gt;
+          &lt;h2&gt;&lt;span l10nTranslate&gt;openIncidentsText&lt;/span&gt; ({{incidentsData.totalIncidents}})&lt;/h2&gt;
+          &lt;div class&#x3D;&quot;dropdown&quot;&gt;
+            &lt;clr-dropdown&gt;
+              &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-outline-primary dropdown-btn&quot; clrDropdownTrigger l10nTranslate&gt;
+                filterByTimePeriodText
+                &lt;clr-icon shape&#x3D;&quot;caret down&quot;&gt;&lt;/clr-icon&gt;
+              &lt;/button&gt;
+              &lt;clr-dropdown-menu clrPosition&#x3D;&quot;bottom-left&quot; *clrIfOpen&gt;
+                &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;allTimeText&lt;/button&gt;
+                &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;todayText&lt;/button&gt;
+                &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;thisWeekText&lt;/button&gt;
+                &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;thisMonthText&lt;/button&gt;
+              &lt;/clr-dropdown-menu&gt;
+            &lt;/clr-dropdown&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;tabs&quot; *ngIf&#x3D;&quot;regionList.length&quot;&gt;
+            &lt;clr-tabs&gt;
+              &lt;clr-tab *ngFor&#x3D;&quot;let region of regionList&quot;&gt;
+                &lt;button clrTabLink id&#x3D;&quot;link1&quot;&gt;{{region}} ({{incidentsData.incidentsRegionWise[region]}})&lt;/button&gt;
+              &lt;/clr-tab&gt;
+            &lt;/clr-tabs&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;table-body&quot;&gt;
+          &lt;div class&#x3D;&quot;donut-chart-container&quot;&gt;
+            &lt;div&gt;
+              &lt;physicalsecurity-custom-chart [clearText]&#x3D;&quot;clearText&quot; [rightAlign]&#x3D;&quot;rightAlign&quot; [chartid]&#x3D;&quot;chartid&quot;
+                [addClearBtn]&#x3D;&quot;addClearBtn&quot; [legendColors]&#x3D;&quot;legendColors&quot; [chartOptions]&#x3D;&quot;options&quot; [legendData]&#x3D;&quot;incidentTypeList&quot;
+                (legendClickCallBack)&#x3D;&quot;legendClick($event)&quot; (clearClickCallBack)&#x3D;&quot;clearFunction()&quot;&gt;
+              &lt;/physicalsecurity-custom-chart&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;table-data&quot;&gt;
+            &lt;clr-datagrid&gt;
+              &lt;clr-dg-column l10nTranslate&gt;incidentTypeText&lt;/clr-dg-column&gt;
+              &lt;clr-dg-column l10nTranslate&gt;dateText&lt;/clr-dg-column&gt;
+              &lt;clr-dg-column [clrDgField]&#x3D;&quot;&#x27;officeLocation&#x27;&quot; l10nTranslate&gt;officeLocationText&lt;/clr-dg-column&gt;
+              &lt;clr-dg-column l10nTranslate&gt;regionText&lt;/clr-dg-column&gt;
+              &lt;clr-dg-column l10nTranslate&gt;priorityText&lt;/clr-dg-column&gt;
+
+              &lt;clr-dg-row *clrDgItems&#x3D;&quot;let incident of incidentsData.data&quot;&gt;
+                &lt;clr-dg-cell&gt;{{incident.type}}&lt;/clr-dg-cell&gt;
+                &lt;clr-dg-cell&gt;{{incident.date}}&lt;/clr-dg-cell&gt;
+                &lt;clr-dg-cell&gt;{{incident.officeLocation}}&lt;/clr-dg-cell&gt;
+                &lt;clr-dg-cell&gt;{{incident.region}}&lt;/clr-dg-cell&gt;
+                &lt;clr-dg-cell (mouseover)&#x3D;&quot;incident.hover&#x3D;true&quot; (mouseout)&#x3D;&quot;incident.hover&#x3D;false&quot; style&#x3D;&quot;cursor:pointer&quot;&gt;
+                  &lt;div *ngIf&#x3D;&quot;!incident.hover&quot;&gt;{{incident.priority}}&lt;/div&gt;
+                  &lt;div *ngIf&#x3D;&quot;incident.hover&quot;&gt;
+                    &lt;span&gt;
+                      &lt;clr-icon shape&#x3D;&quot;eye&quot; class&#x3D;&quot;is-solid&quot; style&#x3D;&quot;height:22px; width:36px;&quot; (click)&#x3D;&quot;openIncidentModal(incident)&quot;&gt;&lt;/clr-icon&gt;
+                    &lt;/span&gt;
+                    &lt;span&gt;
+                      &lt;clr-icon shape&#x3D;&quot;phone-handset&quot; class&#x3D;&quot;is-solid&quot; size&#x3D;&quot;18&quot;&gt;&lt;/clr-icon&gt;
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/clr-dg-cell&gt;
+              &lt;/clr-dg-row&gt;
+
+              &lt;clr-dg-footer&gt;
+                &lt;clr-dg-pagination #pagination [clrDgPageSize]&#x3D;&quot;10&quot; [clrDgTotalItems]&#x3D;&quot;incidentsData.data.length&quot;&gt;
+                  {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+                  &lt;span l10nTranslate&gt;ofText&lt;/span&gt; {{pagination.totalItems}} &lt;span l10nTranslate&gt;incidentsText&lt;/span&gt; 
+                &lt;/clr-dg-pagination&gt;
+              &lt;/clr-dg-footer&gt;
+            &lt;/clr-datagrid&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;physicalsecurity-incident-details [showIncidentModal]&#x3D;&quot;incidentDetailsModal&quot; (closeIncidentModal)&#x3D;&quot;incidentDetailsModal&#x3D;false;&quot;&gt;&lt;/physicalsecurity-incident-details&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;shortage-table&quot;&gt;
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;table-container&quot; *ngIf&#x3D;&quot;resourceShortageData&quot;&gt;
+          &lt;div class&#x3D;&quot;table-header&quot;&gt;
+            &lt;div class&#x3D;&quot;roaster-header&quot;&gt;
+              &lt;h2 &gt;&lt;span l10nTranslate&gt;presentResourceShortageText&lt;/span&gt; (12) &lt;/h2&gt;
+              &lt;div class&#x3D;&quot;dropdown&quot;&gt;
+                &lt;clr-dropdown&gt;
+                  &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-outline-primary dropdown-btn&quot; clrDropdownTrigger l10nTranslate&gt;
+                    allOfficeLocationsText
+                    &lt;clr-icon shape&#x3D;&quot;caret down&quot;&gt;&lt;/clr-icon&gt;
+                  &lt;/button&gt;
+                  &lt;clr-dropdown-menu clrPosition&#x3D;&quot;bottom-left&quot; *clrIfOpen&gt;
+                    &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;allTimeText&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;todayText&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;thisWeekText&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;thisMonthText&lt;/button&gt;
+                  &lt;/clr-dropdown-menu&gt;
+                &lt;/clr-dropdown&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;tabs&quot;&gt;
+              &lt;clr-tabs&gt;
+                &lt;clr-tab *ngFor&#x3D;&quot;let region of regions&quot;&gt;
+                  &lt;button clrTabLink id&#x3D;&quot;link1&quot;&gt;{{region}}
+                    ({{resourceShortageData.regionWise[region]}})&lt;/button&gt;
+                &lt;/clr-tab&gt;
+              &lt;/clr-tabs&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;table-body&quot;&gt;
+            &lt;div class&#x3D;&quot;table-data&quot;&gt;
+              &lt;clr-datagrid&gt;
+                &lt;clr-dg-column l10nTranslate&gt;officeLocationText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-column l10nTranslate&gt;shiftText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-column l10nTranslate&gt;timeElapsedText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-column l10nTranslate&gt;totalDeployedText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-column l10nTranslate&gt;shortageCountText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-row *clrDgItems&#x3D;&quot;let shortageData of resourceShortageData.data&quot;&gt;
+                  &lt;clr-dg-cell&gt;&lt;img alt&#x3D;&quot;&quot; class&#x3D;&quot;profile-picture&quot; src&#x3D;&quot;assets/images/building-image.png&quot;&gt;{{shortageData.officeLocation}}&lt;/clr-dg-cell&gt;
+                  &lt;clr-dg-cell&gt;{{shortageData.shift}}&lt;/clr-dg-cell&gt;
+                  &lt;clr-dg-cell&gt;{{shortageData.timeElapsed}}&lt;/clr-dg-cell&gt;
+                  &lt;clr-dg-cell&gt;{{shortageData.totalDeployed.SSG+shortageData.totalDeployed.SG}}
+                    ({{shortageData.totalDeployed.SSG}} SSG &amp;bull; {{shortageData.totalDeployed.SG}} SG)&lt;/clr-dg-cell&gt;
+                  &lt;clr-dg-cell&gt;{{shortageData.shortage.SSG+shortageData.shortage.SG}}
+                    ({{shortageData.shortage.SSG}} SSG &amp;bull; {{shortageData.shortage.SG}} SG)&lt;/clr-dg-cell&gt;
+                &lt;/clr-dg-row&gt;
+
+                &lt;clr-dg-footer&gt;
+                  &lt;clr-dg-pagination #pagination [clrDgPageSize]&#x3D;&quot;10&quot; [clrDgTotalItems]&#x3D;&quot;staffComplianceData.data.length&quot;&gt;
+                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+                    &lt;span l10nTranslate&gt;ofText&lt;/span&gt; {{pagination.totalItems}}
+                  &lt;/clr-dg-pagination&gt;
+                &lt;/clr-dg-footer&gt;
+              &lt;/clr-datagrid&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;compliance-roaster&quot;&gt;
+      &lt;div class&#x3D;&quot;card&quot;&gt;
+        &lt;div class&#x3D;&quot;table-container&quot; *ngIf&#x3D;&quot;staffComplianceData&quot;&gt;
+          &lt;div class&#x3D;&quot;table-header&quot;&gt;
+            &lt;div class&#x3D;&quot;roaster-header&quot;&gt;
+              &lt;h2&gt;&lt;span l10nTranslate&gt;staffCompTasksText&lt;/span&gt; (12) &lt;/h2&gt;
+              &lt;div class&#x3D;&quot;dropdown&quot;&gt;
+                &lt;clr-dropdown&gt;
+                  &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-outline-primary dropdown-btn&quot; clrDropdownTrigger l10nTranslate&gt;
+                    filterByTimePeriodText
+                    &lt;clr-icon shape&#x3D;&quot;caret down&quot;&gt;&lt;/clr-icon&gt;
+                  &lt;/button&gt;
+                  &lt;clr-dropdown-menu clrPosition&#x3D;&quot;bottom-left&quot; *clrIfOpen&gt;
+                    &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;allTimeText&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;todayText&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;thisWeekText&lt;/button&gt;
+                    &lt;button type&#x3D;&quot;button&quot; clrDropdownItem l10nTranslate&gt;thisMonthText&lt;/button&gt;
+                  &lt;/clr-dropdown-menu&gt;
+                &lt;/clr-dropdown&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;tabs&quot; *ngIf&#x3D;&quot;complianceDataRegions.length&quot;&gt;
+              &lt;clr-tabs&gt;
+                &lt;clr-tab *ngFor&#x3D;&quot;let region of complianceDataRegions&quot;&gt;
+                  &lt;button clrTabLink id&#x3D;&quot;link1&quot;&gt;{{region}}
+                    ({{staffComplianceData.complianceRegions[region]}})&lt;/button&gt;
+                &lt;/clr-tab&gt;
+              &lt;/clr-tabs&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;table-body&quot;&gt;
+            &lt;div class&#x3D;&quot;table-data&quot;&gt;
+              &lt;clr-datagrid&gt;
+                &lt;clr-dg-column l10nTranslate&gt;guardNameText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-column l10nTranslate&gt;taskTypeText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-column l10nTranslate&gt;officeLocationText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-column l10nTranslate&gt;regionText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-column l10nTranslate&gt;statusText&lt;/clr-dg-column&gt;
+                &lt;clr-dg-row *clrDgItems&#x3D;&quot;let staffData of staffComplianceData.data&quot;&gt;
+                  &lt;clr-dg-cell&gt;&lt;img alt&#x3D;&quot;&quot; class&#x3D;&quot;profile-picture&quot; src&#x3D;&quot;assets/images/test1.png&quot;&gt;{{staffData.guardName}}&lt;/clr-dg-cell&gt;
+                  &lt;clr-dg-cell&gt;{{staffData.taskType}}&lt;/clr-dg-cell&gt;
+                  &lt;clr-dg-cell&gt;{{staffData.officeLocation}}&lt;/clr-dg-cell&gt;
+                  &lt;clr-dg-cell&gt;{{staffData.region}}&lt;/clr-dg-cell&gt;
+                  &lt;clr-dg-cell&gt;{{staffData.status}}&lt;/clr-dg-cell&gt;
+                &lt;/clr-dg-row&gt;
+
+                &lt;clr-dg-footer&gt;
+                  &lt;clr-dg-pagination #pagination [clrDgPageSize]&#x3D;&quot;10&quot; [clrDgTotalItems]&#x3D;&quot;staffComplianceData.data.length&quot;&gt;
+                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+                    &lt;span l10nTranslate&gt;ofText&lt;/span&gt; {{pagination.totalItems}}
+                  &lt;/clr-dg-pagination&gt;
+                &lt;/clr-dg-footer&gt;
+              &lt;/clr-datagrid&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;physicalsecurity-event-timeline&gt;&lt;/physicalsecurity-event-timeline&gt;
+    &lt;/div&gt;
+    &lt;physicalsecurity-briefing-report [openBriefingModalSubject]&#x3D;&quot;openBriefingModalSubject&quot;&gt;&lt;/physicalsecurity-briefing-report&gt;
+    &lt;physicalsecurity-broadcast-location [openBroadcastModalSubject]&#x3D;&quot;openBroadcastModalSubject&quot;&gt;&lt;/physicalsecurity-broadcast-location&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./dashboard.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../app-styles/variables.scss&quot;;
+@import &quot;../../app-styles/timeline.scss&quot;;
+@import &quot;../../app-styles/mixins.scss&quot;;
+@import &quot;../../../styles.scss&quot;;
+
+
+.dashboard-area {
+  .custom-header {
+    margin-left: 265px;
+    height: 243px;
+    background-color: $lighten-dark-navyblue;
+    padding: 35px 25px 0px 25px;
+    .search-bar-container {
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      .search-bar {
+        height: 42px;
+        border-radius: 21px;
+        border: solid 1px rgba(255, 255, 255, 0.8);
+        padding: 7px 28px;
+        -webkit-flex: 1; /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */
+        flex: 1;
+        margin-right: 73px;
+        display: flex;
+        align-items: center;
+        .search-icon {
+          -webkit-flex-basis: 20px; /* Safari 6.1+ */
+          -ms-flex-basis: 20px; /* IE 10 */
+          flex-basis: 20px;
+        }
+        .keyword-wrapper {
+          max-width: 100%;
+          position: relative;
+          flex-basis: 100%;
+          .search-input-wrapper {
+            width: 100%;
+            .search-input {
+              width: 100%;
+              &amp;:focus {
+                width: 100%;
+                border-bottom: 0;
+                background: transparent;
+              }
+            }
+          }
+          .results-wrapper {
+            top: 40px;
+          }
+        }
+      }
+      .header-btn-wrapper {
+        -webkit-flex-basis: 69px; /* Safari 6.1+ */
+        -ms-flex-basis: 69px; /* IE 10 */
+        flex-basis: 69px;
+        padding-left: 27px;
+        .header-btn {
+          cursor: pointer;
+          height: 42px;
+          width: 42px;
+          border-radius: 21px;
+          border: solid 1px $white-color;
+          .header-btn-icon {
+            margin: 9px 9px;
+          }
+          &amp;.header-btn-svg {
+            border: none;
+          }
+          .notif-badge {
+            position: absolute;
+            top: -5px;
+            right: -15px;
+            padding: 10px 10px;
+            border-radius: 50%;
+          }
+        }
+      }
+      .notif-par-wrapper {
+        position: relative;
+      }
+    }
+    .header-text {
+      margin-top: 27px;
+      font-size: 32px;
+      font-weight: 500;
+      color: $twothreeeightlight-grey ;
+    }
+  }
+  .main-container {
+    font-family: &quot;Metropolis&quot;;
+    margin-left: 265px;
+    padding: 37px 25px 0px 25px;
+    background-color: $twoFouronelight-grey;
+    height: auto;
+    .dashboard-overview {
+      margin-top: -125px;
+      margin-bottom: 30px;
+      min-height: 170px;
+      .overview-card {
+        border-left: 5px solid $cerulean-blue;
+        cursor: pointer;
+        .card-value {
+          font-size: 40px;
+          font-weight: 500;
+          color: $cerulean-blue;
+          line-height: 50px;
+          text-align: center;
+        }
+        .card-data-1 {
+          font-size: 18px;
+          font-weight: 500;
+          color: $green-red-grey;
+          text-align: center;
+          max-width: inherit;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .Line-3 {
+          width: 180px;
+          height: 1px;
+          border-style: solid;
+          border-width: 1px;
+          border-image-source: linear-gradient(
+            to left,
+            rgba(255, 255, 255, 0),
+            $green-red-grey 50%,
+            rgba(255, 255, 255, 0)
+          );
+          border-image-slice: 1;
+          margin: 9px auto 6px auto;
+        }
+        .card-data-2 {
+          font-size: 15px;
+          text-align: center;
+          color: $green-red-grey
+        }
+      }
+    }
+    .incidents-table {
+      @include incident-table();
+    }
+    .shortage-table {
+      @include staffHeaderDashboard();
+      .profile-picture {
+        vertical-align: middle;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 0 30px;
+      }
+    }
+
+    .compliance-roaster {
+      @include staffHeaderDashboard();
+      .profile-picture {
+        vertical-align: middle;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 0 30px;
+      }
+    }
+
+    .timeline-feed-container {
+      margin-bottom: 1rem;
+      .timeline-date-oper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .timeline-caret-btns {
+          width: 12%;
+          display: flex;
+          justify-content: space-between;
+          .timeline-caret-prev,
+          .timeline-caret-next {
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            clr-icon {
+              width: 12px;
+              height: 12px;
+              position: relative;
+              transform: rotate(-93deg);
+              bottom: 1px;
+            }
+          }
+          .timeline-caret-next {
+            clr-icon {
+              transform: rotate(87deg);
+              position: relative;
+              left: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><physicalsecurity-errorscomponent></physicalsecurity-errorscomponent><physicalsecurity-sidenav></physicalsecurity-sidenav><div class="dashboard-area">  <div class="custom-header">    <div class="search-bar-container">      <physicalsecurity-firebasenotification></physicalsecurity-firebasenotification>      <div class="search-bar">        <clr-icon shape="search" size="18" class="is-inverse search-icon"></clr-icon>        <div class="keyword-wrapper">          <physicalsecurity-menusearch></physicalsecurity-menusearch>        </div>      </div>      <div class="header-btn-wrapper" (click)="openBroadcastModal()">        <img src="assets/images/group.svg" class="header-btn header-btn-svg" alt="">      </div>      <div class="header-btn-wrapper">        <div class="header-btn" (click)="openBriefingModal()">          <clr-icon shape="details" size="22" class="header-btn-icon is-inverse is-solid"></clr-icon>        </div>      </div>      <div class="header-btn-wrapper notif-par-wrapper">        <div class="header-btn" (click)="showNotifications($event);" (document:click)="hideNotifications();">          <clr-icon shape="bell" size="22" class="header-btn-icon is-inverse is-solid"></clr-icon>          <span *ngIf="hideBadge" class="badge badge-warning notif-badge">{{notificationCount}}</span>        </div>        <physicalsecurity-notifications [notificationSubject]="notificationSubject" (notifCount)="getNotificationsCount($event)"></physicalsecurity-notifications>      </div>    </div>    <h1 class="header-text">{{welcomeText}}, {{userData?.displayName||"Abhishek Joshi"}}    </h1>  </div>  <div class="main-container">    <div class="dashboard-overview clr-row">      <div class="clr-col-3">        <div class="card overview-card">          <div class="card-block">            <div class="card-value">10</div>            <div class="card-data-1" title="{{openIncidentsText}}" l10nTranslate>openIncidentsText</div>            <div class="Line-3"></div>            <div class="card-data-2" l10nTranslate>6 officesText</div>          </div>        </div>      </div>      <div class="clr-col-3">        <div class="card overview-card">          <div class="card-block">            <div class="card-value">21</div>            <div class="card-data-1" title="{{resourceShortageText}}" l10nTranslate>resourceShortageText</div>            <div class="Line-3"></div>            <div class="card-data-2" l10nTranslate>4 officesText</div>          </div>        </div>      </div>      <div class="clr-col-3">        <div class="card overview-card">          <div class="card-block">            <div class="card-value">12</div>            <div class="card-data-1" title="{{staffCompTasksText}}" l10nTranslate>staffCompTasksText</div>            <div class="Line-3"></div>            <div class="card-data-2" l10nTranslate>6 officesText</div>          </div>        </div>      </div>      <div class="clr-col-3">        <div class="card overview-card">          <div class="card-block">            <div class="card-value">7</div>            <div class="card-data-1" title="{{newsFeedText}}" l10nTranslate>newsFeedText</div>            <div class="Line-3"></div>            <div class="card-data-2" l10nTranslate>2 officesText</div>          </div>        </div>      </div>    </div>    <div class="incidents-table">      <div class="table-container" *ngIf="incidentsData">        <div class="table-header">          <h2><span l10nTranslate>openIncidentsText</span> ({{incidentsData.totalIncidents}})</h2>          <div class="dropdown">            <clr-dropdown>              <button type="button" class="btn btn-outline-primary dropdown-btn" clrDropdownTrigger l10nTranslate>                filterByTimePeriodText                <clr-icon shape="caret down"></clr-icon>              </button>              <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>                <button type="button" clrDropdownItem l10nTranslate>allTimeText</button>                <button type="button" clrDropdownItem l10nTranslate>todayText</button>                <button type="button" clrDropdownItem l10nTranslate>thisWeekText</button>                <button type="button" clrDropdownItem l10nTranslate>thisMonthText</button>              </clr-dropdown-menu>            </clr-dropdown>          </div>          <div class="tabs" *ngIf="regionList.length">            <clr-tabs>              <clr-tab *ngFor="let region of regionList">                <button clrTabLink id="link1">{{region}} ({{incidentsData.incidentsRegionWise[region]}})</button>              </clr-tab>            </clr-tabs>          </div>        </div>        <div class="table-body">          <div class="donut-chart-container">            <div>              <physicalsecurity-custom-chart [clearText]="clearText" [rightAlign]="rightAlign" [chartid]="chartid"                [addClearBtn]="addClearBtn" [legendColors]="legendColors" [chartOptions]="options" [legendData]="incidentTypeList"                (legendClickCallBack)="legendClick($event)" (clearClickCallBack)="clearFunction()">              </physicalsecurity-custom-chart>            </div>          </div>          <div class="table-data">            <clr-datagrid>              <clr-dg-column l10nTranslate>incidentTypeText</clr-dg-column>              <clr-dg-column l10nTranslate>dateText</clr-dg-column>              <clr-dg-column [clrDgField]="\'officeLocation\'" l10nTranslate>officeLocationText</clr-dg-column>              <clr-dg-column l10nTranslate>regionText</clr-dg-column>              <clr-dg-column l10nTranslate>priorityText</clr-dg-column>              <clr-dg-row *clrDgItems="let incident of incidentsData.data">                <clr-dg-cell>{{incident.type}}</clr-dg-cell>                <clr-dg-cell>{{incident.date}}</clr-dg-cell>                <clr-dg-cell>{{incident.officeLocation}}</clr-dg-cell>                <clr-dg-cell>{{incident.region}}</clr-dg-cell>                <clr-dg-cell (mouseover)="incident.hover=true" (mouseout)="incident.hover=false" style="cursor:pointer">                  <div *ngIf="!incident.hover">{{incident.priority}}</div>                  <div *ngIf="incident.hover">                    <span>                      <clr-icon shape="eye" class="is-solid" style="height:22px; width:36px;" (click)="openIncidentModal(incident)"></clr-icon>                    </span>                    <span>                      <clr-icon shape="phone-handset" class="is-solid" size="18"></clr-icon>                    </span>                  </div>                </clr-dg-cell>              </clr-dg-row>              <clr-dg-footer>                <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="incidentsData.data.length">                  {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}                  <span l10nTranslate>ofText</span> {{pagination.totalItems}} <span l10nTranslate>incidentsText</span>                 </clr-dg-pagination>              </clr-dg-footer>            </clr-datagrid>          </div>        </div>        <physicalsecurity-incident-details [showIncidentModal]="incidentDetailsModal" (closeIncidentModal)="incidentDetailsModal=false;"></physicalsecurity-incident-details>      </div>    </div>    <div class="shortage-table">      <div class="card">        <div class="table-container" *ngIf="resourceShortageData">          <div class="table-header">            <div class="roaster-header">              <h2 ><span l10nTranslate>presentResourceShortageText</span> (12) </h2>              <div class="dropdown">                <clr-dropdown>                  <button type="button" class="btn btn-outline-primary dropdown-btn" clrDropdownTrigger l10nTranslate>                    allOfficeLocationsText                    <clr-icon shape="caret down"></clr-icon>                  </button>                  <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>                    <button type="button" clrDropdownItem l10nTranslate>allTimeText</button>                    <button type="button" clrDropdownItem l10nTranslate>todayText</button>                    <button type="button" clrDropdownItem l10nTranslate>thisWeekText</button>                    <button type="button" clrDropdownItem l10nTranslate>thisMonthText</button>                  </clr-dropdown-menu>                </clr-dropdown>              </div>            </div>            <div class="tabs">              <clr-tabs>                <clr-tab *ngFor="let region of regions">                  <button clrTabLink id="link1">{{region}}                    ({{resourceShortageData.regionWise[region]}})</button>                </clr-tab>              </clr-tabs>            </div>          </div>          <div class="table-body">            <div class="table-data">              <clr-datagrid>                <clr-dg-column l10nTranslate>officeLocationText</clr-dg-column>                <clr-dg-column l10nTranslate>shiftText</clr-dg-column>                <clr-dg-column l10nTranslate>timeElapsedText</clr-dg-column>                <clr-dg-column l10nTranslate>totalDeployedText</clr-dg-column>                <clr-dg-column l10nTranslate>shortageCountText</clr-dg-column>                <clr-dg-row *clrDgItems="let shortageData of resourceShortageData.data">                  <clr-dg-cell><img alt="" class="profile-picture" src="assets/images/building-image.png">{{shortageData.officeLocation}}</clr-dg-cell>                  <clr-dg-cell>{{shortageData.shift}}</clr-dg-cell>                  <clr-dg-cell>{{shortageData.timeElapsed}}</clr-dg-cell>                  <clr-dg-cell>{{shortageData.totalDeployed.SSG+shortageData.totalDeployed.SG}}                    ({{shortageData.totalDeployed.SSG}} SSG &bull; {{shortageData.totalDeployed.SG}} SG)</clr-dg-cell>                  <clr-dg-cell>{{shortageData.shortage.SSG+shortageData.shortage.SG}}                    ({{shortageData.shortage.SSG}} SSG &bull; {{shortageData.shortage.SG}} SG)</clr-dg-cell>                </clr-dg-row>                <clr-dg-footer>                  <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="staffComplianceData.data.length">                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}                    <span l10nTranslate>ofText</span> {{pagination.totalItems}}                  </clr-dg-pagination>                </clr-dg-footer>              </clr-datagrid>            </div>          </div>        </div>      </div>    </div>    <div class="compliance-roaster">      <div class="card">        <div class="table-container" *ngIf="staffComplianceData">          <div class="table-header">            <div class="roaster-header">              <h2><span l10nTranslate>staffCompTasksText</span> (12) </h2>              <div class="dropdown">                <clr-dropdown>                  <button type="button" class="btn btn-outline-primary dropdown-btn" clrDropdownTrigger l10nTranslate>                    filterByTimePeriodText                    <clr-icon shape="caret down"></clr-icon>                  </button>                  <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>                    <button type="button" clrDropdownItem l10nTranslate>allTimeText</button>                    <button type="button" clrDropdownItem l10nTranslate>todayText</button>                    <button type="button" clrDropdownItem l10nTranslate>thisWeekText</button>                    <button type="button" clrDropdownItem l10nTranslate>thisMonthText</button>                  </clr-dropdown-menu>                </clr-dropdown>              </div>            </div>            <div class="tabs" *ngIf="complianceDataRegions.length">              <clr-tabs>                <clr-tab *ngFor="let region of complianceDataRegions">                  <button clrTabLink id="link1">{{region}}                    ({{staffComplianceData.complianceRegions[region]}})</button>                </clr-tab>              </clr-tabs>            </div>          </div>          <div class="table-body">            <div class="table-data">              <clr-datagrid>                <clr-dg-column l10nTranslate>guardNameText</clr-dg-column>                <clr-dg-column l10nTranslate>taskTypeText</clr-dg-column>                <clr-dg-column l10nTranslate>officeLocationText</clr-dg-column>                <clr-dg-column l10nTranslate>regionText</clr-dg-column>                <clr-dg-column l10nTranslate>statusText</clr-dg-column>                <clr-dg-row *clrDgItems="let staffData of staffComplianceData.data">                  <clr-dg-cell><img alt="" class="profile-picture" src="assets/images/test1.png">{{staffData.guardName}}</clr-dg-cell>                  <clr-dg-cell>{{staffData.taskType}}</clr-dg-cell>                  <clr-dg-cell>{{staffData.officeLocation}}</clr-dg-cell>                  <clr-dg-cell>{{staffData.region}}</clr-dg-cell>                  <clr-dg-cell>{{staffData.status}}</clr-dg-cell>                </clr-dg-row>                <clr-dg-footer>                  <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="staffComplianceData.data.length">                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}                    <span l10nTranslate>ofText</span> {{pagination.totalItems}}                  </clr-dg-pagination>                </clr-dg-footer>              </clr-datagrid>            </div>          </div>        </div>      </div>      <physicalsecurity-event-timeline></physicalsecurity-event-timeline>    </div>    <physicalsecurity-briefing-report [openBriefingModalSubject]="openBriefingModalSubject"></physicalsecurity-briefing-report>    <physicalsecurity-broadcast-location [openBroadcastModalSubject]="openBroadcastModalSubject"></physicalsecurity-broadcast-location>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddEventComponent', 'selector': 'physicalsecurity-add-event'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AttendanceComponent', 'selector': 'app-attendance'},{'name': 'BriefingReportComponent', 'selector': 'physicalsecurity-briefing-report'},{'name': 'BroadCastLocationComponent', 'selector': 'physicalsecurity-broadcast-location'},{'name': 'CabTrackingComponent', 'selector': 'app-cab-tracking'},{'name': 'CustomChartComponent', 'selector': 'physicalsecurity-custom-chart'},{'name': 'DashboardComponent', 'selector': 'physicalSecurity-dashboard'},{'name': 'ErrorsComponent', 'selector': 'physicalsecurity-errorscomponent'},{'name': 'EvenTimeLineComponent', 'selector': 'physicalsecurity-event-timeline'},{'name': 'FireBaseNotificationComponent', 'selector': 'physicalsecurity-firebasenotification'},{'name': 'IncidentDetailsComponent', 'selector': 'physicalsecurity-incident-details'},{'name': 'LocationDetailsComponent', 'selector': 'physicalSecurity-location-details'},{'name': 'LoginComponent', 'selector': 'physicalsecurity-login'},{'name': 'LoginComponent', 'selector': 'physicalsecurity-login'},{'name': 'MaterialComponent', 'selector': 'app-material'},{'name': 'MenuSearchComponent', 'selector': 'physicalsecurity-menusearch'},{'name': 'NotificationsComponent', 'selector': 'physicalsecurity-notifications'},{'name': 'OccurrenceComponent', 'selector': 'app-occurrence'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'PageNotFoundComponent', 'selector': 'physicalsecurity-page-not-found'},{'name': 'PhysicalSecurityComponent', 'selector': 'app-physicalsecurity'},{'name': 'PopularLocationsComponent', 'selector': 'physicalsecurity-popular-locations'},{'name': 'ReportsComponent', 'selector': 'app-reports'},{'name': 'SideNavComponent', 'selector': 'physicalsecurity-sidenav'},{'name': 'StaffComponent', 'selector': 'app-staff'},{'name': 'VehicleParkingComponent', 'selector': 'app-vehicle-parking'},{'name': 'ViewProfileComponent', 'selector': 'physicalsecurity-viewprofile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DashboardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DashboardComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

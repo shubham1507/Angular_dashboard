@@ -1,0 +1,175 @@
+{
+    "totalIncidents": "28",
+    "pageSize": 10,
+    "startIndex": 20,
+    "sortBy": "officeLocation",
+    "reverseSort": false,
+    "incidentsRegionWise": {
+        "ALL REGIONS": 28,
+        "APAC": 15,
+        "AMER": 9,
+        "EMEA": 5,
+        "INDIA": 6,
+        "PALO ALTO": 3
+    },
+    "incidentTypes": {
+        "Missing": 10,
+        "Medical": 20
+    },
+    "data": [
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Missing",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Missing",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "closed",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Magnum, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "normal",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Missing",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "15 oct",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "low",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "15 oct",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        },
+        {
+            "type": "Medical",
+            "date": "Oct 12",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "India",
+            "priority": "High",
+            "status": "open",
+            "floor": "3",
+            "area": "Washroom",
+            "time": "09:45 AM"
+        }
+    ]
+}

@@ -1,0 +1,269 @@
+<div class="location-tab-content">
+  <div class="staff-management">
+    <shift-details></shift-details>
+    <div class="staff-cards clr-row">
+      <div class="clr-col-4">
+        <div class="card item-card">
+          <div class="card-block">
+            <div class="card-value">{{guardCount}}</div>
+            <div class="card-data-1" title="{{secGuardsText}}" l10nTranslate>
+              secGuardsText
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clr-col-4">
+        <div class="card  item-card">
+          <div class="card-block">
+            <div class="card-value">{{supervisorCount}}</div>
+            <div class="card-data-1" title="{{supervisorsText}}" l10nTranslate>
+              supervisorsText
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clr-col-4">
+        <div class="card  item-card">
+          <div class="card-block">
+            <div class="card-value">{{managerCount}}</div>
+            <div class="card-data-1" title="{{ManagersText}}" l10nTranslate>
+              ManagersText
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="clr-col-3">
+        <div class="card  item-card">
+          <div class="card-block">
+            <div class="card-value">7</div>
+            <div class="card-data-1" title="{{senSecExecutiveText}}" l10nTranslate>
+              senSecExecutiveText
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div class="weekly-roaster">
+      <div class="card">
+        <div class="table-container" *ngIf="staffData">
+          <div class="table-header">
+            <div class="roaster-header">
+              <h2 l10nTranslate>weeklyRosterText </h2>
+              <!-- <div class="date-calendar-view">
+                <button class="btn caret-prev" (click)="previousWeek();">
+                  <clr-icon shape="angle"></clr-icon>
+                </button>
+                <p-calendar [(ngModel)]="calendarValue" #staffCalendar selectionMode="range" [showIcon]="true"
+                  [numberOfMonths]="2" (onSelect)="showCurrentWeek($event)" [locale]="calLocale">{{calendarValue}}</p-calendar>
+                <button class="btn caret-next" (click)="nextWeek();">
+                  <clr-icon shape="angle"></clr-icon>
+                </button>
+              </div> -->
+
+
+            </div>
+
+            <!-- <div class="tabs" *ngIf="roasterWeeklyWise.length">
+              <clr-tabs>
+                <clr-tab *ngFor="let roaster of roasterWeeklyWise">
+                  <button clrTabLink id="link1">{{roaster}}
+                    ({{staffData.roasterWeeklyWise[roaster]}})</button>
+                </clr-tab>
+              </clr-tabs>
+            </div> -->
+          </div>
+          <!-- <div class="table-body">
+            <div class="table-data">
+              <clr-datagrid>
+                <clr-dg-column l10nTranslate>guardNameText</clr-dg-column>
+                <clr-dg-column l10nTranslate>rankText</clr-dg-column>
+                <clr-dg-column l10nTranslate>empIdText</clr-dg-column>
+                <clr-dg-column l10nTranslate>dutyText</clr-dg-column>
+                <clr-dg-column l10nTranslate>sundayShortText</clr-dg-column>
+                <clr-dg-column l10nTranslate>mondayShortText</clr-dg-column>
+                <clr-dg-column l10nTranslate>tuesdayShortText</clr-dg-column>
+                <clr-dg-column l10nTranslate>wednesdayShortText</clr-dg-column>
+                <clr-dg-column l10nTranslate>thursdayShortText</clr-dg-column>
+                <clr-dg-column l10nTranslate>fridayShortText</clr-dg-column>
+                <clr-dg-column l10nTranslate>saturdayShortText</clr-dg-column>
+
+                <clr-dg-row *clrDgItems="let staffData of staffData.data">
+                  <clr-dg-cell><a class="guard-details">{{staffData.guardName}}</a></clr-dg-cell>
+                  <clr-dg-cell>{{staffData.rank}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.empid}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.duty}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.sun}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.mon}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.tue}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.wed}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.thu}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.fri}}</clr-dg-cell>
+                  <clr-dg-cell>{{staffData.sat}}</clr-dg-cell>
+                </clr-dg-row>
+
+                <clr-dg-footer>
+                  <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="staffData.data.length">
+                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+                    <span l10nTranslate>ofText</span> {{pagination.totalItems}}
+                  </clr-dg-pagination>
+                </clr-dg-footer>
+              </clr-datagrid>
+            </div>
+            <div class="guard-contact-wrapper">
+              <button class="btn btn-outline" l10nTranslate>addGuardText</button>
+              <button class="btn btn-outline" l10nTranslate>contactSupervisorText</button>
+            </div>
+          </div> -->
+          <div class="coming-soon-template">
+              <div class="coming-soon-icon"></div>
+              <div class="coming-soon-text" l10nTranslate>comingSoonText</div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-roaster">
+      <div class="card">
+        <div class="table-container">
+          <div class="table-header">
+            <div class="roaster-header">
+              <h2><span l10nTranslate>staffCompTasksText</span> ({{complianceData?.pageDetails?.totalCount}})</h2>
+              <!-- <div class="dropdown">
+                      <clr-dropdown>
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary dropdown-btn first-letter-upcase"
+                          clrDropdownTrigger
+                          l10nTranslate
+                        >
+                          filterByTimePeriodText
+                          <clr-icon shape="caret down"></clr-icon>
+                        </button>
+                        <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                          <button type="button" clrDropdownItem l10nTranslate>
+                            allTimeText
+                          </button>
+                          <button type="button" clrDropdownItem l10nTranslate>
+                            todayText
+                          </button>
+                          <button type="button" clrDropdownItem l10nTranslate>
+                            thisWeekText
+                          </button>
+                          <button type="button" clrDropdownItem l10nTranslate>
+                            thisMonthText
+                          </button>
+                        </clr-dropdown-menu>
+                      </clr-dropdown>
+                    </div> -->
+            </div>
+            <div class="tabs" *ngIf="roasterComplianceWise?.length">
+              <clr-tabs>
+                <clr-tab *ngFor="let roaster of roasterComplianceWise">
+                  <button clrTabLink id="link1" [ngClass]="{'disabled-tab': selectedComplianceType == roaster.value}"
+                    (click)="selectComplianceType(roaster.value)">
+                    {{ roaster.displayString }}
+                  </button>
+                </clr-tab>
+              </clr-tabs>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-data" *ngIf="complianceData">
+              <clr-datagrid (clrDgRefresh)="refreshComplianceTable($event)" [clrDgLoading]="complianceTableLoading">
+                <clr-dg-column l10nTranslate>guardNameText</clr-dg-column>
+                <clr-dg-column l10nTranslate>guardRoleText</clr-dg-column>
+                <clr-dg-column l10nTranslate>taskTypeText</clr-dg-column>
+                <clr-dg-column l10nTranslate>statusText</clr-dg-column>
+                <clr-dg-column l10nTranslate>DOJText</clr-dg-column>
+                <clr-dg-row *ngFor="let staffData of complianceData.data">
+                  <clr-dg-cell><img alt="" class="profile-picture" src="assets/images/test1.png" />{{ staffData.firstName +
+                    " " + staffData.lastName }}</clr-dg-cell>
+                  <clr-dg-cell>{{ staffData.role }}</clr-dg-cell>
+                  <clr-dg-cell>{{"PV " + (staffData.pvcExpiryDate | pvcExpiry : staffData.hasPVC : 'taskType')}}</clr-dg-cell>
+                  <clr-dg-cell>{{(staffData.pvcExpiryDate | pvcExpiry : staffData.hasPVC) + ( staffData.pvcExpiryDate | l10nDate: defaultLocale:dateOptions) }}</clr-dg-cell>
+                  <clr-dg-cell>{{ staffData.dojVmw | l10nDate: defaultLocale: mediumDate }}</clr-dg-cell>
+                </clr-dg-row>
+    
+                <clr-dg-footer>
+                  <clr-dg-pagination #pagination [clrDgPageSize]="5" [clrDgTotalItems]="complianceData?.pageDetails?.totalCount"
+                    [(clrDgPage)]="selectedCompliancePageNo">
+                    {{ pagination.firstItem + 1 }} -
+                    {{ pagination.lastItem + 1 }}
+                    <span l10nTranslate>ofText</span>
+                    {{ pagination.totalItems }}
+                  </clr-dg-pagination>
+                </clr-dg-footer>
+              </clr-datagrid>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="allstaff-roaster">
+      <div class="card">
+        <div class="table-container" *ngIf="allStaffData">
+          <div class="table-header">
+            <div class="roaster-header">
+              <h2><span l10nTranslate>allStaffText</span></h2>
+              <!-- <div class="search-bar">
+                <input type="text" class="search-input" placeholder="{{searchText}}" />
+                <clr-icon shape="search" size="23" class="is-inverse search-icon"></clr-icon>
+              </div> -->
+              <div class="onboard-btn" title="Coming Soon">
+                <span class="plus">
+                    <clr-icon shape="plus-circle" size="20"></clr-icon>
+                </span>
+                <span class="btn-text">Onboard Guard</span>
+                
+              </div>
+            </div>
+            <!-- <div class="tabs" *ngIf="roasterAllStaff.length">
+              <clr-tabs>
+                <clr-tab *ngFor="let roaster of roasterAllStaff">
+                  <button clrTabLink id="link1">{{roaster}}
+                    ({{allStaffData.allStaffWeeklyWise[roaster]}})</button>
+                </clr-tab>
+              </clr-tabs>
+            </div> -->
+          </div>
+          <div class="table-body">
+            <!-- <div class="table-data">
+              <clr-datagrid>
+                <clr-dg-column l10nTranslate>nameText</clr-dg-column>
+                <clr-dg-column l10nTranslate>empIdText</clr-dg-column>
+                <clr-dg-column l10nTranslate>rankText</clr-dg-column>
+                <clr-dg-column l10nTranslate>DOJText</clr-dg-column>
+                <clr-dg-column l10nTranslate>contactText</clr-dg-column>
+                <clr-dg-column> </clr-dg-column>
+
+                <clr-dg-row *clrDgItems="let allStaff of allStaffData.data">
+                  <clr-dg-cell><img alt="" class="profile-picture" src="assets/images/test1.png">{{allStaff.name}}</clr-dg-cell>
+                  <clr-dg-cell>{{allStaff.empid}}</clr-dg-cell>
+                  <clr-dg-cell>{{allStaff.rank}}</clr-dg-cell>
+                  <clr-dg-cell>{{allStaff.DOJ}}</clr-dg-cell>
+                  <clr-dg-cell><a class="textdecnone">
+                      <clr-icon shape="phone-handset" class="is-solid" size="16"></clr-icon>&nbsp;{{allStaff.contact}}
+                    </a></clr-dg-cell>
+                  <clr-dg-cell><a class="textdecnone" id= {{allStaff.empid}} (click)="openViewProfileModal($event)" l10nTranslate>viewProfileText</a></clr-dg-cell>
+                </clr-dg-row>
+
+                <clr-dg-footer>
+                  <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="allStaffData.data.length">
+                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+                    <span l10nTranslate>ofText</span> {{pagination.totalItems}}
+                  </clr-dg-pagination>
+                </clr-dg-footer>
+              </clr-datagrid>
+            </div> -->
+            <div class="coming-soon-template">
+                <div class="coming-soon-icon"></div>
+                <div class="coming-soon-text" l10nTranslate>comingSoonText</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<physicalsecurity-viewprofile [openViewProfileSubject]="openViewProfileSubject"></physicalsecurity-viewprofile>

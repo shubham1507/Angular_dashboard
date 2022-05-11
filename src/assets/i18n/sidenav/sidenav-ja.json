@@ -1,0 +1,12 @@
+{
+  "selectLanguageText" : "言語を選択する",
+  "myDashboardText": "マイダッシュボード",
+  "addLocationText": "場所を追加",
+  "chooseLocationText": "場所を選択",
+  "popOfcLocationText": "人気のオフィス所在地",
+  "searchForOfcLocText":"オフィス所在地の検索",
+  "logOutTitleText" : "ログアウト",
+  "logOutMsgText" : "あなたのプロフィールからログアウトしてもよろしいですか？",
+  "logOutYesOptText" : "はい",
+  "logOutNoOptText" : "いいえ"
+}

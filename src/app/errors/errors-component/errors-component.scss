@@ -1,0 +1,14 @@
+.error-alert {
+  .alert {
+    position: absolute;
+    left: 30%;
+    width: 50%;
+  }
+}
+
+.ui-toast-message {
+  right: 20%;
+  .ui-toast-icon {
+    display: none;
+  }
+}

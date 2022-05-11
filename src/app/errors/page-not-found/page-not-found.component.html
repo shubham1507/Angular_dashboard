@@ -1,0 +1,26 @@
+<section class="page_404">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 ">
+        <div class="col-sm-12 text-center">
+          <div class="four_zero_four_bg">
+            <h1 class="text-center ">{{ data.error }}</h1>
+          </div>
+
+          <div class="contant_box_404">
+            <h3 class="h2" l10nTranslate>apperror.youAreLost</h3>
+
+            <p l10nTranslate>apperror.pageNotAvailableText</p>
+
+            <a [routerLink]="['/authpass']" l10nTranslate
+              >apperror.gotoHomeText</a
+            >
+            <p *ngIf="detailedError">
+              <b>{{ detailedError }}</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

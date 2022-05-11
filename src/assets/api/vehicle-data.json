@@ -1,0 +1,17 @@
+{
+    "normalIssues": 0,
+    "carpoolParkedCount": 0,
+    "vipParkedCount": 0,
+    "electricParkedCount": 0,
+    "overNightParkingViolations": 0,
+    "carpoolParkingViolations": 0,
+    "vipParkingViolations": 0,
+    "electricParkingViolations": 0,
+    "totalCount": 35,
+    "carsCount": 10,
+    "bikesCount": 20,
+    "cyclesCount": 5,
+    "lastUpdatedMaxOccupancyTime": null,
+    "maxOccupancy": 100,
+    "otherVehicleCount": 0
+}

@@ -1,0 +1,234 @@
+{
+    "pageSize": 10,
+    "regionWise": {
+        "ALL REGIONS": 87,
+        "APAC": 15,
+        "AMER": 9,
+        "EMEA": 5,
+        "INDIA": 0,
+        "PALO ALTO": 2
+    },
+    "data": [
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Magnum, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        },
+        {
+            "officeLocation": "Kalyani Magnum, Bengaluru",
+            "shift": "Shift A (8 AM - 2 PM)",
+            "timeElapsed": "30 mins",
+            "totalDeployed": {
+                "SSG": 2,
+                "SG": 23
+            },
+            "shortage": {
+                "SSG": 1,
+                "SG": 2
+            }
+        }
+    ]
+}

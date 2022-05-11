@@ -1,0 +1,41 @@
+<div *ngIf="shownotifications" (click)="showNotifications($event)">
+  <div class="notif-wrapper">
+    <div class="notif-popup">
+      <div class="notif-header">
+        <div>
+          <span class="notif-label" l10nTranslate>
+            notif.notificationsText
+          </span>
+          <span class="notif-no" *ngIf="notificationsData.length > 0">
+            ({{ notificationsData.length }} New) 
+            <!-- <span l10nTranslate>notif.newText</span> ) -->
+          </span>
+        </div>
+        <button *ngIf="notificationsData.length > 0" type="button" (click)="clearAllNotifications()" class="btn btn-icon btn-sm pull-right clear-btn" l10nTranslate>
+          <clr-icon shape="times-circle"></clr-icon> notif.clearBtnText
+        </button>
+      </div>
+      <div class="notif-body" *ngFor="let notifData of notificationsData">
+        <div class="event-profile">
+          <img alt="" class="profile-picture" src="assets/images/building-image.png" />
+        </div>
+        <div class="event-details">
+          <p class="name">{{ notifData.notification.title || " " }}</p>
+          <p class="details">{{ notifData.notification.body || " " }}</p>
+          <p class="time">
+            <span>{{ notifData.triggeredDate }} </span>
+            <clr-icon shape="circle" class="is-solid" size="6"></clr-icon
+            > {{ notifData.building }}
+          </p>
+          <p class="passed-hours">
+            {{notifData.triggeredDate | timeAgoNumber}} <span l10nTranslate>{{notifData.triggeredDate | timeAgoUnit}}</span>
+          </p>
+        </div>
+        <!-- <div class="event-status">
+          <clr-icon shape="circle" size="10" class="is-solid"></clr-icon>
+        </div> -->
+      </div>
+      <div class="no-notif" *ngIf="notificationsData.length==0">No new notifications.</div>
+    </div>
+  </div>
+</div>

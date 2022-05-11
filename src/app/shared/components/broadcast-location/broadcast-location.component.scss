@@ -1,0 +1,94 @@
+@import "../../../app-styles/variables.scss";
+@import "../../../app-styles/mixins.scss";
+
+.location-broadcast {
+  .modal-content {
+    padding: 0;
+  }
+  .modal-header {
+    @include modal-header();
+  }
+  .modal-body {
+    max-height: 100%;
+    .success-popup {
+      margin: 17px;
+      margin-bottom: 0;
+    }
+    .error-popup {
+      @extend .success-popup;
+    }
+    .searchbar-label {
+      position: relative;
+      display: block;
+      height: 45px;
+      border-radius: 3px;
+      margin: 17px;
+      margin-top: 0;
+      border: 2px solid $seashell-light;
+      clr-icon {
+        @include topLeftAbsolPos(14px, 16px);
+        margin-right: 16px;
+      }
+      .location-auto-complete {
+        display: inline-block;
+        width: 95%;
+        @include topLeftAbsolPos(0px, 10px);
+        .ui-autocomplete {
+          width: 100%;
+          .ui-inputtext {
+            border: none;
+            position: relative;
+            top: 1px;
+            background-size: 0 0;
+            .ui-autocomplete-input-token {
+              border:2px solid #f6f6f6;;
+              ::placeholder {
+                color: $dove_grey;
+                opacity: 1; 
+                letter-spacing: 1px; 
+                font-size: 12px;
+                line-height: normal;
+              }              
+              input {
+                width: 100%;
+                font-size: 16px;
+                font-family: "Metropolis";
+                &:focus {
+                  border-bottom: none;
+                  background-size: 0 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .title-label{
+      margin: 0px 17px;
+      .broadcast-title{
+        width: 100%;
+        border-radius: 3px;
+        height: 45px;
+        border: 2px solid $seashell-light;
+        background: linear-gradient(to bottom,transparent 95%, $white-color 95%) no-repeat;
+        background-size: 0 100%;
+      }
+    }
+    .desc-label {
+      margin: 17px;
+      margin-bottom: 0;
+      .ui-inputtext {
+        border: 1px solid $twotwoone-grey;
+        &:hover {
+          border: 1px solid $twotwoone-grey;
+        }
+      }
+    }
+    .center-align {
+      text-align: center;
+      .spinner {
+        vertical-align: middle;
+      }
+    }
+  }
+}

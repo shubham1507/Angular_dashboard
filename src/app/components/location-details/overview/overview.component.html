@@ -1,0 +1,436 @@
+<div class="location-tab-content">
+  <div class="staff-management">
+    <shift-details></shift-details>
+    <div class="staff-cards clr-row">
+      <div class="clr-col-3">
+        <div class="card item-card">
+          <div class="card-block">
+            <div class="card-value">{{occurrenceData?.pageDetails?.totalCount || 0}}</div>
+            <div
+              class="card-data-1"
+              title="{{ openIncidentsText }}"
+              l10nTranslate
+            >
+              openIncidentsText
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clr-col-3">
+        <div class="card  item-card">
+          <div class="card-block">
+            <div class="card-value coming-soon-txt" l10nTranslate>comingSoonText</div>
+            <div
+              class="card-data-1"
+              title="{{ resourceShortageText }}"
+              l10nTranslate
+            >
+              resourceShortageText
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clr-col-3">
+        <div class="card  item-card">
+          <div class="card-block">
+            <div class="card-value">{{complianceData?.pageDetails?.totalCount || 0}}</div>
+            <div
+              class="card-data-1"
+              title="{{ staffCompTasksText }}"
+              l10nTranslate
+            >
+              staffCompTasksText
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clr-col-3">
+        <div class="card  item-card">
+          <div class="card-block">
+            <div class="card-value coming-soon-txt" l10nTranslate>comingSoonText</div>
+            <div
+              class="card-data-1"
+              title="{{ newsFeedItemsText }}"
+              l10nTranslate
+            >
+              newsFeedItemsText
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="incidents-table">
+      <div class="table-container" *ngIf="occurrenceData">
+        <div class="table-header">
+          <h2>
+            <span l10nTranslate>openIncidentsText</span> ({{
+              occurrenceData?.pageDetails?.totalCount
+            }})
+          </h2>
+          <div class="dropdown">
+            <clr-dropdown>
+              <button
+                type="button"
+                class="btn btn-outline-primary dropdown-btn first-letter-upcase"
+                clrDropdownTrigger
+                l10nTranslate
+              >
+                filterByTimePeriodText
+                <clr-icon shape="caret down"></clr-icon>
+              </button>
+              <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                <!-- <button type="button" (click)="selectTimeRange('All Time')" clrDropdownItem l10nTranslate>
+                  allTimeText
+                </button> -->
+                <button type="button" (click)="selectTimeRange('Today')" clrDropdownItem l10nTranslate>
+                  todayText
+                </button>
+                <button type="button" (click)="selectTimeRange('This Week')" clrDropdownItem l10nTranslate>
+                  thisWeekText
+                </button>
+                <button type="button" (click)="selectTimeRange('This Month')" clrDropdownItem l10nTranslate>
+                  thisMonthText
+                </button>
+                <button type="button" (click)="selectTimeRange('Last Month')" clrDropdownItem l10nTranslate>
+                    lastMonthText
+                  </button>
+              </clr-dropdown-menu>
+            </clr-dropdown>
+          </div>
+        </div>
+        <div class="table-body" *ngIf="occurrenceData">
+          <div
+            class="donut-chart-container"
+            *ngIf="incidentTypeList.length && overviewConstants_options"
+          >
+            <physicalsecurity-custom-chart
+              [clearText]="overviewConstants_clearText"
+              [rightAlign]="overviewConstants_rightAlign"
+              [chartid]="overviewConstants_chartid"
+              [addClearBtn]="overviewConstants_addClearBtn"
+              [legendColors]="overviewConstants_legendColors"
+              [chartOptions]="overviewConstants_options"
+              [legendData]="incidentTypeList"
+              (legendClickCallBack)="legendClick($event)"
+              (clearClickCallBack)="clearFunction()"
+            >
+            </physicalsecurity-custom-chart>
+          </div>
+          <div class="table-data">
+            <clr-datagrid (clrDgRefresh)="refreshIncidentTable($event)"
+            [clrDgLoading]="tableLoading">
+              <clr-dg-column l10nTranslate>incidentTypeText</clr-dg-column>
+              <clr-dg-column l10nTranslate>floorText</clr-dg-column>
+              <clr-dg-column l10nTranslate>areaText</clr-dg-column>
+              <clr-dg-column l10nTranslate>dateText</clr-dg-column>
+              <clr-dg-column l10nTranslate>timeText</clr-dg-column>
+              <clr-dg-column l10nTranslate>priorityText</clr-dg-column>
+
+              <clr-dg-row *ngFor="let incident of occurrenceData?.data" (mouseover)="incident.hover = true" (mouseout)="incident.hover = false">
+                <clr-dg-cell><span class="data-ellipsis" title="{{ incident.incidentType }}">{{ "" + incident.incidentType }}</span></clr-dg-cell>
+                <clr-dg-cell>{{ "" + incident.floor }}</clr-dg-cell>
+                <clr-dg-cell><span class="area-desc" title="{{incident.occurrenceAreaList }}">{{ "" + incident.occurrenceAreaList }}</span></clr-dg-cell>
+                <clr-dg-cell>{{ incident.occurrenceStartedTime | l10nDate: defaultLocale:dateOptions }}</clr-dg-cell>
+                <clr-dg-cell>{{ incident.occurrenceStartedTime | l10nDate: defaultLocale:"shortTime" }}</clr-dg-cell>
+                <clr-dg-cell style="cursor:pointer">
+                  <div [ngClass]="{'hideBlock': incident.hover, 'showBlock': !incident.hover}">High</div>
+                  <div [ngClass]="{'showBlock': incident.hover, 'hideBlock': !incident.hover}">
+                    <span>
+                      <clr-icon shape="eye" class="is-solid" style="height:22px; width:36px;" title="Details" (click)="openIncidentModal(incident)"></clr-icon>
+                    </span>
+                    <span>
+                      <clr-icon shape="phone-handset" class="is-solid" size="18"></clr-icon>
+                    </span>
+                  </div>
+                  </clr-dg-cell>
+              </clr-dg-row>
+
+              <clr-dg-footer>
+                <clr-dg-pagination
+                  #pagination
+                  [clrDgPageSize]="7"
+                  [clrDgTotalItems]="occurrenceData?.pageDetails?.totalCount"
+                  [(clrDgPage)]="selectedIncidentPageNo"
+                >
+                  {{ pagination.firstItem + 1 }} -
+                  {{ pagination.lastItem + 1 }}
+                  <span l10nTranslate> ofText</span>
+                  {{ pagination.totalItems }}
+                  <span l10nTranslate>incidentsText</span>
+                </clr-dg-pagination>
+              </clr-dg-footer>
+            </clr-datagrid>
+          </div>
+        </div>
+        <physicalsecurity-incident-details
+          [showIncidentModal]="incidentDetailsModal" [IncidentDetails]="selectedIncidentDetails"
+          (closeIncidentModal)="incidentDetailsModal = false" *ngIf="incidentDetailsModal"
+        ></physicalsecurity-incident-details>
+      </div>
+    </div>
+    <div class="deployment-table">
+      <div class="card">
+        <div class="table-container" *ngIf="deploymentDetails">
+          <div class="table-header">
+            <div class="roaster-header">
+              <h2 l10nTranslate>deploymentPlanText</h2>
+              <div class="dropdown">
+                <clr-dropdown>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary dropdown-btn first-letter-upcase"
+                    clrDropdownTrigger
+                    l10nTranslate
+                  >
+                    allDutyTypesText
+                    <clr-icon shape="caret down"></clr-icon>
+                  </button>
+                  <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                    <button type="button" clrDropdownItem>All Time</button>
+                    <button type="button" clrDropdownItem>Today</button>
+                    <button type="button" clrDropdownItem>This Week</button>
+                    <button type="button" clrDropdownItem>This Month</button>
+                  </clr-dropdown-menu>
+                </clr-dropdown>
+              </div>
+            </div>
+            <div class="tabs">
+              <clr-tabs>
+                <clr-tab>
+                  <button clrTabLink id="link1">
+                    <span l10nTranslate>shiftText</span> A
+                  </button>
+                </clr-tab>
+                <clr-tab>
+                  <button clrTabLink id="link1">
+                    <span l10nTranslate>shiftText</span> B
+                  </button>
+                </clr-tab>
+                <clr-tab>
+                  <button clrTabLink id="link1">
+                    <span l10nTranslate>shiftText</span> C
+                  </button>
+                </clr-tab>
+              </clr-tabs>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-data">
+              <clr-datagrid>
+                <clr-dg-column l10nTranslate>guardNameText</clr-dg-column>
+                <clr-dg-column l10nTranslate>dutyText</clr-dg-column>
+                <clr-dg-column l10nTranslate>floorText</clr-dg-column>
+                <clr-dg-column l10nTranslate>areasText</clr-dg-column>
+                <clr-dg-column></clr-dg-column>
+                <clr-dg-column></clr-dg-column>
+                <clr-dg-row *clrDgItems="let guard of deploymentDetails.data">
+                  <clr-dg-cell>
+                    <div class="blue-table-data">{{ guard.guardName }}</div>
+                  </clr-dg-cell>
+                  <clr-dg-cell>{{ guard.duty }}</clr-dg-cell>
+                  <clr-dg-cell>{{ guard.floor }}</clr-dg-cell>
+                  <clr-dg-cell>{{ guard.areas }}</clr-dg-cell>
+                  <clr-dg-cell>
+                    <div class="blue-table-data">
+                      <span>
+                        <clr-icon
+                          shape="phone-handset"
+                          class="is-solid is-highlight"
+                          size="24px"
+                        ></clr-icon>
+                      </span>
+                      <span> {{ guard.contactNo }} </span>
+                    </div>
+                  </clr-dg-cell>
+                  <clr-dg-cell>
+                    <div class="blue-table-data">
+                      <span>
+                        <clr-icon
+                          shape="map-marker"
+                          class="is-solid is-highlight"
+                          size="24px"
+                        ></clr-icon>
+                      </span>
+                      <span l10nTranslate> trackText </span>
+                    </div>
+                  </clr-dg-cell>
+                </clr-dg-row>
+
+                <clr-dg-footer>
+                  <clr-dg-pagination
+                    #pagination
+                    [clrDgPageSize]="10"
+                    [clrDgTotalItems]="deploymentDetails.data.length"
+                  >
+                    {{ pagination.firstItem + 1 }} -
+                    {{ pagination.lastItem + 1 }}
+                    <span l10nTranslate>ofText</span>
+                    {{ pagination.totalItems }}
+                  </clr-dg-pagination>
+                </clr-dg-footer>
+              </clr-datagrid>
+            </div>
+            <div class="table-summary">
+              <div class="summary-container">
+                <div class="summary-header" l10nTranslate>
+                  resourceSummaryText
+                </div>
+                <div class="summary-details">
+                  <div class="summary-txt-lg">
+                    <span l10nTranslate>resourceAllowanceText</span>: 30
+                  </div>
+                  <div class="summary-txt-sm">
+                    2 <span l10nTranslate>ssgText</span> &bull; 28
+                    <span l10nTranslate>sgText</span>
+                  </div>
+                </div>
+                <div class="summary-details">
+                  <div class="summary-txt-lg">
+                    <span l10nTranslate>shortageCountText</span>: 3
+                  </div>
+                  <div class="summary-txt-sm">
+                    1 <span l10nTranslate>ssgText</span> &bull; 2
+                    <span l10nTranslate>sgText</span>
+                  </div>
+                </div>
+                <div class="summary-details">
+                  <div class="summary-txt-lg">
+                    <span l10nTranslate>totalDeployedText</span>: 27
+                  </div>
+                  <div class="summary-txt-sm">
+                    1 <span l10nTranslate>ssgText</span> &bull; 26
+                    <span l10nTranslate>sgText</span>
+                  </div>
+                </div>
+                <div class="button-container">
+                  <button class="blue-button" l10nTranslate>
+                    addGuardText
+                  </button>
+                </div>
+                <div class="button-container">
+                  <button class="blue-button" l10nTranslate>
+                    contactSupervisorText
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="compliance-roaster">
+      <div class="card">
+        <div class="table-container" >
+          <div class="table-header">
+            <div class="roaster-header">
+              <h2><span l10nTranslate>staffCompTasksText</span> ({{complianceData?.pageDetails?.totalCount}})</h2>
+              <!-- <div class="dropdown">
+                <clr-dropdown>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary dropdown-btn first-letter-upcase"
+                    clrDropdownTrigger
+                    l10nTranslate
+                  >
+                    filterByTimePeriodText
+                    <clr-icon shape="caret down"></clr-icon>
+                  </button>
+                  <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                    <button type="button" clrDropdownItem l10nTranslate>
+                      allTimeText
+                    </button>
+                    <button type="button" clrDropdownItem l10nTranslate>
+                      todayText
+                    </button>
+                    <button type="button" clrDropdownItem l10nTranslate>
+                      thisWeekText
+                    </button>
+                    <button type="button" clrDropdownItem l10nTranslate>
+                      thisMonthText
+                    </button>
+                  </clr-dropdown-menu>
+                </clr-dropdown>
+              </div> -->
+            </div>
+            <div class="tabs" *ngIf="roasterComplianceWise?.length">
+              <clr-tabs>
+                <clr-tab *ngFor="let roaster of roasterComplianceWise">
+                  <button clrTabLink id="link1" [ngClass]="{'disabled-tab': selectedComplianceType == roaster.value}"
+                   (click)="selectComplianceType(roaster.value)">
+                    {{ roaster.displayString }}
+                  </button>
+                </clr-tab>
+              </clr-tabs>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-data" *ngIf="complianceData">
+              <clr-datagrid (clrDgRefresh)="refreshComplianceTable($event)"
+              [clrDgLoading]="complianceTableLoading">
+                <clr-dg-column l10nTranslate>nameText</clr-dg-column>
+                <clr-dg-column l10nTranslate>roleText</clr-dg-column>
+                <clr-dg-column l10nTranslate>taskTypeText</clr-dg-column>
+                <clr-dg-column l10nTranslate>statusText</clr-dg-column>
+                <clr-dg-column l10nTranslate>DOJText</clr-dg-column>
+                <clr-dg-row
+                  *ngFor="let staffData of complianceData.data"
+                >
+                  <clr-dg-cell
+                    ><img
+                      alt=""
+                      class="profile-picture"
+                      src="assets/images/test1.png"
+                    />{{ staffData.firstName + " " + staffData.lastName }}</clr-dg-cell
+                  >
+                  <clr-dg-cell>{{ staffData.role }}</clr-dg-cell>
+                  <clr-dg-cell>{{"PV " + (staffData.pvcExpiryDate | pvcExpiry : staffData.hasPVC : 'taskType')}}</clr-dg-cell>
+                  <clr-dg-cell>{{(staffData.pvcExpiryDate | pvcExpiry : staffData.hasPVC) + ( staffData.pvcExpiryDate | l10nDate: defaultLocale:dateOptions) }}</clr-dg-cell>
+                  <clr-dg-cell>{{ staffData.dojVmw | l10nDate: defaultLocale: mediumDate }}</clr-dg-cell>
+                </clr-dg-row>
+
+                <clr-dg-footer>
+                  <clr-dg-pagination
+                    #pagination
+                    [clrDgPageSize]="5"
+                    [clrDgTotalItems]="complianceData?.pageDetails?.totalCount"
+                    [(clrDgPage)]="selectedCompliancePageNo"
+                  >
+                    {{ pagination.firstItem + 1 }} -
+                    {{ pagination.lastItem + 1 }}
+                    <span l10nTranslate>ofText</span>
+                    {{ pagination.totalItems }}
+                  </clr-dg-pagination>
+                </clr-dg-footer>
+              </clr-datagrid>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row timeline-news-container">
+      <div class="timeline-container">
+        <physicalsecurity-event-timeline></physicalsecurity-event-timeline>
+      </div>
+      <div class="news-feed-container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-header">
+              <div class="news-feed-header">
+                <div class="heading">
+                  News Feed
+                </div>
+              </div>
+            </div>
+            <div class="card-block">
+              <div class="coming-soon-template">
+                <div class="coming-soon-icon"></div>
+                <div class="coming-soon-text" l10nTranslate>comingSoonText</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

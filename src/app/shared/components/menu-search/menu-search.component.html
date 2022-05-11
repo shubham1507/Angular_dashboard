@@ -1,0 +1,37 @@
+<div class="search-input-wrapper">
+  <input
+    class="search-input"
+    [formControl]="queryField"
+    type="text"
+    id="keyword"
+    placeholder="{{ searchtext }}"
+    class="search-input"
+    (focus)="showOnFocus = true"
+    (blur)="setBlurState()"
+  />
+  <span *ngIf="showLoader" class="spinner spinner-inline spinner-inverse">
+    <span l10nTranslate>menusearch.loadingText</span>...
+  </span>
+</div>
+
+<div
+  class="results-wrapper"
+  *ngIf="showOnFocus == true && results && results.length > 0"
+>
+  <div class="search-record">
+    <div class="search-header"><p l10nTranslate>menusearch.reportsText</p></div>
+    <div
+      class="search-prof-detail"
+      *ngFor="let searchres of results"
+      (click)="goToDetails($event, searchres)"
+    >
+      <div class="search-profile">
+        <img alt="" class="profile-picture" src="assets/images/test1.png" />
+      </div>
+      <div class="search-details">
+        <p class="name">{{ searchres.name }}</p>
+        <p class="details">ID {{ searchres.id }} - {{ searchres.email }}</p>
+      </div>
+    </div>
+  </div>
+</div>

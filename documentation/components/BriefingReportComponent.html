@@ -1,0 +1,2350 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>physical-security documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">physical-security documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>BriefingReportComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/components/briefing-report/briefing-report.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Briefing component for adding the briefing modal changes
+Also includes the location selection and editing the briefing content
+for the selected location</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>physicalsecurity-briefing-report</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./briefing-report.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./briefing-report.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#backToLocSelection">backToLocSelection</a>
+                            </li>
+                            <li>
+                                <a href="#breifingEditVal">breifingEditVal</a>
+                            </li>
+                            <li>
+                                <a href="#countriesData">countriesData</a>
+                            </li>
+                            <li>
+                                <a href="#country">country</a>
+                            </li>
+                            <li>
+                                <a href="#countryInputRef">countryInputRef</a>
+                            </li>
+                            <li>
+                                <a href="#defaultLocale">defaultLocale</a>
+                            </li>
+                            <li>
+                                <a href="#edited">edited</a>
+                            </li>
+                            <li>
+                                <a href="#filteredCountries">filteredCountries</a>
+                            </li>
+                            <li>
+                                <a href="#firstColCount">firstColCount</a>
+                            </li>
+                            <li>
+                                <a href="#hideEditorToolBar">hideEditorToolBar</a>
+                            </li>
+                            <li>
+                                <a href="#isReadOnly">isReadOnly</a>
+                            </li>
+                            <li>
+                                <a href="#lang">lang</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#locale">locale</a>
+                            </li>
+                            <li>
+                                <a href="#locModalFlag">locModalFlag</a>
+                            </li>
+                            <li>
+                                <a href="#options">options</a>
+                            </li>
+                            <li>
+                                <a href="#quillEditInst">quillEditInst</a>
+                            </li>
+                            <li>
+                                <a href="#searchForOfcLocText">searchForOfcLocText</a>
+                            </li>
+                            <li>
+                                <a href="#secondColCount">secondColCount</a>
+                            </li>
+                            <li>
+                                <a href="#selectedCountry">selectedCountry</a>
+                            </li>
+                            <li>
+                                <a href="#showEditorToolBar">showEditorToolBar</a>
+                            </li>
+                            <li>
+                                <a href="#thirdColCount">thirdColCount</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translation">translation</a>
+                            </li>
+                            <li>
+                                <a href="#typeContentHereText">typeContentHereText</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#editorInstance">editorInstance</a>
+                            </li>
+                            <li>
+                                <a href="#filterCountry">filterCountry</a>
+                            </li>
+                            <li>
+                                <a href="#filteredCountryComplete">filteredCountryComplete</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onLocationSelect">onLocationSelect</a>
+                            </li>
+                            <li>
+                                <a href="#openBriefingModal">openBriefingModal</a>
+                            </li>
+                            <li>
+                                <a href="#populateSelectLocation">populateSelectLocation</a>
+                            </li>
+                            <li>
+                                <a href="#resetModal">resetModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#openBriefingModalSubject">openBriefingModalSubject</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(reportsService: <a href="../injectables/ReportsService.html">ReportsService</a>, locale: LocaleService, translation: TranslationService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:111</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor function used to initialise the briefing component modal</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>reportsService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ReportsService.html" target="_self" >ReportsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>locale</td>
+                                                  
+                                                        <td>
+                                                                    <code>LocaleService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="openBriefingModalSubject"></a>
+                        <code>openBriefingModalSubject</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>briefing modal subject used to create an association between  the wrapper component for opening the briefing modal pop up</p>
+</div>
+                            <p>
+                            <em>Type :</em>    <code>Subject&lt;any&gt;</code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="editorInstance"></a>
+                        <span class="name">
+                            <b>
+                            editorInstance
+                            </b>
+                            <a href="#editorInstance"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>editorInstance(quillInstance)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:193</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function used to instantiate the quill editor passed to the callback of the onEditor created</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>quillInstance</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filterCountry"></a>
+                        <span class="name">
+                            <b>
+                            filterCountry
+                            </b>
+                            <a href="#filterCountry"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>filterCountry(query, countries: any[])</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:148</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function handles the auto complete search operation and returns the list of countries
+filtered based on the provided query search</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>query</td>
+                                                        <td>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>countries</td>
+                                                        <td>
+                                                                    <code>any[]</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>any[]</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredCountryComplete"></a>
+                        <span class="name">
+                            <b>
+                            filteredCountryComplete
+                            </b>
+                            <a href="#filteredCountryComplete"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>filteredCountryComplete(event)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:133</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function called after when the user performs the auto complete search</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:224</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Subscription handler for opening the briefing modal subject</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onLocationSelect"></a>
+                        <span class="name">
+                            <b>
+                            onLocationSelect
+                            </b>
+                            <a href="#onLocationSelect"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onLocationSelect(value)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="182" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:182</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function used to set the navigation back to the auto search from the recent searches location search</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>value</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openBriefingModal"></a>
+                        <span class="name">
+                            <b>
+                            openBriefingModal
+                            </b>
+                            <a href="#openBriefingModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>openBriefingModal()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:124</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function used to open the briefing modal along by resetting the modal data</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="populateSelectLocation"></a>
+                        <span class="name">
+                            <b>
+                            populateSelectLocation
+                            </b>
+                            <a href="#populateSelectLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>populateSelectLocation(evt)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:164</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function used to populate the selected location</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>evt</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="resetModal"></a>
+                        <span class="name">
+                            <b>
+                            resetModal
+                            </b>
+                            <a href="#resetModal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>resetModal()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:172</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function used to set the reset state for the briefing modal</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="backToLocSelection"></a>
+                        <span class="name">
+                            <b>
+                            backToLocSelection
+                            </b>
+                            <a href="#backToLocSelection"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>backToLocSelection:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:88</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Conditional flag used to navigate back to the autoComplete location search</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="breifingEditVal"></a>
+                        <span class="name">
+                            <b>
+                            breifingEditVal
+                            </b>
+                            <a href="#breifingEditVal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>breifingEditVal:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot; &quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:83</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Conditional flag used to store the editing value for the toolbar editor</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="countriesData"></a>
+                        <span class="name">
+                            <b>
+                            countriesData
+                            </b>
+                            <a href="#countriesData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>countriesData:     <code>Array&lt;Object&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;Object&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[{}]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Place holder for storing the countries data</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="country"></a>
+                        <span class="name">
+                            <b>
+                            country
+                            </b>
+                            <a href="#country"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>country:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" >Object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" >Object</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the country details</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="countryInputRef"></a>
+                        <span class="name">
+                            <b>
+                            countryInputRef
+                            </b>
+                            <a href="#countryInputRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>countryInputRef:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;addLocationInput&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>location input template reference for removing the focus once user performs close operation</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultLocale"></a>
+                        <span class="name">
+                            <b>
+                            defaultLocale
+                            </b>
+                            <a href="#defaultLocale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>defaultLocale:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @DefaultLocale()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="edited"></a>
+                        <span class="name">
+                            <b>
+                            edited
+                            </b>
+                            <a href="#edited"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>edited:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:99</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Conditional flag used to show the edit section based on the flag value</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredCountries"></a>
+                        <span class="name">
+                            <b>
+                            filteredCountries
+                            </b>
+                            <a href="#filteredCountries"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>filteredCountries:     <code>any[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:72</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Place holder for storing the filtered countries when we are doing an auto complete operation</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="firstColCount"></a>
+                        <span class="name">
+                            <b>
+                            firstColCount
+                            </b>
+                            <a href="#firstColCount"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>firstColCount:     <code>string[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:57</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for holding the first column section of countries for the popular locations</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hideEditorToolBar"></a>
+                        <span class="name">
+                            <b>
+                            hideEditorToolBar
+                            </b>
+                            <a href="#hideEditorToolBar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>hideEditorToolBar:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>function () {
+    this.quillEditInst.theme.modules.toolbar.container.hidden &#x3D; true;
+    this.edited &#x3D; true;
+    this.isReadOnly &#x3D; true;
+
+    // do the api call and send the location and  the edited content values
+
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="211" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:211</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Function used to hide the editor toolbar</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isReadOnly"></a>
+                        <span class="name">
+                            <b>
+                            isReadOnly
+                            </b>
+                            <a href="#isReadOnly"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>isReadOnly:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:104</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Conditional flag used to show the read only state for the editor toolbar</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lang"></a>
+                        <span class="name">
+                            <b>
+                            lang
+                            </b>
+                            <a href="#lang"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>lang:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Language()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locale"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            locale
+                            </b>
+                            <a href="#locale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>locale:     <code>LocaleService</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>LocaleService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:119</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locModalFlag"></a>
+                        <span class="name">
+                            <b>
+                            locModalFlag
+                            </b>
+                            <a href="#locModalFlag"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>locModalFlag:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:77</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Conditional flag used to open and close the briefing modal</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <span class="name">
+                            <b>
+                            options
+                            </b>
+                            <a href="#options"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>options:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    toolbar: TOOLBAR_CONFIG
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:109</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the options for the editor toolbar</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="quillEditInst"></a>
+                        <span class="name">
+                            <b>
+                            quillEditInst
+                            </b>
+                            <a href="#quillEditInst"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>quillEditInst:     <code>null</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>null</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>null</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:93</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for storing the quill editor instance</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchForOfcLocText"></a>
+                        <span class="name">
+                            <b>
+                            searchForOfcLocText
+                            </b>
+                            <a href="#searchForOfcLocText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>searchForOfcLocText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="secondColCount"></a>
+                        <span class="name">
+                            <b>
+                            secondColCount
+                            </b>
+                            <a href="#secondColCount"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>secondColCount:     <code>string[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:62</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for holding the second column section of countries for the popular locations</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedCountry"></a>
+                        <span class="name">
+                            <b>
+                            selectedCountry
+                            </b>
+                            <a href="#selectedCountry"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>selectedCountry:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>plece holder for capturing the selected country</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showEditorToolBar"></a>
+                        <span class="name">
+                            <b>
+                            showEditorToolBar
+                            </b>
+                            <a href="#showEditorToolBar"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>showEditorToolBar:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>function () {
+    this.quillEditInst.theme.modules.toolbar.container.hidden &#x3D; false;
+    this.edited &#x3D; false;
+    this.isReadOnly &#x3D; false;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="202" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:202</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Function used to show the editor toolbar</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="thirdColCount"></a>
+                        <span class="name">
+                            <b>
+                            thirdColCount
+                            </b>
+                            <a href="#thirdColCount"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>thirdColCount:     <code>string[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:67</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>place holder for holding the thirdcolumn section of countries for the popular locations</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="translation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            translation
+                            </b>
+                            <a href="#translation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>translation:     <code>TranslationService</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TranslationService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:119</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="typeContentHereText"></a>
+                        <span class="name">
+                            <b>
+                            typeContentHereText
+                            </b>
+                            <a href="#typeContentHereText"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>typeContentHereText:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/shared/components/briefing-report/briefing-report.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output, Input, ViewEncapsulation } from &#x27;@angular/core&#x27;;
+import { ReportsService } from &#x27;src/app/services/reports.service&#x27;;
+import { Subject } from &#x27;rxjs&#x27;;
+import { TOOLBAR_CONFIG } from &#x27;../../const&#x27;;
+
+import {
+  Language,
+  DefaultLocale,
+  LocaleService,
+  TranslationService
+} from &#x27;angular-l10n&#x27;;
+/**
+ * Briefing component for adding the briefing modal changes
+ * Also includes the location selection and editing the briefing content
+ * for the selected location
+ */
+@Component({
+  selector: &#x27;physicalsecurity-briefing-report&#x27;,
+  templateUrl: &#x27;./briefing-report.component.html&#x27;,
+  styleUrls: [&#x27;./briefing-report.component.scss&#x27;],
+  encapsulation: ViewEncapsulation.None
+})
+export class BriefingReportComponent implements OnInit {
+
+  @Language() lang: string;
+  @DefaultLocale() defaultLocale: string;
+  typeContentHereText: string;
+  searchForOfcLocText: string;
+  /**
+   * location input template reference for removing the focus once user performs close operation
+   *  */
+  @ViewChild(&#x27;addLocationInput&#x27;) countryInputRef: ElementRef;
+
+  /**
+   * briefing modal subject used to create an association between  the wrapper component for opening the briefing modal pop up
+   */
+  @Input() openBriefingModalSubject: Subject&lt;any&gt;;
+
+  /**
+   * Place holder for storing the countries data
+   */
+  countriesData: Array&lt;Object&gt; &#x3D; [{}];
+
+  /**
+   * place holder for storing the country details
+   */
+  country: Object;
+
+  /**
+   * plece holder for capturing the selected country
+   *  */
+  selectedCountry: string &#x3D; &#x27;&#x27;;
+
+  /**
+   * place holder for holding the first column section of countries for the popular locations
+   */
+  firstColCount: string[] &#x3D; [];
+
+  /**
+   *  place holder for holding the second column section of countries for the popular locations
+   */
+  secondColCount: string[] &#x3D; [];
+
+  /**
+   *  place holder for holding the thirdcolumn section of countries for the popular locations
+   */
+  thirdColCount: string[] &#x3D; [];
+
+  /**
+   * Place holder for storing the filtered countries when we are doing an auto complete operation
+   */
+  filteredCountries: any[];
+
+  /**
+   * Conditional flag used to open and close the briefing modal
+   */
+  locModalFlag: boolean &#x3D; false;
+
+
+  /**
+  * Conditional flag used to store the editing value for the toolbar editor
+  */
+  breifingEditVal: string &#x3D; &quot; &quot;;
+
+  /**
+   * Conditional flag used to navigate back to the autoComplete location search
+   */
+  backToLocSelection: boolean &#x3D; false;
+
+  /**
+   * place holder for storing the quill editor instance
+   */
+  quillEditInst &#x3D; null;
+
+
+  /**
+   * Conditional flag used to show the edit section based on the flag value
+   */
+  edited &#x3D; true;
+
+  /**
+   * Conditional flag used to show the read only state for the editor toolbar
+   */
+  isReadOnly &#x3D; true;
+
+  /**
+   * place holder for storing the options for the editor toolbar
+   */
+  options &#x3D; {
+    toolbar: TOOLBAR_CONFIG
+  };
+
+
+
+  /**
+   * Constructor function used to initialise the briefing component modal
+   * @param reportsService
+   */
+  constructor(private reportsService: ReportsService, public locale: LocaleService, public translation: TranslationService) { }
+
+  /**
+   * Function used to open the briefing modal along by resetting the modal data
+   */
+  openBriefingModal() {
+    this.resetModal();
+    this.locModalFlag &#x3D; true;
+  }
+
+  /**
+   * Function called after when the user performs the auto complete search
+   * @param event
+   */
+  filteredCountryComplete(event) {
+    let query &#x3D; event.query;
+    this.reportsService.getCountriesData()
+      .subscribe(countriesData &#x3D;&gt; {
+        this.filteredCountries &#x3D; this.filterCountry(query, countriesData.data);
+        this.countriesData &#x3D; countriesData.data;
+      });
+  }
+
+  /**
+   * Function handles the auto complete search operation and returns the list of countries
+   * filtered based on the provided query search
+   * @param query
+   * @param countries
+   */
+  filterCountry(query, countries: any[]): any[] {
+    //in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
+    let filtered: any[] &#x3D; [];
+    countries.forEach((item, country) &#x3D;&gt; {
+      if (item[&#x27;name&#x27;].toLowerCase().indexOf(query.toLowerCase()) &#x3D;&#x3D; 0) {
+        filtered.push(item);
+      }
+    });
+    return filtered;
+  }
+
+
+
+  /**
+   * Function used to populate the selected location
+   */
+  populateSelectLocation(evt) {
+    this.backToLocSelection &#x3D; true;
+    this.country &#x3D; { name: evt.currentTarget.innerText };
+  }
+
+  /**
+   * Function used to set the reset state for the briefing modal
+   */
+  resetModal() {
+    this.backToLocSelection &#x3D; false;
+    this.country &#x3D; {};
+    this.breifingEditVal &#x3D; &#x27;&#x27;;
+  }
+
+  /**
+   * Function used to set the navigation back to the auto search from the recent searches location search
+   * @param value
+   */
+  onLocationSelect(value) {
+    this.backToLocSelection &#x3D; true;
+  }
+
+
+
+
+  /**
+   * Function used to instantiate the quill editor passed to the callback of the onEditor created
+   * @param quillInstance
+   */
+  editorInstance(quillInstance) {
+    this.quillEditInst &#x3D; quillInstance;
+    this.quillEditInst.theme.modules.toolbar.container.hidden &#x3D; true;
+    this.edited &#x3D; true;
+  }
+
+  /**
+   * Function used to show the editor toolbar
+   */
+  showEditorToolBar &#x3D; function () {
+    this.quillEditInst.theme.modules.toolbar.container.hidden &#x3D; false;
+    this.edited &#x3D; false;
+    this.isReadOnly &#x3D; false;
+  }
+
+  /**
+   * Function used to hide the editor toolbar
+   */
+  hideEditorToolBar &#x3D; function () {
+    this.quillEditInst.theme.modules.toolbar.container.hidden &#x3D; true;
+    this.edited &#x3D; true;
+    this.isReadOnly &#x3D; true;
+
+    // do the api call and send the location and  the edited content values
+
+  }
+
+  /**
+   * Subscription handler for opening the briefing modal subject
+   */
+
+  ngOnInit() {
+    this.translation.translationChanged().subscribe(
+      () &#x3D;&gt; {
+        this.searchForOfcLocText &#x3D; this.translation.translate(&#x27;briefing.searchForOfcLocText&#x27;);
+        this.typeContentHereText &#x3D; this.translation.translate(&#x27;briefing.typeContentHereText&#x27;);
+      }
+    );
+    this.openBriefingModalSubject.subscribe(data &#x3D;&gt; {
+      this.openBriefingModal();
+    });
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;location-briefing&quot;&gt;
+    &lt;clr-modal [(clrModalOpen)]&#x3D;&quot;locModalFlag&quot; [clrModalSize]&#x3D;&quot;&#x27;xl&#x27;&quot;&gt;
+      &lt;h3 class&#x3D;&quot;modal-title&quot; l10nTranslate&gt;
+        briefing.briefingReportText
+      &lt;/h3&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+         &lt;div&gt;
+             &lt;div [ngClass]&#x3D;&quot;{&#x27;display-none&#x27;: backToLocSelection}&quot;&gt;
+              &lt;p class&#x3D;&quot;office-location-msg&quot; l10nTranslate&gt;briefing.chooseOfficeLocationText&lt;/p&gt;
+              &lt;label _ngcontent-c1&#x3D;&quot;&quot; class&#x3D;&quot;searchbar-label&quot;&gt;
+                &lt;clr-icon class&#x3D;&quot;&quot; shape&#x3D;&quot;search&quot; size&#x3D;&quot;12&quot;&gt;
+                &lt;/clr-icon&gt;
+                &lt;div class&#x3D;&quot;location-auto-complete&quot; &gt;
+                  &lt;p-autoComplete #addLocationInput autoFocus [(ngModel)]&#x3D;&quot;country&quot;  [forceSelection] &#x3D; &quot;true&quot;  [suggestions]&#x3D;&quot;filteredCountries&quot; (completeMethod)&#x3D;&quot;filteredCountryComplete($event)&quot;
+                    field&#x3D;&quot;name&quot; [size]&#x3D;&quot;30&quot; placeholder&#x3D;&quot;{{searchForOfcLocText}}&quot; [minLength]&#x3D;&quot;1&quot;  (onSelect)&#x3D;&quot;onLocationSelect($event)&quot;
+                   &gt;&lt;/p-autoComplete&gt;
+                &lt;/div&gt;
+                &lt;/label&gt;
+             &lt;/div&gt;
+              &lt;div class&#x3D;&quot;table-container&quot; *ngIf&#x3D;&quot;!backToLocSelection; else updateLocation&quot;&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                  &lt;div class&#x3D;&quot;col-xs-12 col-md-12 col-lg-6 col-xl-12&quot;&gt;
+                    &lt;p class&#x3D;&quot;location-header-name&quot; l10nTranslate&gt;
+                      briefing.recentlySharedText
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;physicalsecurity-popular-locations (locationClickCallBack)&#x3D;&quot;populateSelectLocation($event)&quot;&gt;&lt;/physicalsecurity-popular-locations&gt;
+              &lt;/div&gt;
+              &lt;ng-template #updateLocation&gt;
+                  &lt;div class&#x3D;&quot;edit-location&quot;&gt;
+                    &lt;div class&#x3D;&quot;edit-location-header&quot;&gt;
+                      &lt;div class&#x3D;&quot;loc-header&quot;&gt;
+                          &lt;clr-icon shape&#x3D;&quot;angle&quot; size&#x3D;&quot;38&quot; (click)&#x3D;&quot;resetModal()&quot;&gt;&lt;/clr-icon&gt; &lt;span class&#x3D;&quot;location-name&quot;&gt;{{country.name}}&lt;/span&gt;
+                      &lt;/div&gt;
+                     &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;edit-location-content&quot;&gt;
+                        &lt;div class&#x3D;&quot;editBtns&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; *ngIf&#x3D;&quot;edited&quot; (click)&#x3D;&quot;showEditorToolBar()&quot; l10nTranslate&gt;briefing.editText&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; *ngIf&#x3D;&quot;!edited&quot; (click)&#x3D;&quot;hideEditorToolBar()&quot; l10nTranslate&gt;briefing.updateText&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class&#x3D;&quot;content-quill-editor&quot;&gt;
+                              &lt;quill-editor [placeholder]&#x3D;&quot;typeContentHereText&quot; [(ngModel)]&#x3D;&quot;breifingEditVal&quot;
+                              [modules]&#x3D; &quot;options&quot; [readOnly]&#x3D;&quot;isReadOnly&quot;
+                              (onEditorCreated)&#x3D;&quot;editorInstance($event)&quot;
+                             &gt;
+                             &lt;/quill-editor&gt;
+                          &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/ng-template&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/clr-modal&gt;
+  &lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./briefing-report.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../app-styles/variables.scss&quot;;
+@import &quot;../../../app-styles/mixins.scss&quot;;
+
+.location-briefing {
+  .modal-content {
+    padding: 0;
+  }
+  .modal-header {
+    @include modal-header();
+  }
+  .modal-body {
+    max-height: 100%;
+    .display-none {
+      display: none;
+    }
+    .office-location-msg {
+      @include twentyFourPXFont($equal_dark_grey);
+      margin: 40px 20px;
+    }
+    .searchbar-label {
+      position: relative;
+      display: block;
+      height: 39px;
+      border-radius: 3px;
+      margin: 17px;
+      border: 2px solid $seashell-light;
+      clr-icon {
+        @include topLeftAbsolPos(10px, 16px);
+        margin-right: 16px;
+      }
+      .location-auto-complete {
+        display: inline-block;
+        width: 95%;
+        @include topLeftAbsolPos(4px, 41px);
+        .ui-autocomplete {
+          width: 100%;
+          .ui-inputtext {
+            border: none;
+            &amp;:focus {
+              border-bottom: none;
+              background-size: 0 100%;
+            }
+          }
+        }
+      }
+    }
+    .table-container {
+      margin: 0 16px;
+      padding-bottom: 40px;
+      .location-header-name {
+        @include twentyFourPXFont($equal_dark_grey);
+        line-height: 25px;
+        text-align: left;
+      }
+    }
+    .edit-location {
+      margin: 30px 0;
+      .edit-location-header {
+        .loc-header {
+          margin: 0 20px;
+          clr-icon {
+            width: 30px;
+            height: 30px;
+            display: table-cell;
+            border: 1px solid;
+            border-radius: 50%;
+            transform: rotate(-94deg);
+            cursor: pointer;
+          }
+          .location-name {
+            @include twentyFourPXFont($equal_dark_grey);
+            display: table-cell;
+            padding-left: 15px;
+            vertical-align: middle;
+          }
+        }
+        padding-bottom: 0.5rem;
+        box-shadow: 0 1px 0 0 $twoonefive-grey;
+      }
+      .edit-location-content {
+        margin-top: 10px;
+        .editBtns {
+          width: 100%;
+          display: flex;
+          flex-direction: row-reverse;
+        }
+        .content-quill-editor {
+          min-height: 300px;
+          position: relative;
+          .ql-toolbar {
+            position: absolute;
+            bottom: 0;
+            z-index: 1000;
+            width: 100%;
+            border: 0 !important;
+            font-family: &quot;Metropolis&quot;;
+          }
+          .ql-container {
+            border: none;
+            font-family: &quot;Metropolis&quot;;
+            .ql-editor.ql-blank::before {
+              font-style: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="location-briefing">    <clr-modal [(clrModalOpen)]="locModalFlag" [clrModalSize]="\'xl\'">      <h3 class="modal-title" l10nTranslate>        briefing.briefingReportText      </h3>      <div class="modal-body">         <div>             <div [ngClass]="{\'display-none\': backToLocSelection}">              <p class="office-location-msg" l10nTranslate>briefing.chooseOfficeLocationText</p>              <label _ngcontent-c1="" class="searchbar-label">                <clr-icon class="" shape="search" size="12">                </clr-icon>                <div class="location-auto-complete" >                  <p-autoComplete #addLocationInput autoFocus [(ngModel)]="country"  [forceSelection] = "true"  [suggestions]="filteredCountries" (completeMethod)="filteredCountryComplete($event)"                    field="name" [size]="30" placeholder="{{searchForOfcLocText}}" [minLength]="1"  (onSelect)="onLocationSelect($event)"                   ></p-autoComplete>                </div>                </label>             </div>              <div class="table-container" *ngIf="!backToLocSelection; else updateLocation">                <div class="row">                  <div class="col-xs-12 col-md-12 col-lg-6 col-xl-12">                    <p class="location-header-name" l10nTranslate>                      briefing.recentlySharedText                    </p>                  </div>                </div>                <physicalsecurity-popular-locations (locationClickCallBack)="populateSelectLocation($event)"></physicalsecurity-popular-locations>              </div>              <ng-template #updateLocation>                  <div class="edit-location">                    <div class="edit-location-header">                      <div class="loc-header">                          <clr-icon shape="angle" size="38" (click)="resetModal()"></clr-icon> <span class="location-name">{{country.name}}</span>                      </div>                     </div>                    <div class="edit-location-content">                        <div class="editBtns">                            <button class="btn btn-primary" *ngIf="edited" (click)="showEditorToolBar()" l10nTranslate>briefing.editText</button>                            <button class="btn btn-primary" *ngIf="!edited" (click)="hideEditorToolBar()" l10nTranslate>briefing.updateText</button>                          </div>                          <div class="content-quill-editor">                              <quill-editor [placeholder]="typeContentHereText" [(ngModel)]="breifingEditVal"                              [modules]= "options" [readOnly]="isReadOnly"                              (onEditorCreated)="editorInstance($event)"                             >                             </quill-editor>                          </div>                    </div>                  </div>              </ng-template>          </div>      </div>    </clr-modal>  </div></div>'
+    var COMPONENTS = [{'name': 'AddEventComponent', 'selector': 'physicalsecurity-add-event'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AttendanceComponent', 'selector': 'app-attendance'},{'name': 'BriefingReportComponent', 'selector': 'physicalsecurity-briefing-report'},{'name': 'BroadCastLocationComponent', 'selector': 'physicalsecurity-broadcast-location'},{'name': 'CabTrackingComponent', 'selector': 'app-cab-tracking'},{'name': 'CustomChartComponent', 'selector': 'physicalsecurity-custom-chart'},{'name': 'DashboardComponent', 'selector': 'physicalSecurity-dashboard'},{'name': 'ErrorsComponent', 'selector': 'physicalsecurity-errorscomponent'},{'name': 'EvenTimeLineComponent', 'selector': 'physicalsecurity-event-timeline'},{'name': 'FireBaseNotificationComponent', 'selector': 'physicalsecurity-firebasenotification'},{'name': 'IncidentDetailsComponent', 'selector': 'physicalsecurity-incident-details'},{'name': 'LocationDetailsComponent', 'selector': 'physicalSecurity-location-details'},{'name': 'LoginComponent', 'selector': 'physicalsecurity-login'},{'name': 'LoginComponent', 'selector': 'physicalsecurity-login'},{'name': 'MaterialComponent', 'selector': 'app-material'},{'name': 'MenuSearchComponent', 'selector': 'physicalsecurity-menusearch'},{'name': 'NotificationsComponent', 'selector': 'physicalsecurity-notifications'},{'name': 'OccurrenceComponent', 'selector': 'app-occurrence'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'PageNotFoundComponent', 'selector': 'physicalsecurity-page-not-found'},{'name': 'PhysicalSecurityComponent', 'selector': 'app-physicalsecurity'},{'name': 'PopularLocationsComponent', 'selector': 'physicalsecurity-popular-locations'},{'name': 'ReportsComponent', 'selector': 'app-reports'},{'name': 'SideNavComponent', 'selector': 'physicalsecurity-sidenav'},{'name': 'StaffComponent', 'selector': 'app-staff'},{'name': 'VehicleParkingComponent', 'selector': 'app-vehicle-parking'},{'name': 'ViewProfileComponent', 'selector': 'physicalsecurity-viewprofile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'BriefingReportComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BriefingReportComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

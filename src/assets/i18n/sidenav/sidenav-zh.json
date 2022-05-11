@@ -1,0 +1,12 @@
+{
+  "selectLanguageText" : "选择语言",
+  "myDashboardText": "我的仪表板",
+  "addLocationText": "添加位置",
+  "chooseLocationText": "选择位置",
+  "popOfcLocationText": "热门办公地点",
+  "searchForOfcLocText":"搜索办公地点",
+  "logOutTitleText" : "登出",
+  "logOutMsgText" : "您确定要退出个人资料吗？",
+  "logOutYesOptText" : "是",
+  "logOutNoOptText" : "没有"
+}

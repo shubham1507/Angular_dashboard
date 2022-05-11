@@ -1,0 +1,51 @@
+@import "../../app-styles/variables.scss";
+.login-page {
+  background-image: url("/assets/images/login-bg.png");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .vm-logo {
+    position: absolute;
+    background-image: url("/assets/images/vmware-logo.png");
+    width: 160px;
+    height: 51.3px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: contain;
+    top: 40px;
+    left: 40px;
+  }
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 4.1em;
+    transform: translate(-50%, -50%);
+    .title-text {
+      font-size: 35px;
+      font-weight: 500;
+      text-align: center;
+      color: $white-color;
+      .bold-text {
+        font-weight: bold;
+      }
+    }
+    .white-bg-text {
+      height: 45px;
+      width: 287px;
+      border-radius: 3px;
+      background-color: $white-color;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 45px;
+      letter-spacing: 0.8px;
+      color: $onetwofour-navyblue;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0 auto;
+    }
+  }
+}

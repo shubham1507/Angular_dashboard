@@ -1,0 +1,12 @@
+{
+  "selectLanguageText" : "Sprache auswählen",
+  "myDashboardText": "Mein Armaturenbrett",
+  "addLocationText": "Ort hinzufügen",
+  "chooseLocationText": "Ort wählen",
+  "popOfcLocationText": "Beliebte Bürostandorte",
+  "searchForOfcLocText":"Suchen Sie nach Bürostandort",
+  "logOutTitleText" : "Ausloggen",
+  "logOutMsgText" : "Sind Sie sicher, dass Sie sich von Ihrem Profil abmelden möchten?",
+  "logOutYesOptText" : "Ja",
+  "logOutNoOptText" : "Nein"
+}

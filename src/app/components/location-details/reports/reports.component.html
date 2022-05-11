@@ -1,0 +1,55 @@
+<div class="location-tab-content">
+  <div class="reports">
+    <shift-details></shift-details>
+    <div class="reports-tabs">
+      <clr-tabs>
+        <clr-tab>
+          <button (click)="setSelectedTab('occurrence')" clrTabLink>
+            <span l10nTranslate>occurrenceTabText</span>
+            <div class="border-line"></div>
+          </button>
+          <ng-template [(clrIfActive)]="occurenceActive">
+            <app-occurrence></app-occurrence>
+          </ng-template>
+        </clr-tab>
+        <clr-tab>
+          <button (click)="setSelectedTab('vehicle-parking')" clrTabLink>
+            <span l10nTranslate>vehicleParkingTabText</span>
+            <div class="border-line"></div>
+          </button>
+          <ng-template [(clrIfActive)]="vehicleTrackActive">
+            <app-vehicle-parking></app-vehicle-parking>
+          </ng-template>
+        </clr-tab>
+        <clr-tab>
+          <button (click)="setSelectedTab('cab-tracking')" clrTabLink>
+            <span l10nTranslate>cabTrackingTabText</span>
+            <div class="border-line"></div>
+          </button>
+          <ng-template [(clrIfActive)]="cabTrackActive">
+            <app-cab-tracking></app-cab-tracking>
+          </ng-template>
+        </clr-tab>
+        <clr-tab>
+          <button (click)="setSelectedTab('material')" clrTabLink>
+            <span l10nTranslate>materialTabText</span>
+            <div class="border-line"></div>
+          </button>
+          <ng-template [(clrIfActive)]="materialActive">
+            <app-material></app-material>
+          </ng-template>
+        </clr-tab>
+        <clr-tab>
+          <button (click)="setSelectedTab('attendance')" clrTabLink>
+            <span l10nTranslate>attendanceTabText</span>
+            <div class="no-border"></div>
+          </button>
+          <ng-template [(clrIfActive)]="attendanceActive">
+            <app-attendance></app-attendance>
+          </ng-template>
+        </clr-tab>
+      </clr-tabs>
+    </div>
+  </div>
+  <div></div>
+</div>

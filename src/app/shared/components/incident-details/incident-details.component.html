@@ -1,0 +1,202 @@
+<div class="modal">
+  <div class="modal-dialog modal-xl" role="dialog" aria-hidden="true">
+    <div class="modal-header">
+      <h3 class="modal-title pull-left" l10nTranslate>
+        incidentDetails.openIncidentDetailsText
+      </h3>
+      <clr-icon
+        shape="times-circle"
+        size="26"
+        class="is-inverse pull-right"
+        (click)="closeIncidentPopUp()"
+      ></clr-icon>
+    </div>
+    <div class="modal-content incident-details-container">
+      <div class="vertical-sec-1" *ngIf="incidentData">
+        <div class="incident-data">
+          <table class="incident-table">
+            <tr>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.incidentTypeText
+                </div>
+                <div class="table-data-value" [title]="incidentData.incidentType">
+                  {{ "" + incidentData.incidentType }}
+                </div>
+              </td>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.areaText
+                </div>
+                <div class="table-data-value" [title]="incidentData.occurrenceAreaList">
+                  {{ "" + (incidentData.occurrenceAreaList || "NA")  }}
+                </div>
+              </td>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.floorText
+                </div>
+                <div class="table-data-value" [title]="incidentData.floor">
+                  {{ "" + (incidentData.floor || "NA") }}
+                </div>
+              </td>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.statusText
+                </div>
+                <div class="table-data-value" [title]="incidentData.occurrenceStatus">
+                    <div class="status-dot pull-left" 
+                    [ngClass]="{'open': incidentData.occurrenceStatus=='Open',
+                    'reopened': incidentData.occurrenceStatus=='Reopened',
+                    'resolved': incidentData.occurrenceStatus=='Resolved',
+                    'closed': incidentData.occurrenceStatus=='Closed'}">
+                    </div>
+                    <div class="pull-left">
+                        {{ incidentData.occurrenceStatus }}
+                    </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.shiftText
+                </div>
+                <div class="table-data-value" [title]="incidentData.shiftInfo">
+                  {{ incidentData.shiftInfo }}
+                </div>
+              </td>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.dateText
+                </div>
+                <div class="table-data-value">
+                  {{ incidentData.occurrenceSubmittedTime | l10nDate: defaultLocale: dateOptions }}
+                  
+                </div>
+              </td>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.startTimeText
+                </div>
+                <div class="table-data-value" >
+                  {{ incidentData.occurrenceStartedTime | l10nDate: defaultLocale: 'shortTime' }}
+                </div>
+              </td>
+              <td>
+                <button class="blue-button" title="Coming Soon!" l10nTranslate>
+                  incidentDetails.overrideStatusText
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.officeLocationText
+                </div>
+                <div class="table-data-value" [title]="incidentData.buildingName">
+                  {{ incidentData.buildingName }}
+                </div>
+              </td>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.regionText
+                </div>
+                <div class="table-data-value" [title]="'NA'">
+                  <!-- {{ incidentData.incidentDetails.region }} -->
+                  NA
+                </div>
+              </td>
+              <td>
+                <div class="table-data-key" l10nTranslate>
+                  incidentDetails.additionalDescriptionText
+                </div>
+                <div class="table-data-value" [title]="incidentData.occurrenceDescription">
+                  {{ incidentData.occurrenceDescription }}
+                </div>
+              </td>
+              <td>
+                <button class="blue-button" title="Coming Soon!" l10nTranslate>
+                  incidentDetails.addCommentsText
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="staff-data" l10nTranslate>
+          incidentDetails.staffText
+          <div
+            class="staff-details"
+            
+          >
+            <div class="profile-picture-container">
+              <img [src]="'assets/images/test1.png'" class="profile-picture" alt="" />
+            </div>
+            <div class="employee-data">
+              <div class="employee-name">{{incidentData.firstName + " " + incidentData.lastName}}</div>
+              <div class="employee-role">NA</div>
+            </div>
+            <div class="staff-contact">
+              <button class="blue-button">
+                <span>
+                  <clr-icon
+                    shape="phone-handset"
+                    class="is-solid is-highlight"
+                    size="24px"
+                  ></clr-icon>
+                </span>
+                <span>{{incidentData.occurrenceReportedByContactNum}}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vertical-sec-2">
+        <div
+          class="inc-activity-log"
+          *ngIf="incidentData.updateInfo && incidentData.updateInfo.length > 0; else noTimeLineData"
+        >
+          <div class="card">
+            <div class="card-header" l10nTranslate>
+              incidentDetails.activityLogText
+            </div>
+            <div class="card-block">
+              <div class="card-text ">
+                <div class="timeline-feed-container">
+                  <section class="evt-timeline">
+                    <div class="evt-timeline__container">
+                      <div
+                        class="evt-timeline__block "
+                        *ngFor="let timeLine of incidentData.updateInfo"
+                      >
+                        <div class="evt-timeline__icon"></div>
+                        <div class="evt-timeline__content ">
+                          <div class="activity-heading">
+                            <h2>{{ timeLine.updatedDateTime | l10nDate: defaultLocale: dateOptions }}</h2>
+                            <p>{{ timeLine.updatedDescription }} by {{timeLine.updaterEmailId}}</p>
+                            <!-- <ul
+                              *ngFor="let activityItem of timeLine.activities"
+                            >
+                              <li>{{ activityItem }}</li>
+                            </ul> -->
+                          </div>
+                          <span class="evt-timeline__date">{{
+                              timeLine.updatedDateTime | l10nDate: defaultLocale: 'shortTime'
+                          }}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ng-template #noTimeLineData>
+          <p class="no-data" l10nTranslate>timeline.noDataTimelineText</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" aria-hidden="true" *ngIf="showIncidentModal"></div>

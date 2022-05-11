@@ -1,0 +1,11 @@
+<div class="staff-header">
+  <div class="shift-det">
+    <span l10nTranslate>currentShiftText</span> :
+    <span><b>{{currentShift || "-"}}</b></span>
+    <div class="border-line"></div>
+    <clr-icon class="clock" shape="clock"></clr-icon>
+    <span class="next-shift" l10nTranslate>nextShiftStartsInText</span>: 
+    <span><b> {{nextShiftStartsIn || '-'}}</b></span>
+  </div>
+  <div class="time-det">{{currentTime}}</div>
+</div>

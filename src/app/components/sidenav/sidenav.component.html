@@ -1,0 +1,128 @@
+<div class="side-nav">
+  <div class="vmlogo"></div>
+  <div class="project-title">Physical Security</div>
+  <div class="language-select-wrapper">
+    <div class="clr-select-wrapper">
+      <select clrSelect (change)="localeChange($event.target.value)">
+        <option
+          *ngFor="let language of languages"
+          [value]="language.locale"
+          [attr.selected]="
+            locale.getCurrentLanguage() == language.locale.toLowerCase()
+              ? true
+              : null
+          "
+        >
+          {{ language.lang }}
+        </option>
+      </select>
+      <span class="clr-subtext" l10nTranslate>selectLanguageText</span>
+    </div>
+  </div>
+  <div class="white-border-full"></div>
+  <div  *ngIf="userData">
+    <div class="profile-picture-container">
+      <img
+        class="profile-picture"
+        [src]="userImgUrl || 'assets/images/test1.png'"
+        alt=""
+      />
+    </div>
+    <div class="user-name">
+      {{ userData?.firstName + " " + userData?.lastName }}
+    </div>
+    <div class="user-title">
+      {{ userData?.rank || " " }}
+    </div>
+    <div  class="logout" [ngClass]="{'highlight': logOutBtnsVisible }">
+      <button class="btn btn-link" (click)="showLogOutBtns($event)" (document:click)="hideLogOutBtns()">
+          <clr-icon shape="logout" size="20" ></clr-icon> <span class="first-letter-upcase" l10nTranslate>logOutTitleText</span>
+      </button>
+      <div class="logout-msg" *ngIf="logOutBtnsVisible">
+        <p l10nTranslate> logOutMsgText</p>
+        <div class="logout-btns">
+            <button class="btn btn-link" (click)="hideLogOutBtns()">
+                <span l10nTranslate>logOutNoOptText</span>
+            </button>
+            <button class="btn btn-link yes-opt" (click)="logOut()">
+                <span l10nTranslate>logOutYesOptText</span>
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="white-border-short"></div>
+  <div class="nav-btn-container">
+    <div
+      [routerLink]="['/app/dashboard']"
+      routerLinkActive="selected"
+      class="nav-btn"
+      *ngIf="buildingList.length>=2"
+    >
+      <clr-icon
+        class="nav-btn-icon is-inverse"
+        size="20"
+        shape="computer"
+      ></clr-icon>
+      <div class="nav-btn-text" l10nTranslate>myDashboardText</div>
+    </div>
+
+    <div *ngIf="buildingList.length > 0">
+        <div
+        [routerLink]="['/app/location', building]"
+        routerLinkActive="selected"
+        class="nav-btn"
+        *ngFor="let building of buildingList"
+      >
+        <clr-icon
+          class="nav-btn-icon is-inverse"
+          size="20"
+          shape="map-marker"
+        ></clr-icon>
+        <div class="nav-btn-text" [title]="building">{{ building }}</div>
+      </div>
+    </div>
+
+
+    <!-- <button class="nav-btn" (click)="openLocationModal()">
+        <clr-icon class="nav-btn-icon is-inverse" size="20" shape="plus-circle"></clr-icon>
+        <div class="nav-btn-text" l10nTranslate>addLocationText</div>
+      </button> -->
+  </div>
+</div>
+
+<div class="add-location">
+  <clr-modal [(clrModalOpen)]="locModalFlag" [clrModalSize]="'lg'">
+    <h3 class="modal-title" l10nTranslate>chooseLocationText</h3>
+    <div class="modal-body">
+      <label _ngcontent-c1="" class="searchbar-label">
+        <clr-icon class="" shape="search" size="12"> </clr-icon>
+        <div class="location-auto-complete">
+          <p-autoComplete
+            #addLocationInput
+            autoFocus
+            [(ngModel)]="country"
+            [forceSelection]="true"
+            [suggestions]="filteredCountries"
+            (completeMethod)="filterCountryComplete($event)"
+            field="name"
+            [size]="30"
+            placeholder="{{ searchForOfcLocText }}"
+            [minLength]="1"
+            (onSelect)="onLocationSelect($event)"
+          ></p-autoComplete>
+        </div>
+      </label>
+      <div class="table-container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12 col-lg-6 col-xl-12">
+            <p class="location-header-name" l10nTranslate>popOfcLocationText</p>
+          </div>
+        </div>
+        <physicalsecurity-popular-locations
+          (locationClickCallBack)="selectPopularLocation($event)"
+        ></physicalsecurity-popular-locations>
+      </div>
+    </div>
+  </clr-modal>
+</div>

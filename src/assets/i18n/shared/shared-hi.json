@@ -1,0 +1,78 @@
+{
+  "broadcast": {
+    "modaltitle": "नया प्रसारण",
+    "autocompletetext": "कार्यालय स्थान जोड़ें",
+    "writehere": "यहाँ लिखें",
+    "addTitle" : "शीर्षक जोड़ें",
+    "saveSuccess" : "प्रसारण डेटा सफलतापूर्वक सहेजा गया",
+    "saveFailure" : "प्रसारण डेटा सहेजने में त्रुटि हुई, कृपया पुनः प्रयास करें",
+    "submit": "जमा करें"
+  },
+  "briefing": {
+    "briefingReportText": "ब्रीफिंग रिपोर्ट",
+    "chooseOfficeLocationText": "कार्यालय का स्थान चुनें",
+    "recentlySharedText": "हाल ही में खोजा गया",
+    "editText": "संपादित करें",
+    "updateText": "अद्यतन करें",
+    "typeContentHereText": "यहां कंटेंट टाइप करें",
+    "searchForOfcLocText": "कार्यालय स्थान के लिए खोजें",
+    "saveSuccess": "ब्रीफिंग रिपोर्ट सफलतापूर्वक बच गई",
+    "lastUpdated": "आखरी अपडेट"
+  },
+  "menusearch": {
+    "searchtext": "खोज",
+    "loadingText": "लोड हो रहा है",
+    "reportsText": "रिपोर्ट"
+  },
+  "notif": {
+    "notificationsText": "सूचनाएं",
+    "newText": "नया",
+    "clearBtnText": "सभी साफ करें"
+  },
+  "timeline": {
+    "eventTimelineText": "इवेंट टाइमलाइन",
+    "noDataTimelineText": "समयावधि में कोई डेटा मौजूद नहीं है",
+    "newEventText": "नयी घटना",
+    "toText": "सेवा मेरे",
+    "createText": "सर्जन करना",
+    "addEventTitleText": "ईवेंट शीर्षक जोड़ें",
+    "addNewLocText": "नया स्थान जोड़ें",
+    "writeHereText": "यहाँ लिखें"
+  },
+  "chart": {
+    "noDataText": "कोई डेटा उपलब्ध नहीं होने के कारण चार्ट प्रस्तुत करने में असमर्थ"
+  },
+  "incidentDetails": {
+    "openIncidentDetailsText": "हादसा विवरण खोलें",
+    "incidentTypeText": "हादसा प्रकार",
+    "areaText": "क्षेत्र",
+    "floorText": "मंज़िल",
+    "statusText": "स्थिति",
+    "shiftText": "काम की पाली",
+    "dateText": "दिनांक",
+    "startTimeText": "समय शुरू",
+    "overrideStatusText": "ओवरराइड की स्थिति",
+    "officeLocationText": "कार्यालय स्थान",
+    "regionText": "क्षेत्र",
+    "additionalDescriptionText": "अतिरिक्त विवरण",
+    "addCommentsText": "टिप्पणी करें",
+    "staffText": "कर्मचारी",
+    "activityLogText": "गतिविधि लॉग"
+  },
+  "generateReport": {
+    "successMsg" : "रिपोर्ट सफलतापूर्वक डाउनलोड की गई"
+  },
+  "initialisingText" : "आरंभ",
+  "locationNotFound" : "स्थान नहीं मिला",
+  "timeUnit": {
+    "now": "अभी",
+    "min": "मिनट",
+    "mins": "मिनट पहले",
+    "hour": "घंटा",
+    "hours": "घंटो पहले",
+    "day": "दिन",
+    "days": "दिन पहले",
+    "week": "हफ़्ता",
+    "weeks": "हफ़्तों पहले"
+  }
+}

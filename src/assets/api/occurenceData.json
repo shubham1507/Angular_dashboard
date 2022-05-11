@@ -1,0 +1,224 @@
+{
+  "pageDetails": {
+    "page": 1,
+    "size": 7,
+    "totalPages": 1,
+    "totalCount": 6
+  },
+  "data": [
+    {
+      "id": "5c33995dcfc6510010065d7c",
+      "appId": "SMIE-VMWARE-808616",
+      "tenantId": "SMIE-VMWARE-4535",
+      "buildingName": "KALYANI VISTA (KV)",
+      "timeZone": "Asia/Calcutta",
+      "floor": [
+        "3",
+        "4"
+      ],
+      "shiftInfo": "SHIFT-C",
+      "occurrenceReportedByEmailId": "srivastavs@vmware.com",
+      "occurrenceReportedByContactNum": "+918087434074",
+      "occurrenceType": "NON-BAU-Incident-Report",
+      "incidentType": [
+        "Medical Incidents"
+      ],
+      "occurrenceAreaList": [
+        "Board Rooms11",
+        "Breakout",
+        "Conference Rooms1"
+      ],
+      "occurrenceStartedTime": 1546885435291,
+      "occurrenceSubmittedTime": 1546885470611,
+      "occurrenceStatus": "Open",
+      "occurrenceApprovalStatus": "Pending",
+      "occurrenceDescription": "TEST OCCURRENCE",
+      "imagesUrl": []
+    },
+    {
+      "id": "5c3db26c6ca4870011f91120",
+      "appId": "SMIE-VMWARE-808616",
+      "tenantId": "SMIE-VMWARE-4535",
+      "buildingName": "KALYANI VISTA (KV)",
+      "timeZone": "IST",
+      "floor": [
+        "3",
+        "4",
+        "5"
+      ],
+      "shiftInfo": "Shift-C",
+      "occurrenceReportedByEmailId": "motwanis@vmware.com",
+      "occurrenceReportedByContactNum": "+911234567890",
+      "occurrenceType": "NON-BAU-Incident-Report",
+      "incidentType": [
+        "Medical Incidents"
+      ],
+      "occurrenceAreaList": [
+        "Board Rooms",
+        "Breakout",
+        "Conference Rooms",
+        "Parking"
+      ],
+      "occurrenceStartedTime": 1544684028000,
+      "occurrenceSubmittedTime": 1544684028000,
+      "occurrenceStatus": "Open",
+      "occurrenceApprovalStatus": "Pending",
+      "occurrenceDescription": "TEST OCCURRENCE",
+      "imagesUrl": [
+        "/api/v1/download/5c3db26f6ca4870011f91122"
+      ],
+      "updateInfo": [
+        {
+          "id": null,
+          "updatedDescription": "Test",
+          "updaterEmailId": "motwanis@vmware.com",
+          "updatedDateTime": 1544684028000,
+          "updatedImages": []
+        }
+      ]
+    },
+    {
+      "id": "5c33995dcfc6510010065d7c",
+      "appId": "SMIE-VMWARE-808616",
+      "tenantId": "SMIE-VMWARE-4535",
+      "buildingName": "KALYANI VISTA (KV)",
+      "timeZone": "Asia/Calcutta",
+      "floor": [
+        "3",
+        "4"
+      ],
+      "shiftInfo": "SHIFT-C",
+      "occurrenceReportedByEmailId": "srivastavs@vmware.com",
+      "occurrenceReportedByContactNum": "+918087434074",
+      "occurrenceType": "NON-BAU-Incident-Report",
+      "incidentType": [
+        "Medical Incidents"
+      ],
+      "occurrenceAreaList": [
+        "Board Rooms11",
+        "Breakout",
+        "Conference Rooms1"
+      ],
+      "occurrenceStartedTime": 1546885435291,
+      "occurrenceSubmittedTime": 1546885470611,
+      "occurrenceStatus": "Open",
+      "occurrenceApprovalStatus": "Pending",
+      "occurrenceDescription": "TEST OCCURRENCE",
+      "imagesUrl": []
+    },
+    {
+      "id": "5c3db26c6ca4870011f91120",
+      "appId": "SMIE-VMWARE-808616",
+      "tenantId": "SMIE-VMWARE-4535",
+      "buildingName": "KALYANI VISTA (KV)",
+      "timeZone": "IST",
+      "floor": [
+        "3",
+        "4",
+        "5"
+      ],
+      "shiftInfo": "Shift-C",
+      "occurrenceReportedByEmailId": "motwanis@vmware.com",
+      "occurrenceReportedByContactNum": "+911234567890",
+      "occurrenceType": "NON-BAU-Incident-Report",
+      "incidentType": [
+        "Medical Incidents"
+      ],
+      "occurrenceAreaList": [
+        "Board Rooms",
+        "Breakout",
+        "Conference Rooms",
+        "Parking"
+      ],
+      "occurrenceStartedTime": 1544684028000,
+      "occurrenceSubmittedTime": 1544684028000,
+      "occurrenceStatus": "Open",
+      "occurrenceApprovalStatus": "Pending",
+      "occurrenceDescription": "TEST OCCURRENCE",
+      "imagesUrl": [
+        "/api/v1/download/5c3db26f6ca4870011f91122"
+      ],
+      "updateInfo": [
+        {
+          "id": null,
+          "updatedDescription": "Test",
+          "updaterEmailId": "motwanis@vmware.com",
+          "updatedDateTime": 1544684028000,
+          "updatedImages": []
+        }
+      ]
+    },
+    {
+      "id": "5c33995dcfc6510010065d7c",
+      "appId": "SMIE-VMWARE-808616",
+      "tenantId": "SMIE-VMWARE-4535",
+      "buildingName": "KALYANI VISTA (KV)",
+      "timeZone": "Asia/Calcutta",
+      "floor": [
+        "3",
+        "4"
+      ],
+      "shiftInfo": "SHIFT-C",
+      "occurrenceReportedByEmailId": "srivastavs@vmware.com",
+      "occurrenceReportedByContactNum": "+918087434074",
+      "occurrenceType": "NON-BAU-Incident-Report",
+      "incidentType": [
+        "Medical Incidents"
+      ],
+      "occurrenceAreaList": [
+        "Board Rooms11",
+        "Breakout",
+        "Conference Rooms1"
+      ],
+      "occurrenceStartedTime": 1546885435291,
+      "occurrenceSubmittedTime": 1546885470611,
+      "occurrenceStatus": "Open",
+      "occurrenceApprovalStatus": "Pending",
+      "occurrenceDescription": "TEST OCCURRENCE",
+      "imagesUrl": []
+    },
+    {
+      "id": "5c3db26c6ca4870011f91120",
+      "appId": "SMIE-VMWARE-808616",
+      "tenantId": "SMIE-VMWARE-4535",
+      "buildingName": "KALYANI VISTA (KV)",
+      "timeZone": "IST",
+      "floor": [
+        "3",
+        "4",
+        "5"
+      ],
+      "shiftInfo": "Shift-C",
+      "occurrenceReportedByEmailId": "motwanis@vmware.com",
+      "occurrenceReportedByContactNum": "+911234567890",
+      "occurrenceType": "NON-BAU-Incident-Report",
+      "incidentType": [
+        "Medical Incidents"
+      ],
+      "occurrenceAreaList": [
+        "Board Rooms",
+        "Breakout",
+        "Conference Rooms",
+        "Parking"
+      ],
+      "occurrenceStartedTime": 1544684028000,
+      "occurrenceSubmittedTime": 1544684028000,
+      "occurrenceStatus": "Open",
+      "occurrenceApprovalStatus": "Pending",
+      "occurrenceDescription": "TEST OCCURRENCE",
+      "imagesUrl": [
+        "/api/v1/download/5c3db26f6ca4870011f91122"
+      ],
+      "updateInfo": [
+        {
+          "id": null,
+          "updatedDescription": "Test",
+          "updaterEmailId": "motwanis@vmware.com",
+          "updatedDateTime": 1544684028000,
+          "updatedImages": []
+        }
+      ]
+    }
+  ],
+  "success": true
+}

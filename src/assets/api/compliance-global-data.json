@@ -1,0 +1,139 @@
+{
+    "pageSize": 10,
+    "complianceRegions": {
+        "ALL REGIONS": 87,
+        "APAC": 15,
+        "AMER": 9,
+        "EMEA": 5,
+        "INDIA": 0,
+        "PALO ALTO": 2
+    },
+    "data": [
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        },
+        {
+            "guardName": "Mukesh Kumar",
+            "guardRole": "Security Guard",
+            "taskType": "PV Pending",
+            "status": "Requested on Oct 29",
+            "DOJ": "14 May 2018",
+            "officeLocation": "Kalyani Vista, Bengaluru",
+            "region": "INDIA"
+        }
+    ]
+}

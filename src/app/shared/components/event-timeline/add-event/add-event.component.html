@@ -1,0 +1,73 @@
+<div class="addnew-event">
+  <clr-modal [(clrModalOpen)]="eventModallOpen" [clrModalSize]="'lg'">
+    <h3 class="modal-title" l10nTranslate>timeline.newEventText</h3>
+    <div class="modal-body">
+      <div>
+        <form [formGroup]="newEventForm" (ngSubmit)="onSubmit()">
+          <div class="add-event-title">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="addeventTitle"
+              placeholder="{{ addEventTitleText }}"
+            />
+          </div>
+          <div class="calendar-between">
+            <span>
+              <p-calendar
+                formControlName="fromTime"
+                [showTime]="true"
+                [locale]="calLocale"
+              ></p-calendar
+            ></span>
+            <span class="diff-text" l10nTranslate> timeline.toText </span>
+            <span>
+              <p-calendar
+                formControlName="toTime"
+                [showTime]="true"
+                [locale]="calLocale"
+              ></p-calendar
+            ></span>
+          </div>
+          <label _ngcontent-c1="" class="searchbar-label">
+            <clr-icon class="" shape="search" size="12"> </clr-icon>
+            <div class="location-auto-complete">
+              <p-autoComplete
+                autoFocus
+                formControlName="eventLocation"
+                [forceSelection]="true"
+                [suggestions]="filteredLocations"
+                (completeMethod)="filteredLocationComplete($event)"
+                field="name"
+                [size]="30"
+                placeholder="{{ addNewLocText }}"
+                [minLength]="1"
+                [multiple]="eventModallOpen"
+              ></p-autoComplete>
+            </div>
+          </label>
+          <div class="desc-label">
+            <textarea
+              class="form-control"
+              [rows]="5"
+              [cols]="30"
+              pInputTextarea
+              placeholder="{{ writeHereText }}"
+              formControlName="descText"
+            ></textarea>
+          </div>
+          <div class="center-align">
+            <button
+              class="btn btn-primary"
+              type="submit"
+              [disabled]="!newEventForm.valid"
+              l10nTranslate
+            >
+              timeline.createText
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </clr-modal>
+</div>

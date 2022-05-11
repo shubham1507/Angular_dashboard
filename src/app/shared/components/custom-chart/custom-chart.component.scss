@@ -1,0 +1,79 @@
+@import "../../../app-styles/variables.scss";
+@import "../../../app-styles/mixins.scss";
+
+.rightAlign {
+  @include flexCenterdisplay();
+  .legend-data {
+    display: block;
+  }
+}
+.no-data-found {
+  color: $dove_grey;
+  margin: 20px;
+  font-size: 28px;
+  line-height: 1.5rem;
+}
+/**Overriding the chart css */
+.nvd3 {
+  .nvd3.nv-pie {
+    .nv-pie-title {
+      fill: $dove_grey;
+      font-weight: 500;
+    }
+    .incEle,
+    .incDesc {
+      font-size: 30px !important;
+      font-family: "Metropolis" !important;
+    }
+    .incDesc {
+      font-size: 14px !important;
+    }
+  }
+}
+/**CSS for the legend labels */
+.legend-data {
+  display: table;
+  margin: 0 auto;
+  .legend-wrapper {
+    width: 100%;
+    .container-legend {
+      display: inline-block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      color: $dove_grey;
+      @include selecttext(none);
+      /* Hide the browser's default radio button */
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .checkmark {
+        position: absolute;
+        top: 3px;
+        left: 11px;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: 1px solid;
+        .checkmark-inner-circle {
+          position: absolute;
+          display: block;
+          top: 2px;
+          left: 2px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .btn-clear {
+      position: absolute;
+      margin: 0;
+    }
+  }
+}

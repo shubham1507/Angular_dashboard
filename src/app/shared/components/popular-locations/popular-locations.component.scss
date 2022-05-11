@@ -1,0 +1,24 @@
+@import "../../../app-styles/variables.scss";
+
+.location-name {
+  td {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    a {
+      line-height: 40px;
+      font-size: 16px;
+      color: $equal_dark_grey;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+.no-recent-search-txt{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+}

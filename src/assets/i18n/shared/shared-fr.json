@@ -1,0 +1,78 @@
+{
+  "broadcast": {
+    "modaltitle": "Nouvelle diffusion",
+    "autocompletetext": "Ajouter un emplacement de bureau",
+    "writehere": "Ecrire ici",
+    "addTitle" : "Ajouter un titre",
+    "saveSuccess" : "Diffusion des données sauvegardées avec succès",
+    "saveFailure" : "Une erreur s'est produite lors de la sauvegarde des données de diffusion. Veuillez réessayer",
+    "submit": "Soumettre"
+  },
+  "briefing": {
+    "briefingReportText": "Rapport de briefing",
+    "chooseOfficeLocationText": "Choisissez l'emplacement du bureau",
+    "recentlySharedText": "Récemment recherché",
+    "editText": "modifier",
+    "updateText": "Mettre à jour",
+    "typeContentHereText": "Tapez le contenu ici",
+    "searchForOfcLocText": "Rechercher un bureau",
+    "saveSuccess": "Compte rendu enregistré avec succès",
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "menusearch": {
+    "searchtext": "chercher",
+    "loadingText": "Chargement",
+    "reportsText": "Rapports"
+  },
+  "notif": {
+    "notificationsText": "Les notifications",
+    "newText": "Nouveau",
+    "clearBtnText": "Tout effacer"
+  },
+  "timeline": {
+    "eventTimelineText": "Chronologie de l'événement",
+    "noDataTimelineText": "Aucune donnée présente dans la chronologie",
+    "newEventText": "Nouvel évènement",
+    "toText": "à",
+    "createText": "CRÉER",
+    "addEventTitleText": "Ajouter un titre à l'événement",
+    "addNewLocText": "Ajouter un nouvel emplacement",
+    "writeHereText": "Ecrire ici"
+  },
+  "chart": {
+    "noDataText": "Impossible de rendre le graphique car aucune donnée n'est disponible"
+},
+  "incidentDetails": {
+    "openIncidentDetailsText": "Détails de l'incident ouvert",
+    "incidentTypeText": "Type d'incident",
+    "areaText": "Surface",
+    "floorText": "étage",
+    "statusText": "Statut",
+    "shiftText": "Shift",
+    "dateText": "Datte",
+    "startTimeText": "Heure de début",
+    "overrideStatusText": "Remplacer le statut",
+    "officeLocationText": "Emplacement du bureau",
+    "regionText": "Région",
+    "additionalDescriptionText": "Description supplémentaire",
+    "addCommentsText": "Ajoutez des commentaires",
+    "staffText": "Personnel",
+    "activityLogText": "Journal d'activité"
+  },
+  "generateReport": {
+    "successMsg" : "Rapport téléchargé avec succès"
+  },
+  "initialisingText" : "Initialisation",
+  "locationNotFound" : "Lieu non trouvé",
+  "timeUnit": {
+    "now": "à présent",
+    "min": "minute",
+    "mins": "il y a quelques minutes",
+    "hour": "Heure",
+    "hours": "il y a des heures",
+    "day": "journée",
+    "days": "il y a quelques jours",
+    "week": "la semaine",
+    "weeks": "il y a des semaines"
+  }
+}

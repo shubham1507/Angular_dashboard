@@ -1,0 +1,310 @@
+$color_1: #737373;
+$color_2: #0095d3;
+$color_3: #007cbb;
+$color_4: #737373;
+$border_color_1: transparent;
+$border_left_color_1: white;
+
+.timeline-feed-container {
+  /* You can add global styles to this file, and also import other style files */
+  /* --------------------------------
+Primary styles
+-------------------------------- */
+  /* --------------------------------
+Vertical Timeline
+-------------------------------- */
+  @-webkit-keyframes "evt-bounce-1" {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes "evt-bounce-1" {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @-webkit-keyframes "evt-bounce-2" {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes "evt-bounce-2" {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes "evt-bounce-2-inverse" {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: translateX(-20px);
+      transform: translateX(-20px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes "evt-bounce-2-inverse" {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: translateX(-20px);
+      transform: translateX(-20px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    &::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    &::before {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+  h1 {
+    font-weight: bold;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0;
+    color: $color_3;
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    &:before {
+      content: "+";
+      margin-right: 4px;
+    }
+  }
+  .event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    .event-heading {
+      color: $color_1;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .event-apps {
+      font-family: Metropolis;
+      font-size: 16px;
+      color: $color_3;
+    }
+  }
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .timeline-heading {
+      font-weight: bold;
+      font-size: 20px;
+      font-weight: 600;
+      color: $color_3;
+    }
+  }
+  .evt-timeline {
+    .evt-timeline__container {
+      position: relative;
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 2em 0;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 90%;
+        width: 4px;
+        background: #cccccc;
+      }
+      .evt-timeline__block {
+        position: relative;
+        right: 9%;
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .evt-timeline__icon {
+          position: absolute;
+          top: 0;
+          border-radius: 50%;
+          background: #0095d3;
+          -webkit-box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+            0 3px 0 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+            0 3px 0 4px rgba(0, 0, 0, 0.05);
+        }
+        .evt-timeline__content {
+          position: relative;
+          background: white;
+          border-radius: 0.25em;
+          padding: 1em;
+          float: right;
+          width: 70%;
+          &:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 16px;
+            right: 100%;
+            height: 0;
+            width: 0;
+            border: 7px solid transparent;
+            border-right: 7px solid white;
+          }
+          .activity-heading {
+            position: relative;
+            bottom: 25px;
+            right: 5%;
+            width: 120%;
+            h2 {
+              color: $color_2;
+              line-height: 1;
+              font-size : 16px;
+            }
+            p {
+              color: $color_2;
+              line-height: 1.6;
+              font-size: 14px;
+              color: $color_3;
+              margin: 0;
+            }
+            .activityItems {
+              font-family: "Metropolis";
+              font-size: 15px;
+              color: #666666;
+            }
+          }
+          .evt-timeline__date {
+            float: left;
+            padding: 0.8em 0;
+            opacity: 0.7;
+            font-size: 16px;
+            font-weight: 500;
+            color: $color_4;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .evt-timeline__container {
+    &::before {
+      left: 15.5%;
+    }
+
+    .evt-timeline__icon {
+      width: 12px;
+      height: 12px;
+      left: 25%;
+      margin-left: -6px;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+    .evt-timeline__icon.evt-timeline__icon--bounce-in {
+      visibility: visible;
+      -webkit-animation: evt-bounce-1 0.6s;
+      animation: evt-bounce-1 0.6s;
+    }
+    .evt-timeline__content {
+      margin-left: 0;
+      padding: 1.6em;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      &::before {
+        top: 24px;
+        left: 100%;
+        border-color: $border_color_1;
+        border-left-color: $border_left_color_1;
+      }
+    }
+    .evt-timeline__date {
+      position: absolute;
+      width: 100%;
+      left: auto;
+      right: 32%;
+      top: -20px;
+    }
+    .evt-timeline__content.evt-timeline__content--bounce-in {
+      visibility: visible;
+      -webkit-animation: evt-bounce-2 0.6s;
+      animation: evt-bounce-2 0.6s;
+    }
+  }
+}

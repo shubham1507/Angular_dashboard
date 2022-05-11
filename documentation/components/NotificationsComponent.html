@@ -1,0 +1,1180 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>physical-security documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">physical-security documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>NotificationsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/components/notifications/notifications.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component used to show the notifications on the header</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>physicalsecurity-notifications</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./notifications.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./notifications.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#defaultLocale">defaultLocale</a>
+                            </li>
+                            <li>
+                                <a href="#lang">lang</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#locale">locale</a>
+                            </li>
+                            <li>
+                                <a href="#notificationsData">notificationsData</a>
+                            </li>
+                            <li>
+                                <a href="#notificationSub">notificationSub</a>
+                            </li>
+                            <li>
+                                <a href="#shownotifications">shownotifications</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#translation">translation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#hideNotifications">hideNotifications</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#showNotifications">showNotifications</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#notificationSubject">notificationSubject</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#notifCount">notifCount</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(reportsService: <a href="../injectables/ReportsService.html">ReportsService</a>, _restApi: <a href="../injectables/RestApi.html">RestApi</a>, locale: LocaleService, translation: TranslationService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor function used to instantiate the notifications component</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>reportsService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ReportsService.html" target="_self" >ReportsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_restApi</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/RestApi.html" target="_self" >RestApi</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>locale</td>
+                                                  
+                                                        <td>
+                                                                    <code>LocaleService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>translation</td>
+                                                  
+                                                        <td>
+                                                                    <code>TranslationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="notificationSubject"></a>
+                        <code>notificationSubject</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>notification subject used to invoke the notification when user select the notification icon </p>
+</div>
+                            <p>
+                            <em>Type :</em>    <code>Subject&lt;any&gt;</code>
+
+                            </p>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:38</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="notifCount"></a>
+                        <code>notifCount</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>notif count emitter used to emit the notification count when the user lands  </p>
+</div>
+                        <em><code>$event</code> Type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:41</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hideNotifications"></a>
+                        <span class="name">
+                            <b>
+                            hideNotifications
+                            </b>
+                            <a href="#hideNotifications"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>hideNotifications()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function used to hide the notifications</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:93</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>unsubscribe the  notification subscription data</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:71</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>On initialise function used to subscribe the notifications</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showNotifications"></a>
+                        <span class="name">
+                            <b>
+                            showNotifications
+                            </b>
+                            <a href="#showNotifications"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showNotifications(evt)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Function does not propagates the event to the parent element and displays the notifications</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>evt</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="defaultLocale"></a>
+                        <span class="name">
+                            <b>
+                            defaultLocale
+                            </b>
+                            <a href="#defaultLocale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>defaultLocale:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @DefaultLocale()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lang"></a>
+                        <span class="name">
+                            <b>
+                            lang
+                            </b>
+                            <a href="#lang"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>lang:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Language()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locale"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            locale
+                            </b>
+                            <a href="#locale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>locale:     <code>LocaleService</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>LocaleService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notificationsData"></a>
+                        <span class="name">
+                            <b>
+                            notificationsData
+                            </b>
+                            <a href="#notificationsData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>notificationsData:     <code><a href="../interfaces/notificationsDTO.html" target="_self" >notificationsDTO[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/notificationsDTO.html" target="_self" >notificationsDTO[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to hold the notifications data from an observable </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notificationSub"></a>
+                        <span class="name">
+                            <b>
+                            notificationSub
+                            </b>
+                            <a href="#notificationSub"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>notificationSub:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used to hold the notification subscription  </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shownotifications"></a>
+                        <span class="name">
+                            <b>
+                            shownotifications
+                            </b>
+                            <a href="#shownotifications"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>shownotifications:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>notification flag to show and hide the notification container </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="translation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            translation
+                            </b>
+                            <a href="#translation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>translation:     <code>TranslationService</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TranslationService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/shared/components/notifications/notifications.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, EventEmitter, Output, OnDestroy } from &#x27;@angular/core&#x27;;
+import { ReportsService } from &#x27;src/app/services/reports.service&#x27;;
+import { Subject, Subscription } from &#x27;rxjs&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+import { notificationsDTO } from &#x27;./notifications-model&#x27;;
+import { RestApi } from &#x27;src/app/services/restapi.service&#x27;;
+
+import {
+  Language,
+  DefaultLocale,
+  TranslationService,
+  LocaleService,
+} from &#x27;angular-l10n&#x27;;
+
+/**
+ * Component used to show the notifications on the header
+ */
+@Component({
+  selector: &#x27;physicalsecurity-notifications&#x27;,
+  templateUrl: &#x27;./notifications.component.html&#x27;,
+  styleUrls: [&#x27;./notifications.component.scss&#x27;]
+})
+export class NotificationsComponent implements OnInit , OnDestroy {
+
+  @Language() lang: string;
+  @DefaultLocale() defaultLocale: string;
+
+  /**Used to hold the notification subscription  */
+  notificationSub : Subscription;
+
+  /**Used to hold the notifications data from an observable */
+  notificationsData : notificationsDTO[] ;
+
+  /**notification flag to show and hide the notification container */
+  shownotifications : boolean &#x3D; false;
+
+  /** notification subject used to invoke the notification when user select the notification icon */
+  @Input() notificationSubject: Subject&lt;any&gt;;
+
+  /** notif count emitter used to emit the notification count when the user lands  */
+  @Output() notifCount  &#x3D; new EventEmitter&lt;any&gt;();
+
+
+  /**
+   * Constructor function used to instantiate the notifications component
+   * @param reportsService
+   * @param _restApi
+   */
+  constructor(private reportsService: ReportsService , private _restApi : RestApi, public locale: LocaleService, public translation: TranslationService) { }
+
+  /**
+   * Function does not propagates the event to the parent element and displays the notifications
+   * @param evt
+   */
+  showNotifications(evt){
+    evt.stopPropagation();
+    this.shownotifications &#x3D; true;
+  }
+
+  /**
+   * Function used to hide the notifications
+   */
+  hideNotifications(){
+    this.shownotifications &#x3D; false;
+  }
+
+  /**
+   * On initialise function used to subscribe the notifications
+   *
+   */
+  ngOnInit() {
+    /**
+     * Subscribe to the notification subject and show the notifications when user selects the notification option
+     */
+    this.notificationSubject.subscribe( open &#x3D;&gt; {
+      this.shownotifications &#x3D;  open;
+    });
+
+    /**
+     * Get the notifications data for the users
+     * and emit the event for the notification count
+     */
+   this.notificationSub &#x3D;  this.reportsService.getNotificationsData().pipe(map((notificationsData : notificationsDTO )&#x3D;&gt; {
+    this.notificationsData &#x3D; notificationsData;
+    this.notifCount.emit(this.notificationsData.length);
+   })).subscribe(val &#x3D;&gt; {});
+
+  }
+
+  /**
+   *  unsubscribe the  notification subscription data
+   */
+  ngOnDestroy() {
+    this.notificationSub.unsubscribe();
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;shownotifications&quot; (click)&#x3D;&quot;showNotifications($event);&quot;&gt;
+    &lt;div class&#x3D;&quot;notif-wrapper&quot;&gt;
+        &lt;div class&#x3D;&quot;notif-popup&quot;&gt;
+            &lt;div class&#x3D;&quot;notif-header&quot;&gt;
+                &lt;div&gt;
+                    &lt;span class&#x3D;&quot;notif-label&quot; l10nTranslate&gt; notif.notificationsText &lt;/span&gt;
+                    &lt;span class&#x3D;&quot;notif-no&quot;&gt; ( {{notificationsData.length}} &lt;span l10nTranslate&gt;notif.newText&lt;/span&gt; )
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;notif-body&quot; *ngFor&#x3D;&quot;let notifData of notificationsData&quot;&gt;
+                &lt;div class&#x3D;&quot;event-profile&quot;&gt;
+                    &lt;img alt&#x3D;&quot;&quot; class&#x3D;&quot;profile-picture&quot; src&#x3D;&quot;assets/images/test1.png&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;event-details&quot;&gt;
+                    &lt;p class&#x3D;&quot;name&quot;&gt;{{notifData.name}}&lt;/p&gt;
+                    &lt;p class&#x3D;&quot;details&quot;&gt;{{notifData.details}}&lt;/p&gt;
+                    &lt;p class&#x3D;&quot;time&quot;&gt;&lt;span&gt;{{notifData.time}}&lt;/span&gt;
+                        &lt;clr-icon shape&#x3D;&quot;circle&quot; class&#x3D;&quot;is-solid&quot; size&#x3D;&quot;6&quot;&gt;&lt;/clr-icon&gt;{{notifData.location}}
+                    &lt;/p&gt;
+                    &lt;p class&#x3D;&quot;passedhours&quot;&gt; {{notifData.passedhours}}&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;event-status&quot;&gt;
+                    &lt;clr-icon shape&#x3D;&quot;circle&quot; size&#x3D;&quot;10&quot; class&#x3D;&quot;is-solid&quot;&gt;&lt;/clr-icon&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./notifications.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../app-styles/variables.scss&quot;;
+@import &quot;../../../app-styles/mixins.scss&quot;;
+
+.notif-wrapper {
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+  top: 0;
+  &amp;::after {
+    content: &quot;&quot;;
+    position: absolute;
+    top: 45px;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 26px 15px;
+    border-color: transparent transparent $white-color transparent;
+  }
+  .notif-popup {
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    overflow-y: scroll;
+    background: $white-color;
+    right: 0px;
+    top: 65px;
+    z-index: 10000;
+    .notif-header {
+      @include flexCenterdisplay();
+      justify-content: space-between;
+      margin: 14px;
+      margin-bottom: 0;
+      border-bottom: 1px solid $twoonefive-grey;
+      .notif-label {
+        font-size: 16px;
+        font-weight: 600;
+        color: $onezerotwo-grey;
+      }
+      .notif-no {
+        color: $orange-color;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+    .notif-body {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $twotwoone-grey;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      .event-profile {
+        min-width: 40px;
+        img {
+          width: 30px;
+          height: 30px;
+          margin: 0 17px;
+        }
+      }
+      .event-details {
+        p {
+          margin-top: 0;
+          min-width: 310px;
+        }
+        .name {
+          font-size: 12px;
+          font-weight: 600;
+          color: $fourtysix-grey;
+        }
+        .details {
+          font-size: 14px;
+          font-weight: 500;
+          color: $onetwofour-navyblue;
+        }
+        .time {
+          font-size: 14px;
+          font-weight: 500;
+          color: $dove_grey;
+        }
+        .passedhours {
+          font-size: 12px;
+          font-weight: 500;
+          opacity: 0.5;
+          color: $fourtysix-grey;
+        }
+      }
+      .event-status {
+        min-width: 40px;
+        text-align: right;
+        clr-icon {
+          fill: $orange-color;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="shownotifications" (click)="showNotifications($event);">    <div class="notif-wrapper">        <div class="notif-popup">            <div class="notif-header">                <div>                    <span class="notif-label" l10nTranslate> notif.notificationsText </span>                    <span class="notif-no"> ( {{notificationsData.length}} <span l10nTranslate>notif.newText</span> )                    </span>                </div>            </div>            <div class="notif-body" *ngFor="let notifData of notificationsData">                <div class="event-profile">                    <img alt="" class="profile-picture" src="assets/images/test1.png">                </div>                <div class="event-details">                    <p class="name">{{notifData.name}}</p>                    <p class="details">{{notifData.details}}</p>                    <p class="time"><span>{{notifData.time}}</span>                        <clr-icon shape="circle" class="is-solid" size="6"></clr-icon>{{notifData.location}}                    </p>                    <p class="passedhours"> {{notifData.passedhours}}</p>                </div>                <div class="event-status">                    <clr-icon shape="circle" size="10" class="is-solid"></clr-icon>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AddEventComponent', 'selector': 'physicalsecurity-add-event'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AttendanceComponent', 'selector': 'app-attendance'},{'name': 'BriefingReportComponent', 'selector': 'physicalsecurity-briefing-report'},{'name': 'BroadCastLocationComponent', 'selector': 'physicalsecurity-broadcast-location'},{'name': 'CabTrackingComponent', 'selector': 'app-cab-tracking'},{'name': 'CustomChartComponent', 'selector': 'physicalsecurity-custom-chart'},{'name': 'DashboardComponent', 'selector': 'physicalSecurity-dashboard'},{'name': 'ErrorsComponent', 'selector': 'physicalsecurity-errorscomponent'},{'name': 'EvenTimeLineComponent', 'selector': 'physicalsecurity-event-timeline'},{'name': 'FireBaseNotificationComponent', 'selector': 'physicalsecurity-firebasenotification'},{'name': 'IncidentDetailsComponent', 'selector': 'physicalsecurity-incident-details'},{'name': 'LocationDetailsComponent', 'selector': 'physicalSecurity-location-details'},{'name': 'LoginComponent', 'selector': 'physicalsecurity-login'},{'name': 'LoginComponent', 'selector': 'physicalsecurity-login'},{'name': 'MaterialComponent', 'selector': 'app-material'},{'name': 'MenuSearchComponent', 'selector': 'physicalsecurity-menusearch'},{'name': 'NotificationsComponent', 'selector': 'physicalsecurity-notifications'},{'name': 'OccurrenceComponent', 'selector': 'app-occurrence'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'PageNotFoundComponent', 'selector': 'physicalsecurity-page-not-found'},{'name': 'PhysicalSecurityComponent', 'selector': 'app-physicalsecurity'},{'name': 'PopularLocationsComponent', 'selector': 'physicalsecurity-popular-locations'},{'name': 'ReportsComponent', 'selector': 'app-reports'},{'name': 'SideNavComponent', 'selector': 'physicalsecurity-sidenav'},{'name': 'StaffComponent', 'selector': 'app-staff'},{'name': 'VehicleParkingComponent', 'selector': 'app-vehicle-parking'},{'name': 'ViewProfileComponent', 'selector': 'physicalsecurity-viewprofile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NotificationsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NotificationsComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "incidentDetails": {
+        "incidentType": "Missing Incident",
+        "area": "Washroom",
+        "floor": "Floor 2",
+        "shift": "Shift A",
+        "date": "Wed, Oct 29",
+        "startTime": "11:00 AM",
+        "officeLocation": "Kalyani Vista, Bengaluru",
+        "region": "India",
+        "description": "--",
+        "status": "Open"
+    },
+    "staffDetails": [
+        {
+            "imgUrl": "assets/images/test1.png",
+            "name": "Naveen Tikaram",
+            "role": "Supervisor",
+            "contactNo": "0153 4390435"
+        },
+        {
+            "imgUrl": "assets/images/test1.png",
+            "name": "Ramesh Joshi",
+            "role": "Security Guard",
+            "contactNo": "+91 902 3214722"
+        }
+    ]
+}

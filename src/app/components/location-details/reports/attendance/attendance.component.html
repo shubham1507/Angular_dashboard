@@ -1,0 +1,382 @@
+<div *ngIf="!dataError; else nodata_content">
+<clr-tab-content>
+  <div class="reports-tabs-content" *ngIf="staffCount; else data_loading">
+    <div class="item">
+      <div class="entries-header">
+        <span class="overview-desc" l10nTranslate>
+          overviewtabtext
+        </span>
+        <!-- <span class="entries-details">
+          974 Total entries
+          <clr-icon size="8" shape="circle" class="is-solid"></clr-icon>
+          Today
+        </span> -->
+      </div>
+      <div class="item-track clr-row">
+        <div class="clr-col-4">
+          <div class="card item-card">
+            <div class="card-block">
+              <div class="card-value">{{guardCount + supervisorCount + managerCount}}</div>
+              <div class="card-data-1" title="{{allStaffText}}" l10nTranslate>
+                allStaffText
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-4">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value coming-soon-txt" l10nTranslate>comingSoonText</div>
+              <div class="card-data-1" title="{{staffOnLeaveText}}" l10nTranslate>
+                staffOnLeaveText
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-4">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value">{{femaleStaffCount}}</div>
+              <div class="card-data-1" title="{{femaleStaffText}}" l10nTranslate>
+                femaleStaffText
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="clr-col-3">
+          <div class="card  item-card">
+            <div class="card-block">
+              <div class="card-value">7</div>
+              <div class="card-data-1" title="{{incidentsReportedText}}" l10nTranslate>
+                incidentsReportedText
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-header">
+             <span l10nTranslate>roleWiseDistText</span> 
+            </div>
+            <div class="card-center-wrapper">
+              <div class="card-block card-center">
+                <div class="chart-center" id="{{rateWiseDistrConstant_chartid}}">
+                  <physicalsecurity-custom-chart [rightAlign]="
+                          rateWiseDistrConstant_rightAlign
+                          "
+                    [chartid]="
+                          rateWiseDistrConstant_chartid
+                          "
+                    [addClearBtn]="
+                          rateWiseDistrConstant_addClearBtn
+                          "
+                    [legendColors]="
+                          rateWiseDistrConstant_legendColors
+                          "
+                    [chartOptions]="
+                          rateWiseDistrConstant_options
+                          "
+                    [legendData]="roleWiseDistrData">
+                  </physicalsecurity-custom-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+          <div class="card">
+            <div class="card-header">
+              <span l10nTranslate>demographicDistText</span>
+            </div>
+            <div class="card-center-wrapper">
+              <div class="card-block card-center">
+                <div class="chart-center" id="{{demoGraphDistrConstant_chartid}}">
+                  <physicalsecurity-custom-chart [rightAlign]="
+                              demoGraphDistrConstant_rightAlign
+                              "
+                    [chartid]="
+                              demoGraphDistrConstant_chartid
+                              "
+                    [addClearBtn]="
+                              demoGraphDistrConstant_addClearBtn
+                              "
+                    [legendColors]="
+                              demoGraphDistrConstant_legendColors
+                              "
+                    [chartOptions]="
+                              demoGraphDistrConstant_options
+                              "
+                    [legendData]="demoGraphDistrData">
+                  </physicalsecurity-custom-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-report-list-header">
+        <div class="rep-list-details">
+          <span class="rep-list-header" l10nTranslate>reportsListText</span>
+          <span class="rep-total">{{attendanceData?.pageDetails?.totalCount || 0}} <span l10nTranslate>totalText</span></span>
+        </div>
+        <!-- <button class="btn btn-outline rep-list-button " (click)="openAttendanceModal()" l10nTranslate>
+          generateReportText
+        </button> -->
+        <button class="btn btn-outline rep-list-button " title="Coming Soon!" l10nTranslate>
+            generateReportText
+          </button>
+      </div>
+      <div class="filters-container">
+        <div class="filter">
+          <div class="filter-title" l10nTranslate>byGuardNameText</div>
+          <p-autoComplete 
+          [(ngModel)]="selectedStaff" 
+          [suggestions]="staffSearchData" 
+          field="fullName" 
+          (completeMethod)="searchStaff($event)"
+          (onSelect)="selectStaff($event)"
+          placeholder="Guard Name">
+          </p-autoComplete>
+          <div class="clear-filter" *ngIf="clearSearchButtonFlag" (click)="clearSearchFilter()">
+              <clr-icon shape="times"></clr-icon>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-title">By Role</div>
+          <clr-dropdown>
+            <button
+              type="button"
+              class="btn btn-outline-primary dropdown-btn"
+              clrDropdownTrigger
+            >
+              {{ selectedFilterRole }}
+              <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+              <button
+                type="button"
+                (click)="selectRole('', $event)"
+                clrDropdownItem
+              >
+                All Roles
+              </button>
+              <button
+                type="button"
+                (click)="selectRole('guard', $event)"
+                clrDropdownItem
+              >
+                Guards
+              </button>
+              <button
+                type="button"
+                (click)="selectRole('supervisor', $event)"
+                clrDropdownItem
+              >
+                Supervisors
+              </button>
+              <button
+                type="button"
+                (click)="selectRole('manager', $event)"
+                clrDropdownItem
+              >
+                Managers
+              </button>
+            </clr-dropdown-menu>
+          </clr-dropdown>
+        </div>
+        <div class="filter">
+          <div class="filter-title" l10nTranslate>timePeriodText</div>
+          <p-calendar 
+          [(ngModel)]="dateRange"
+          selectionMode="range"
+          [readonlyInput]="true"
+          (onSelect)="selectDateRange($event)"
+          [locale]="calLocale"
+          [showIcon]="true">
+          </p-calendar>
+        </div>
+      </div>
+      <div class="vehicle-track-table">
+        <clr-datagrid (clrDgRefresh)="refresh($event)"
+        [clrDgLoading]="tableLoading">
+          <clr-dg-column l10nTranslate>nameText</clr-dg-column>
+          <clr-dg-column l10nTranslate>roleText</clr-dg-column>
+          <clr-dg-column l10nTranslate>empIdText</clr-dg-column>
+          <clr-dg-column l10nTranslate>dateText</clr-dg-column>
+          <clr-dg-column l10nTranslate>inTimeText</clr-dg-column>
+          <clr-dg-column l10nTranslate>outTimeText</clr-dg-column>
+          <clr-dg-column l10nTranslate>workingHrsText</clr-dg-column>
+          <clr-dg-column></clr-dg-column>
+          <clr-dg-row *ngFor="
+               let attendance of attendanceData?.data
+               ">
+            <clr-dg-cell>
+              <div style="line-height:initial;">
+                {{attendance.firstName + " " + attendance.lastName}}
+              </div>
+            </clr-dg-cell>
+            <clr-dg-cell>
+              <div class="first-letter-upcase">
+                  {{attendance.userType}}
+              </div>
+            </clr-dg-cell>
+            <clr-dg-cell>{{attendance.empId || 'NA'}}
+            </clr-dg-cell>
+            <clr-dg-cell>{{
+              attendance.punchInTime | l10nDate: defaultLocale:dateOptions
+              }}
+            </clr-dg-cell>
+            <clr-dg-cell>{{
+              attendance.punchInTime | l10nDate: defaultLocale:"shortTime"
+              }}
+            </clr-dg-cell>
+            <clr-dg-cell>{{
+              (attendance.punchOutTime | l10nDate: defaultLocale:"shortTime") || "-"
+              }}
+            </clr-dg-cell>
+            <clr-dg-cell>
+              <div>
+                {{attendance.punchInTime | timeDiffHrs : attendance.punchOutTime || 0 }}
+              </div>
+            </clr-dg-cell>
+            <clr-dg-cell>
+              <div class="blue-table-data" l10nTranslate>
+                viewProfileText
+              </div>
+            </clr-dg-cell>
+          </clr-dg-row>
+          <clr-dg-footer>
+            <clr-dg-pagination #pagination
+              [clrDgPageSize]="5"
+              [clrDgTotalItems]="attendanceData?.pageDetails?.totalCount"
+              [(clrDgPage)]="selectedPageNo">
+              {{ pagination.firstItem + 1 }} -
+              {{ pagination.lastItem + 1 }} <span l10nTranslate>ofText</span>
+              {{ pagination.totalItems }}
+            </clr-dg-pagination>
+          </clr-dg-footer>
+        </clr-datagrid>
+      </div>
+    </div>
+  </div>
+</clr-tab-content>
+<div class="reports-modal">
+  <clr-modal [(clrModalOpen)]="attendanceModal.openattendanceModal" [clrModalSize]="'lg'">
+    <h3 class="modal-title">
+      <div class="reports-modal-title" l10nTranslate>
+        generateReportText
+      </div>
+    </h3>
+    <div class="modal-body">
+      <div class="reports-section">
+
+        <div class="reports-section1">
+          <section class="content">
+            <p class="reports-date-title" l10nTranslate>
+              selectDateRangeText
+            </p>
+            <div class="row date-wrapper">
+              <div class="col-sm-6">
+                <label class="reports-date-label" l10nTranslate>
+                  fromText
+                </label>
+                <input type="text" class="reports-date-picker" placeholder="DDMMYYYY">
+              </div>
+              <div class="col-sm-6">
+                <label class="reports-date-label" l10nTranslate>
+                  toText
+                </label>
+                <input type="text" class="reports-date-picker" placeholder="DDMMYYYY">
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- <div class="reports-section2">
+                <section class="content">
+                   <p class="reports-date-title">
+                      Select Time Period
+                   </p>
+                   <div class="row">
+                      <div class="col-sm-2">
+                         <clr-checkbox [clrChecked]="true">
+                            All Day
+                         </clr-checkbox>
+                         <div class="border-line">
+                         </div>
+                      </div>
+                      <div class="col-sm-5">
+                         <label class="reports-date-label">
+                            Start Time
+                         </label>
+                         <input type="text" class="reports-date-picker"
+                            placeholder="start time">
+                      </div>
+                      <div class="col-sm-5">
+                         <label class="reports-date-label">
+                            End Time
+                         </label>
+                         <input type="text" class="reports-date-picker"
+                            placeholder="end time">
+                      </div>
+                   </div>
+                </section>
+             </div> -->
+        <div class="reports-section3">
+          <section class="content">
+            <p class="reports-date-title">
+              Other Parameters
+            </p>
+            <div class="row other-param-wrapper">
+              <div class="col-sm-6">
+                <div class="clr-select-wrapper">
+                  <select id="select-basic" class="clr-select">
+                    <option value="1" selected>All Guards</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="clr-select-wrapper">
+                  <select id="select-basic" class="clr-select">
+                    <option value="1" selected>All Duities</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="reports-modal-btn">
+          <button class="btn btn-primary" l10nTranslate>generateText</button>
+        </div>
+      </div>
+    </div>
+  </clr-modal>
+</div>
+</div>
+
+<ng-template #data_loading>
+  <div class="report-loader-wrapper">
+    <span class="spinner"> Loading... </span>
+  </div>
+</ng-template>
+<ng-template #nodata_content>
+    <div class="nodata-alert">
+        <div class="alert alert-danger" role="alert">
+            <div class="alert-items">
+                <div class="alert-item static">
+                    <div class="alert-icon-wrapper">
+                        <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                    </div>
+                    <span class="alert-text">Error occurred while retrieving data.</span>
+                    <div class="alert-actions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,386 @@
+<div *ngIf="isAccessGranted;else nodata_content">
+  <physicalsecurity-errorscomponent></physicalsecurity-errorscomponent>
+  <physicalsecurity-sidenav [loadedUserData]="userData" [loadedBuildingData]="buildingList"></physicalsecurity-sidenav>
+
+  <div class="dashboard-area">
+    <div class="custom-header">
+      <div class="search-bar-container">
+        <physicalsecurity-firebasenotification [loadedUserData]="userData"></physicalsecurity-firebasenotification>
+        <div class="search-bar">
+          <!-- <clr-icon shape="search" size="18" class="is-inverse search-icon"></clr-icon>
+        <div class="keyword-wrapper">
+          <physicalsecurity-menusearch></physicalsecurity-menusearch>
+        </div> -->
+          <h1 class="header-text" *ngIf="userData">
+            Welcome, {{ userData?.firstName + " " + userData?.lastName }}
+          </h1>
+        </div>
+
+        <div class="header-btn-wrapper" (click)="openBroadcastModal()">
+          <img src="assets/images/group.svg" class="header-btn header-btn-svg" alt="" />
+        </div>
+        <div class="header-btn-wrapper">
+          <div class="header-btn" (click)="openBriefingModal()">
+            <clr-icon shape="details" size="22" class="header-btn-icon is-inverse is-solid"></clr-icon>
+          </div>
+        </div>
+        <div class="header-btn-wrapper notif-par-wrapper">
+          <div class="header-btn" (click)="showNotifications($event)" (document:click)="hideNotifications()">
+            <clr-icon shape="bell" size="22" class="header-btn-icon is-inverse is-solid"></clr-icon>
+            <span *ngIf="hideBadge" class="badge badge-warning notif-badge">{{
+              notificationCount
+              }}</span>
+          </div>
+          <physicalsecurity-notifications [notificationDataSubject]="notificationDataSubject" [notificationShowSubject]="notificationShowSubject"
+            (notifCount)="getNotificationsCount($event)"></physicalsecurity-notifications>
+            <div class="modal-backdrop" *ngIf="notifBackdrop"></div>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="dashboard-overview clr-row">
+        <div class="clr-col-3">
+          <div class="card overview-card">
+            <div class="card-block">
+              <div class="card-value">{{incidentsData2?.pageDetails?.totalCount}}</div>
+              <div class="card-data-1" title="{{ openIncidentsText }}" l10nTranslate>
+                openIncidentsText
+              </div>
+              <div class="Line-3"></div>
+              <div class="card-data-2">{{buildingList.length}} <span l10nTranslate>officesText</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card overview-card">
+            <div class="card-block">
+              <div class="card-value coming-soon-txt" l10nTranslate>comingSoonText</div>
+              <div class="card-data-1" title="{{ resourceShortageText }}" l10nTranslate>
+                resourceShortageText
+              </div>
+              <div class="Line-3"></div>
+              <div class="card-data-2">{{buildingList.length}} <span l10nTranslate>officesText</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card overview-card">
+            <div class="card-block">
+              <div class="card-value">{{complianceData?.pageDetails?.totalCount}}</div>
+              <div class="card-data-1" title="{{ staffCompTasksText }}" l10nTranslate>
+                staffCompTasksText
+              </div>
+              <div class="Line-3"></div>
+              <div class="card-data-2">{{buildingList.length}} <span l10nTranslate>officesText</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-3">
+          <div class="card overview-card">
+            <div class="card-block">
+              <div class="card-value coming-soon-txt" l10nTranslate>comingSoonText</div>
+              <div class="card-data-1" title="{{ newsFeedText }}" l10nTranslate>
+                newsFeedText
+              </div>
+              <div class="Line-3"></div>
+              <div class="card-data-2">{{buildingList.length}} <span l10nTranslate>officesText</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="incidents-table">
+        <div class="table-container" *ngIf="incidentsData2">
+          <div class="table-header">
+            <h2>
+              <span l10nTranslate>openIncidentsText</span> ({{
+                incidentsData2?.pageDetails?.totalCount
+              }})
+            </h2>
+            <div class="dropdown">
+              <clr-dropdown>
+                <button type="button" class="btn btn-outline-primary dropdown-btn first-letter-upcase" clrDropdownTrigger l10nTranslate>
+                  filterByTimePeriodText
+                  <clr-icon shape="caret down"></clr-icon>
+                </button>
+                <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                  <button type="button" (click)="selectTimeRange('Today')" clrDropdownItem l10nTranslate>
+                      todayText
+                    </button>
+                    <button type="button" (click)="selectTimeRange('This Week')" clrDropdownItem l10nTranslate>
+                      thisWeekText
+                    </button>
+                    <button type="button" (click)="selectTimeRange('This Month')" clrDropdownItem l10nTranslate>
+                      thisMonthText
+                    </button>
+                    <button type="button" (click)="selectTimeRange('Last Month')" clrDropdownItem l10nTranslate>
+                      lastMonthText
+                    </button>
+                </clr-dropdown-menu>
+              </clr-dropdown>
+            </div>
+
+            <!-- <div class="tabs" *ngIf="regionList.length">
+              <clr-tabs>
+                <clr-tab *ngFor="let region of regionList">
+                  <button clrTabLink id="link1">
+                    {{ region }} ({{ incidentsData.incidentsRegionWise[region] }})
+                  </button>
+                </clr-tab>
+              </clr-tabs>
+            </div> -->
+          </div>
+          <div class="table-body">
+            <div class="donut-chart-container" *ngIf="incidentsData2">
+              <div>
+                <physicalsecurity-custom-chart [clearText]="clearText" [rightAlign]="rightAlign" [chartid]="chartid"
+                  [addClearBtn]="addClearBtn" [legendColors]="legendColors" [chartOptions]="chartOptions" [legendData]="incidentTypeList"
+                  (legendClickCallBack)="legendClick($event)" (clearClickCallBack)="clearFunction()">
+                </physicalsecurity-custom-chart>
+              </div>
+            </div>
+            <div class="table-data" *ngIf="incidentsData2">
+              <clr-datagrid (clrDgRefresh)="refreshIncidentTable($event)"
+              [clrDgLoading]="incidentTableLoading">
+                <clr-dg-column l10nTranslate>incidentTypeText</clr-dg-column>
+                <clr-dg-column l10nTranslate>dateText</clr-dg-column>
+                <clr-dg-column l10nTranslate>officeLocationText</clr-dg-column>
+                <clr-dg-column l10nTranslate>regionText</clr-dg-column>
+                <clr-dg-column l10nTranslate>priorityText</clr-dg-column>
+
+                <clr-dg-row *ngFor="let incident of incidentsData2?.data" (mouseover)="incident.hover = true" (mouseout)="incident.hover = false">
+                  <clr-dg-cell><span class="data-ellipsis" title="{{ incident.incidentType }}">{{ "" + incident.incidentType }}</span></clr-dg-cell>
+                  <clr-dg-cell>{{ incident.occurrenceStartedTime | l10nDate: defaultLocale:dateOptions }}</clr-dg-cell>
+                  <clr-dg-cell>{{ incident.buildingName }}</clr-dg-cell>
+                  <clr-dg-cell>NA</clr-dg-cell>
+                  <clr-dg-cell style="cursor:pointer">
+                    <div [ngClass]="{'hideBlock': incident.hover, 'showBlock': !incident.hover}">High</div>
+                    <div [ngClass]="{'showBlock': incident.hover, 'hideBlock': !incident.hover}">
+                      <span>
+                        <clr-icon shape="eye" class="is-solid" style="height:22px; width:36px;" title="Details" (click)="openIncidentModal(incident)"></clr-icon>
+                      </span>
+                      <span>
+                        <clr-icon shape="phone-handset" class="is-solid" size="18"></clr-icon>
+                      </span>
+                    </div>
+                  </clr-dg-cell>
+                </clr-dg-row>
+
+                <clr-dg-footer>
+                  <clr-dg-pagination #pagination [clrDgPageSize]="7"
+                   [clrDgTotalItems]="incidentsData2?.pageDetails?.totalCount"
+                   [(clrDgPage)]="selectedIncidentPageNo"
+                   >
+                    {{ pagination.firstItem + 1 }} -
+                    {{ pagination.lastItem + 1 }}
+                    <span l10nTranslate>ofText</span> {{ pagination.totalItems }}
+                    <span l10nTranslate>incidentsText</span>
+                  </clr-dg-pagination>
+                </clr-dg-footer>
+              </clr-datagrid>
+            </div>
+          </div>
+          <physicalsecurity-incident-details [showIncidentModal]="incidentDetailsModal" [IncidentDetails]="selectedIncidentDetails"
+           (closeIncidentModal)="incidentDetailsModal = false" *ngIf="incidentDetailsModal"></physicalsecurity-incident-details>
+        </div>
+      </div>
+
+      <div class="shortage-table">
+        <div class="card">
+          <div class="table-container" *ngIf="resourceShortageData">
+            <div class="table-header">
+              <div class="roaster-header">
+                <h2>
+                  <span l10nTranslate>presentResourceShortageText</span>
+                </h2>
+                <!-- <div class="dropdown">
+                  <clr-dropdown>
+                    <button type="button" class="btn btn-outline-primary dropdown-btn first-letter-upcase" clrDropdownTrigger l10nTranslate>
+                      allOfficeLocationsText
+                      <clr-icon shape="caret down"></clr-icon>
+                    </button>
+                    <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                      <button type="button" clrDropdownItem l10nTranslate>
+                        allTimeText
+                      </button>
+                      <button type="button" clrDropdownItem l10nTranslate>
+                        todayText
+                      </button>
+                      <button type="button" clrDropdownItem l10nTranslate>
+                        thisWeekText
+                      </button>
+                      <button type="button" clrDropdownItem l10nTranslate>
+                        thisMonthText
+                      </button>
+                    </clr-dropdown-menu>
+                  </clr-dropdown>
+                </div> -->
+              </div>
+              <!-- <div class="tabs">
+                <clr-tabs>
+                  <clr-tab *ngFor="let region of regions">
+                    <button clrTabLink id="link1">
+                      {{ region }} ({{ resourceShortageData.regionWise[region] }})
+                    </button>
+                  </clr-tab>
+                </clr-tabs>
+              </div> -->
+            </div>
+            <div class="table-body">
+              <!-- <div class="table-data">
+                <clr-datagrid>
+                  <clr-dg-column l10nTranslate>officeLocationText</clr-dg-column>
+                  <clr-dg-column l10nTranslate>shiftText</clr-dg-column>
+                  <clr-dg-column l10nTranslate>timeElapsedText</clr-dg-column>
+                  <clr-dg-column l10nTranslate>totalDeployedText</clr-dg-column>
+                  <clr-dg-column l10nTranslate>shortageCountText</clr-dg-column>
+                  <clr-dg-row *clrDgItems="let shortageData of resourceShortageData.data">
+                    <clr-dg-cell><img alt="" class="profile-picture" src="assets/images/building-image.png" />{{
+                      shortageData.officeLocation }}</clr-dg-cell>
+                    <clr-dg-cell>{{ shortageData.shift }}</clr-dg-cell>
+                    <clr-dg-cell>{{ shortageData.timeElapsed }}</clr-dg-cell>
+                    <clr-dg-cell>{{
+                      shortageData.totalDeployed.SSG +
+                      shortageData.totalDeployed.SG
+                      }}
+                      ({{ shortageData.totalDeployed.SSG }} SSG &bull;
+                      {{ shortageData.totalDeployed.SG }} SG)</clr-dg-cell>
+                    <clr-dg-cell>{{
+                      shortageData.shortage.SSG + shortageData.shortage.SG
+                      }}
+                      ({{ shortageData.shortage.SSG }} SSG &bull;
+                      {{ shortageData.shortage.SG }} SG)</clr-dg-cell>
+                  </clr-dg-row>
+
+                  <clr-dg-footer>
+                    <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="staffComplianceData?.data.length">
+                      {{ pagination.firstItem + 1 }} -
+                      {{ pagination.lastItem + 1 }}
+                      <span l10nTranslate>ofText</span>
+                      {{ pagination.totalItems }}
+                    </clr-dg-pagination>
+                  </clr-dg-footer>
+                </clr-datagrid>
+              </div> -->
+              <div class="coming-soon-template">
+                <div class="coming-soon-icon"></div>
+                <div class="coming-soon-text" l10nTranslate>comingSoonText</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compliance-roaster">
+        <div class="card">
+          <div class="table-container">
+            <div class="table-header">
+              <div class="roaster-header">
+                <h2><span l10nTranslate>staffCompTasksText</span> ({{complianceData?.pageDetails?.totalCount}})</h2>
+                <div class="dropdown">
+                  <clr-dropdown>
+                    <button type="button" class="btn btn-outline-primary dropdown-btn first-letter-upcase" clrDropdownTrigger l10nTranslate>
+                      filterByTaskTypeText
+                      <clr-icon shape="caret down"></clr-icon>
+                    </button>
+                    <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                      <button type="button" (click)="selectComplianceType('All')" clrDropdownItem>
+                        All
+                      </button>
+                      <button type="button" (click)="selectComplianceType('Pending')" clrDropdownItem>
+                        PV Pending
+                      </button>
+                      <button type="button" (click)="selectComplianceType('Expired')" clrDropdownItem>
+                        PV Expired
+                      </button>
+                      <button type="button" (click)="selectComplianceType('Expiring_in_30_days')" clrDropdownItem>
+                        PV Expiring In 30 Days
+                      </button>
+                    </clr-dropdown-menu>
+                  </clr-dropdown>
+                </div>
+              </div>
+              <!-- <div class="tabs" *ngIf="complianceDataRegions.length">
+                <clr-tabs>
+                  <clr-tab *ngFor="let region of complianceDataRegions">
+                    <button clrTabLink id="link1">
+                      {{ region }} ({{
+                      staffComplianceData.complianceRegions[region]
+                      }})
+                    </button>
+                  </clr-tab>
+                </clr-tabs>
+              </div> -->
+            </div>
+            <div class="table-body">
+              <div class="table-data" *ngIf="complianceData">
+                <clr-datagrid (clrDgRefresh)="refreshComplianceTable($event)"
+                [clrDgLoading]="complianceTableLoading">
+                  <clr-dg-column l10nTranslate>nameText</clr-dg-column>
+                  <clr-dg-column l10nTranslate>taskTypeText</clr-dg-column>
+                  <clr-dg-column l10nTranslate>officeLocationText</clr-dg-column>
+                  <clr-dg-column l10nTranslate>regionText</clr-dg-column>
+                  <clr-dg-column l10nTranslate>statusText</clr-dg-column>
+                  <clr-dg-row *ngFor="let staffData of complianceData.data">
+                    <clr-dg-cell><img alt="" class="profile-picture" src="assets/images/test1.png" />{{
+                      staffData.firstName + " " + staffData.lastName}}</clr-dg-cell>
+                    <clr-dg-cell>{{"PV " + (staffData.pvcExpiryDate | pvcExpiry : staffData.hasPVC : 'taskType')}}</clr-dg-cell>
+                    <clr-dg-cell>{{ staffData.buildingsAssigned }}</clr-dg-cell>
+                    <clr-dg-cell>{{ staffData.region || 'NA' }}</clr-dg-cell>
+                    <clr-dg-cell>{{(staffData.pvcExpiryDate | pvcExpiry : staffData.hasPVC) + ( staffData.pvcExpiryDate | l10nDate: defaultLocale:dateOptions) }}</clr-dg-cell>
+                  </clr-dg-row>
+
+                  <clr-dg-footer>
+                    <clr-dg-pagination #pagination [clrDgPageSize]="5"
+                     [clrDgTotalItems]="complianceData?.pageDetails?.totalCount"
+                     [(clrDgPage)]="selectedCompliancePageNo"
+                     >
+                      {{ pagination.firstItem + 1 }} -
+                      {{ pagination.lastItem + 1 }}
+                      <span l10nTranslate>ofText</span>
+                      {{ pagination.totalItems }}
+                    </clr-dg-pagination>
+                  </clr-dg-footer>
+                </clr-datagrid>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row timeline-news-container">
+        <div class="timeline-container">
+          <physicalsecurity-event-timeline></physicalsecurity-event-timeline>
+        </div>
+        <div class="news-feed-container">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card">
+              <div class="card-header">
+                <div class="news-feed-header">
+                  <div class="heading">
+                    News Feed
+                  </div>
+                </div>
+              </div>
+              <div class="card-block">
+                <div class="coming-soon-template">
+                  <div class="coming-soon-icon"></div>
+                  <div class="coming-soon-text" l10nTranslate>comingSoonText</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <physicalsecurity-briefing-report [openBriefingModalSubject]="openBriefingModalSubject" [loadedUserData]="userData"
+        [loadedBuildingData]="buildingList"></physicalsecurity-briefing-report>
+      <physicalsecurity-broadcast-location [openBroadcastModalSubject]="openBroadcastModalSubject" [loadedUserData]="userData"
+        [loadedBuildingData]="buildingList"></physicalsecurity-broadcast-location>
+    </div>
+  </div>
+</div>
+
+<ng-template #nodata_content>
+    <div class="bar">
+        <div class="circle"></div>
+        <p l10nTranslate>initialisingText</p>
+    </div>
+</ng-template>

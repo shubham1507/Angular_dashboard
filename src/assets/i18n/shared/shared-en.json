@@ -1,0 +1,78 @@
+{
+  "broadcast": {
+    "modaltitle": "New Broadcast",
+    "autocompletetext": "ADD OFFICE LOCATION",
+    "writehere": "Write here",
+    "addTitle": "Add Title",
+    "saveSuccess": "Broadcast data saved Successfully.",
+    "saveFailure": "Error occurred in saving broadcast data , please try again",
+    "submit": "Submit"
+  },
+  "briefing": {
+    "briefingReportText": "Briefing Report",
+    "chooseOfficeLocationText": "Choose Office Location",
+    "recentlySharedText": "Recently Searched",
+    "editText": "Edit",
+    "updateText": "Update",
+    "typeContentHereText": "Type Content Here",
+    "searchForOfcLocText": "Search for Office Location",
+    "saveSuccess": "Briefing report saved Successfully.",
+    "lastUpdated": "Last Updated"
+  },
+  "menusearch": {
+    "searchtext": "Search",
+    "loadingText": "Loading",
+    "reportsText": "Reports"
+  },
+  "notif": {
+    "notificationsText": "Notifications",
+    "newText": "New",
+    "clearBtnText": "Clear All"
+  },
+  "timeline": {
+    "eventTimelineText": "Event Timeline",
+    "noDataTimelineText": "No Data present in timeline",
+    "newEventText": "New Event",
+    "toText": "to",
+    "createText": "CREATE",
+    "addEventTitleText": "Add Event Title",
+    "addNewLocText": "Add New Location",
+    "writeHereText": "Write Here"
+  },
+  "chart": {
+    "noDataText": "Unable to render chart as no data is available"
+  },
+  "incidentDetails": {
+    "openIncidentDetailsText": "Open Incident Details",
+    "incidentTypeText": "Incident Type",
+    "areaText": "Area",
+    "floorText": "Floor",
+    "statusText": "Status",
+    "shiftText": "Shift",
+    "dateText": "Date",
+    "startTimeText": "Start Time",
+    "overrideStatusText": "Override Status",
+    "officeLocationText": "Office Location",
+    "regionText": "Region",
+    "additionalDescriptionText": "Additional Description",
+    "addCommentsText": "Add Comments",
+    "staffText": "Staff",
+    "activityLogText": "Activity Log"
+  },
+  "generateReport": {
+    "successMsg": "Report downloaded successfully"
+  },
+  "initialisingText": "initialising",
+  "locationNotFound": "Location not Found",
+  "timeUnit": {
+    "now": "Now",
+    "min": "min",
+    "mins": "mins ago",
+    "hour": "hour",
+    "hours": "hours ago",
+    "day": "day",
+    "days": "days ago",
+    "week": "week",
+    "weeks": "weeks ago"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "selectLanguageText" : "언어 선택",
+  "myDashboardText": "내 대시 보드",
+  "addLocationText": "위치 추가",
+  "chooseLocationText": "위치 선택",
+  "popOfcLocationText": "인기있는 사무실 위치",
+  "searchForOfcLocText":"사무실 위치 검색",
+  "logOutTitleText" : "로그 아웃",
+  "logOutMsgText" : "프로필을 로그 아웃 하시겠습니까?",
+  "logOutYesOptText" : "예",
+  "logOutNoOptText" : "아니"
+}

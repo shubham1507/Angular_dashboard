@@ -1,0 +1,40 @@
+<!--Chart  template-->
+<div *ngIf="legendData && legendData.length > 0; else noData_content">
+  <div [ngClass]="{ rightAlign: rightAlign }">
+    <div id="{{ chartid }}">
+      <nvd3 [options]="options" [data]="legendData"></nvd3>
+    </div>
+
+    <!--Custom legend template-->
+    <div class="legend-data">
+      <div
+        class="legend-wrapper"
+        *ngFor="let legendLabel of legendData; index as i"
+      >
+        <label class="container-legend" (click)="legendClick(legendLabel.key)"
+          ><span>{{ legendLabel.key }} ({{ legendLabel.y }})</span>
+          <input type="radio" name="radio" />
+          <span
+            class="checkmark"
+            [ngStyle]="{ 'border-color': legendColors[i] }"
+            ><span
+              class="checkmark-inner-circle"
+              [ngStyle]="{ background: legendColors[i] }"
+            ></span
+          ></span>
+        </label>
+        <button
+          *ngIf="addClearBtn && selectedLegLabel == legendLabel.key"
+          class="btn btn-sm btn-link btn-clear "
+          (click)="clearClick()"
+        >
+          <clr-icon shape="redo"></clr-icon>{{ clearText }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noData_content>
+  <div class="no-data-found" l10nTranslate>chart.noDataText</div>
+</ng-template>

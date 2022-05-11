@@ -1,0 +1,342 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>physical-security documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">physical-security documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>CalLocaleSwitch</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/utils/cal-locale-switch.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#getLocaleCalendarObj">getLocaleCalendarObj</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getLocaleCalendarObj"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Static</span>
+                            getLocaleCalendarObj
+                            </b>
+                            <a href="#getLocaleCalendarObj"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getLocaleCalendarObj(locale)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/shared/utils/cal-locale-switch.ts:7</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>locale</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" >Object</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+
+
+@Injectable()
+export default class CalLocaleSwitch {
+
+    static getLocaleCalendarObj(locale): Object {
+      let calLocale &#x3D;{};
+      switch(locale) {
+        case &quot;zh&quot;: {
+          calLocale &#x3D; {
+            firstDayOfWeek: 0,
+            dayNames: [&quot;星期一&quot;, &quot;星期二&quot;, &quot;星期三&quot;, &quot;星期四&quot;, &quot;	星期五&quot;, &quot;星期六&quot;, &quot;星期日&quot;],
+            dayNamesShort:  [&quot;星期一&quot;, &quot;星期二&quot;, &quot;星期三&quot;, &quot;星期四&quot;, &quot;	星期五&quot;, &quot;星期六&quot;, &quot;星期日&quot;],
+            dayNamesMin:  [&quot;星期一&quot;, &quot;星期二&quot;, &quot;星期三&quot;, &quot;星期四&quot;, &quot;	星期五&quot;, &quot;星期六&quot;, &quot;星期日&quot;],
+            monthNames: [ &quot;一月&quot;,&quot;二月&quot;,&quot;三月&quot;,&quot;四月&quot;,&quot;五月&quot;,&quot;六月&quot;,&quot;七月&quot;,&quot;八月&quot;,&quot;九月&quot;,&quot;十月&quot;,&quot;十一月&quot;,&quot;十二月&quot; ],
+            monthNamesShort: [ &quot;一月&quot;,&quot;二月&quot;,&quot;三月&quot;,&quot;四月&quot;,&quot;五月&quot;,&quot;六月&quot;,&quot;七月&quot;,&quot;八月&quot;,&quot;九月&quot;,&quot;十月&quot;,&quot;十一月&quot;,&quot;十二月&quot; ],
+            today: &#x27;今天&#x27;,
+            clear: &#x27;明确&#x27;
+          };
+          break;
+        }
+        case &quot;de&quot;: {
+          calLocale &#x3D; {
+            firstDayOfWeek: 0,
+            dayNames: [&quot;Montag&quot;, &quot;Dienstag&quot;, &quot;Mittwoch&quot;, &quot;Donnerstag&quot;, &quot;Freitag&quot;, &quot;Samstag&quot;, &quot;Sonntag&quot;],
+            dayNamesShort: [&quot;Mon&quot;, &quot;Die&quot;, &quot;Mit&quot;, &quot;Don&quot;, &quot;Fre&quot;, &quot;Sam&quot;, &quot;Son&quot;],
+            dayNamesMin: [&quot;Mon&quot;, &quot;Die&quot;, &quot;Mit&quot;, &quot;Don&quot;, &quot;Fre&quot;, &quot;Sam&quot;, &quot;Son&quot;],
+            monthNames: [ &quot;Januar &quot;,&quot;Februar &quot;,&quot;März&quot;,&quot;April&quot;,&quot;Mai&quot;,&quot;Juni&quot;,&quot;Juli&quot;,&quot;August&quot;,&quot;September&quot;,&quot;Oktober&quot;,&quot;November&quot;,&quot;Dezembe&quot; ],
+            monthNamesShort: [ &quot;Jan&quot;, &quot;Feb&quot;, &quot;Mär&quot;, &quot;Apr&quot;, &quot;Mai&quot;, &quot;Jun&quot;,&quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Okt&quot;, &quot;Nov&quot;, &quot;Dez&quot; ],
+            today: &#x27;heute&#x27;,
+            clear: &#x27;klar&#x27;
+          };
+          break;
+        }
+        case &quot;fr&quot;: {
+          calLocale &#x3D; {
+            firstDayOfWeek: 0,
+            dayNames: [&quot;lundi&quot;, &quot;mardi&quot;, &quot;mercredi&quot;, &quot;jeudi&quot;, &quot;vendredi&quot;, &quot;samedi&quot;,&quot;dimanche&quot;],
+            dayNamesShort: [&quot;lun&quot;, &quot;mar&quot;, &quot;mer&quot;, &quot;jeu&quot;, &quot;ven&quot;, &quot;sam&quot;,&quot;dim&quot;],
+            dayNamesMin: [&quot;lu&quot;,&quot;ma&quot;,&quot;me&quot;,&quot;je&quot;,&quot;ve&quot;,&quot;sa&quot;,&quot;di&quot;],
+            monthNames: [ &quot;janvier&quot;,&quot;février&quot;,&quot;mars &quot;,&quot;avril &quot;,&quot;mai&quot;,&quot;juin&quot;,&quot;juillet&quot;,&quot;aout&quot;,&quot;septembre&quot;,&quot;octobre&quot;,&quot;novembre&quot;,&quot;décembre&quot; ],
+            monthNamesShort: [ &quot;jan&quot;, &quot;fev&quot;, &quot;mar&quot;, &quot;avr&quot;, &quot;mai&quot;, &quot;jui&quot;,&quot;juil&quot;, &quot;aou&quot;, &quot;sep&quot;, &quot;Oct&quot;, &quot;nov&quot;, &quot;déc&quot; ],
+            today: &quot;aujourd&#x27;hui&quot;,
+            clear: &#x27;clair&#x27;
+          };
+          break;
+        }
+        case &quot;en&quot;: {
+          calLocale &#x3D; {
+            firstDayOfWeek: 0,
+            dayNames: [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;],
+            dayNamesShort: [&quot;Sun&quot;, &quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;],
+            dayNamesMin: [&quot;Su&quot;,&quot;Mo&quot;,&quot;Tu&quot;,&quot;We&quot;,&quot;Th&quot;,&quot;Fr&quot;,&quot;Sa&quot;],
+            monthNames: [ &quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;,&quot;July&quot;,&quot;August&quot;,&quot;September&quot;,&quot;October&quot;,&quot;November&quot;,&quot;December&quot; ],
+            monthNamesShort: [ &quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;,&quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot; ],
+            today: &#x27;Today&#x27;,
+            clear: &#x27;Clear&#x27;
+          };
+          break;
+        }
+        case &quot;ja&quot;: {
+          calLocale &#x3D; {
+            firstDayOfWeek: 0,
+            dayNames: [&quot;にちようび – 日曜日&quot;, &quot;げつようび – 月曜日&quot;, &quot;かようび – 火曜日&quot;, &quot;すいようび – 水曜日&quot;, &quot;もくようび – 木曜日&quot;, &quot;きんようび – 金曜日&quot;, &quot;どようび – 土曜日&quot;],
+            dayNamesShort: [&quot;にちようび – 日曜日&quot;, &quot;げつようび – 月曜日&quot;, &quot;かようび – 火曜日&quot;, &quot;すいようび – 水曜日&quot;, &quot;もくようび – 木曜日&quot;, &quot;きんようび – 金曜日&quot;, &quot;どようび – 土曜日&quot;],
+            dayNamesMin: [&quot;にちようび – 日曜日&quot;, &quot;げつようび – 月曜日&quot;, &quot;かようび – 火曜日&quot;, &quot;すいようび – 水曜日&quot;, &quot;もくようび – 木曜日&quot;, &quot;きんようび – 金曜日&quot;, &quot;どようび – 土曜日&quot;],
+            monthNames: [ &quot;いち がつ 一月&quot;,&quot;に がつ 二月&quot;,&quot;さん がつ 三月&quot;,&quot;し がつ 四月&quot;,&quot;ご がつ 五月&quot;,&quot;ろく がつ 六月&quot;,&quot;しち がつ 七月&quot;,&quot;はち　がつ&quot;,&quot;く　がつ&quot;,&quot;じゅう　がつ&quot;,&quot;じゅういち　がつ&quot;,&quot;じゅうに　がつ&quot; ],
+            monthNamesShort: [ &quot;一月&quot;,&quot;二月&quot;,&quot;三月&quot;,&quot;四月&quot;,&quot;五月&quot;,&quot;六月&quot;,&quot;七月&quot;,&quot;がつ&quot;,&quot;がつ&quot;,&quot;がつ&quot;,&quot;がつ&quot;,&quot;がつ&quot; ],
+            today: &#x27;今日&#x27;,
+            clear: &#x27;クリア&#x27;
+          };
+          break;
+        }
+        case &quot;ko&quot;: {
+          calLocale &#x3D; {
+            firstDayOfWeek: 0,
+            dayNames: [&quot;월요일&quot;, &quot;화요일&quot;, &quot;수요일&quot;, &quot;목요일&quot;, &quot;금요일&quot;, &quot;토요일&quot;, &quot;일요일&quot;],
+            dayNamesShort: [&quot;월요일&quot;, &quot;화요일&quot;, &quot;수요일&quot;, &quot;목요일&quot;, &quot;금요일&quot;, &quot;토요일&quot;, &quot;일요일&quot;],
+            dayNamesMin: [&quot;월요일&quot;, &quot;화요일&quot;, &quot;수요일&quot;, &quot;목요일&quot;, &quot;금요일&quot;, &quot;토요일&quot;, &quot;일요일&quot;],
+            monthNames: [ &quot;월 (일월)&quot;,&quot;월 (이월)&quot;,&quot;월 (삼월)&quot;,&quot;월 (사월)&quot;,&quot;월 (오월)&quot;,&quot;월 (유월 )&quot;,&quot;월 (칠월)&quot;,&quot;월 (팔월)&quot;,&quot;월 (구월)&quot;,&quot;월 (시월)&quot;,&quot;월 (십일월)&quot;,&quot;월 (십이월)&quot; ],
+            monthNamesShort: [ &quot;월 (일월)&quot;,&quot;월 (이월)&quot;,&quot;월 (삼월)&quot;,&quot;월 (사월)&quot;,&quot;월 (오월)&quot;,&quot;월 (유월 )&quot;,&quot;월 (칠월)&quot;,&quot;월 (팔월)&quot;,&quot;월 (구월)&quot;,&quot;월 (시월)&quot;,&quot;월 (십일월)&quot;,&quot;월 (십이월)&quot; ],
+            today: &#x27;오늘&#x27;,
+            clear: &#x27;명확한&#x27;
+          };
+          break;
+        }
+        default: {
+          calLocale &#x3D; {
+            firstDayOfWeek: 0,
+            dayNames: [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;],
+            dayNamesShort: [&quot;Sun&quot;, &quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;],
+            dayNamesMin: [&quot;Su&quot;,&quot;Mo&quot;,&quot;Tu&quot;,&quot;We&quot;,&quot;Th&quot;,&quot;Fr&quot;,&quot;Sa&quot;],
+            monthNames: [ &quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;,&quot;July&quot;,&quot;August&quot;,&quot;September&quot;,&quot;October&quot;,&quot;November&quot;,&quot;December&quot; ],
+            monthNamesShort: [ &quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;,&quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot; ],
+            today: &#x27;Today&#x27;,
+            clear: &#x27;Clear&#x27;
+          };
+          break;
+        }
+     }
+
+
+      return calLocale;
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CalLocaleSwitch.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

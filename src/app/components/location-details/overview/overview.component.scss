@@ -1,0 +1,18 @@
+@import "../../../app-styles/variables.scss";
+@import "../../../app-styles/timeline.scss";
+@import "../../../app-styles/mixins.scss";
+@import "../../../../styles.scss";
+
+.incidents-table {
+  .area-desc{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+  }
+}
+
+.timeline-news-container {
+  @include timeline-news-container();
+}

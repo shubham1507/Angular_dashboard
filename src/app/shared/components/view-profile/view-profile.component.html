@@ -1,0 +1,479 @@
+<div class="view-profile">
+  <clr-modal [(clrModalOpen)]="viewProfileFlag" [clrModalSize]="'xl'">
+    <h3 class="modal-title">View Profile</h3>
+    <div class="modal-body">
+      <div class="view-prof-container">
+        <div class="overlayViewProfile" *ngIf="showLoader">
+          <span class="spinner spinner-inverse"> Loading... </span>
+        </div>
+        <div class="row  top-section" *ngIf="profileUserData">
+          <div class="col-md-7  left-section">
+            <div class="prof-img">
+              <img
+                src="https://apigateway-iot-qa.apps.wdc-np.itcna.vmware.com/api/staff-mgmt-service/staff/v1/getImage/5c402c101ef8730013103f6b"
+                class="header-btn header-btn-svg"
+                width="110px"
+                height="110px"
+                alt=""
+              />
+            </div>
+            <div class="prof-details">
+              <p class="prof-name">
+                {{ profileUserData.firstName }}
+                {{ profileUserData.middleName }}
+                {{ profileUserData.lastName }}
+              </p>
+              <p class="prof-design">{{profileUserData.role}}</p>
+              <p class="current-status">
+                <span>Current status</span>&nbsp;<clr-icon
+                  shape="circle"
+                  class="is-solid"
+                  size="16px"
+                >
+                </clr-icon>
+              </p>
+              <p class="shift-details">
+                <span>{{profileUserData.shiftAssigned}}</span>&nbsp;<clr-icon
+                  shape="circle"
+                  class="is-solid"
+                  size="8"
+                ></clr-icon
+                >&nbsp;<span>{{profileUserData.buildingsAssigned}} , {{profileUserData.city}} </span>
+              </p>
+              <p class="contact-details">
+                <button class="btn btn-outline">
+                  <clr-icon
+                    size="24"
+                    shape="phone-handset"
+                    class="is-solid"
+                  ></clr-icon
+                  ><span class="phno">{{profileUserData.primContactNum}}</span>
+                </button>
+                <button class="btn btn-outline">
+                  <clr-icon
+                    size="24"
+                    shape="map-marker"
+                    class="is-solid"
+                  ></clr-icon
+                  ><span class="floordesc">{{profileUserData.floorsAssigned}}</span>
+                </button>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-5 right-section">
+            <div class="border-seperator"></div>
+            <div class="employee-details">
+              <div class="emp-rec emp-label">Jag Emp ID</div>
+              <div class="emp-rec emp-val">{{profileUserData.vendorEmpId}}</div>
+              <div class="emp-rec emp-label">VM Emp ID</div>
+              <div class="emp-rec emp-val">{{profileUserData.vmwEmpId}}</div>
+              <div class="emp-rec emp-label">Joined On</div>
+              <div class="emp-rec emp-val">{{profileUserData.workExpDetails.dojVmw}}</div>
+              <div class="emp-rec emp-label">Years of Experience</div>
+              <div class="emp-rec emp-val">{{profileUserData.workExpDetails.workingDurationVmware}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="row  bottom-section" *ngIf="profileUserData">
+          <div class="col-md-12">
+            <clr-tabs>
+              <clr-tab>
+                <button clrTabLink>General</button>
+                <ng-template [(clrIfActive)]="generalActive">
+                  <clr-tab-content>
+                    <div class="gen-cont">
+                      <div class="row mt-bot40">
+                        <div class="border-line"></div>
+                        <div class="col-sm-5">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="gen-head">First Name</p>
+                              <p class="gen-val">{{ profileUserData.firstName }}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Middle Name</p>
+                              <p class="gen-val">{{ profileUserData.middleName }}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Last Name</p>
+                              <p class="gen-val">{{ profileUserData.lastName }}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-7">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <p class="gen-head">Address</p>
+                              <p class="gen-val">
+                               {{profileUserData.presAddr}}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-bot40">
+                        <div class="col-sm-5">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="gen-head">Date of birth</p>
+                              <p class="gen-val">{{profileUserData.dob}}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Age</p>
+                              <p class="gen-val">{{age}}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Gender</p>
+                              <p class="gen-val">{{profileUserData.gender}}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-7">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="gen-head">City</p>
+                              <p class="gen-val">{{profileUserData.city}}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">State</p>
+                              <p class="gen-val">{{profileUserData.state}}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Country</p>
+                              <p class="gen-val">{{profileUserData.country}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="gen-head">Height</p>
+                              <p class="gen-val">{{profileUserData.height}}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Weight</p>
+                              <p class="gen-val">{{profileUserData.weight}}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Blood Group</p>
+                              <p class="gen-val">{{profileUserData.bloodGrp}}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-7">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p class="gen-head">Primary Cell No</p>
+                              <p class="gen-val">{{profileUserData.primContactNum}}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Secondary Cell No</p>
+                              <p class="gen-val">{{profileUserData.secContactNum}}</p>
+                            </div>
+                            <div class="col-md-4">
+                              <p class="gen-head">Emergency Contact</p>
+                              <p class="gen-val">{{profileUserData.emrgContactNum}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </clr-tab-content>
+                </ng-template>
+              </clr-tab>
+              <clr-tab>
+                <button clrTabLink>Work Experience</button>
+                <ng-template [(clrIfActive)]="workExpActive">
+                  <clr-tab-content>
+                    <div class="work-cont">
+                      <div class="row mt-top40  ">
+                        <div class="col-md-2 firstcol ">
+                          <p class="work-head">Date of joining</p>
+                          <p class="work-val">{{profileUserData.dojVmw}}</p>
+                        </div>
+                        <div class="col-md-3 secondcol ">
+                          <p class="work-head">
+                            Present Security Service Provider
+                          </p>
+                          <p class="work-val">NA</p>
+                        </div>
+                        <div class="col-md-3 thirdcol ">
+                          <p class="work-head">Work Duration at VMware</p>
+                          <p class="work-val">{{profileUserData.workingDurationVmware}}</p>
+                        </div>
+                        <div class="col-md-3 fourthcol">
+                          <p class="work-head">
+                            Medical certificate Expiry Date
+                          </p>
+                          <p class="work-val">{{profileUserData.medicalCertExpiryLocalDate}}</p>
+                        </div>
+                        <div class="col-md-2 fifthcol ">
+                          <p class="work-head">ESI Card No</p>
+                          <p class="work-val">{{profileUserData.esiCardNum}}</p>
+                        </div>
+                      </div>
+
+                      <div class="row  mt-top40 ">
+                        <div class="col-md-2 firstcol ">
+                          <p class="work-head">PVC Issue Date</p>
+                          <p class="work-val">{{profileUserData.pvcIssuedLocalDate}}</p>
+                        </div>
+                        <div class="col-md-3 secondcol ">
+                          <p class="work-head">PVC Valid Till</p>
+                          <p class="work-val">{{profileUserData.pvcExpiryLocalDate}}</p>
+                        </div>
+                        <div class="col-md-3 thirdcol ">
+                          <p class="work-head">PVC acknowledgment Date</p>
+                          <p class="work-val">{{profileUserData.pvcAckLocalDate}}</p>
+                        </div>
+                        <div class="col-md-4 ">
+                          <p class="work-head">
+                            PVC Acknowledgment Date + 52 Days
+                          </p>
+                          <p class="work-val">{{profileUserData.pvcAckPlus52}}</p>
+                        </div>
+                      </div>
+
+                      <div class="row  mt-top40  ">
+                        <div class="col-md-4 ">
+                          <p class="work-head">
+                            PVC Acknowledgment Date + 53 to 60 Days
+                          </p>
+                          <p class="work-val">{{profileUserData.pvcAckPlus53to60}}</p>
+                        </div>
+                        <div class="col-md-4 ">
+                          <p class="work-head">
+                            PVC Acknowledgment Date  60 Days
+                          </p>
+                          <p class="work-val">{{profileUserData.pvcAck60Plus}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </clr-tab-content>
+                </ng-template>
+              </clr-tab>
+              <clr-tab>
+                <button clrTabLink>Education</button>
+                <ng-template [(clrIfActive)]="eduActive">
+                  <clr-tab-content>
+                    <div class="qualif-cont">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-md-2" *ngFor="let eduDetail of educationDetails" >
+                              <p class="qualif-head">{{eduDetail.degreeName}}</p>
+                              <p class="qualif-val">{{eduDetail.marks}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </clr-tab-content>
+                </ng-template>
+              </clr-tab>
+              <clr-tab>
+                <button clrTabLink>Language</button>
+                <ng-template [(clrIfActive)]="langActive">
+                  <clr-tab-content>
+                    <div
+                      class="lang-section row"
+                      *ngIf="!isObjectEmpty(langKnownList)"
+                    >
+                      <div class="border-line"></div>
+
+                      <div class="col-md-6">
+                        <div class="languages">
+                          <div class="language_record  ">
+                            <div class="horizontal-line"></div>
+                            <!-- Header record -->
+                            <div class="language_item">
+                              <a href="" class=""> <span></span> </a>
+                            </div>
+                            <div class="language_item">
+                              <a href="" class=""> Read </a>
+                            </div>
+                            <div class="language_item">
+                              <a href="" class=""> Write </a>
+                            </div>
+                            <div class="language_item">
+                              <a href="" class=""> Speak </a>
+                            </div>
+                          </div>
+                          <div
+                            class="language_record"
+                            *ngFor="let langOne of langKnownList.langOneList"
+                          >
+                            <div class="language_item">
+                              <a class=""
+                                >{{ langOne.language }} <span></span>
+                              </a>
+                            </div>
+                            <div class="language_item">
+                              <a class="" *ngIf="langOne.canRead == true">
+                                <clr-icon shape="check"></clr-icon>
+                              </a>
+                            </div>
+                            <div class="language_item">
+                              <a class="" *ngIf="langOne.canWrite == true">
+                                <clr-icon shape="check"></clr-icon>
+                              </a>
+                            </div>
+                            <div class="language_item">
+                              <a class="" *ngIf="langOne.canSpeak == true">
+                                <clr-icon shape="check"></clr-icon>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="languages">
+                          <div class="language_record  ">
+                            <div class="horizontal-line"></div>
+                            <!-- Header record -->
+                            <div class="language_item ">
+                              <a href="" class=""> <span></span> </a>
+                            </div>
+                            <div class="language_item">
+                              <a href="" class=""> Read </a>
+                            </div>
+                            <div class="language_item">
+                              <a href="" class=""> Write </a>
+                            </div>
+                            <div class="language_item">
+                              <a href="" class=""> Speak </a>
+                            </div>
+                          </div>
+
+                          <div
+                            class="language_record"
+                            *ngFor="let langOne of langKnownList.langTwoList"
+                          >
+                            <div class="language_item">
+                              <a class=""
+                                >{{ langOne.language }} <span></span>
+                              </a>
+                            </div>
+                            <div class="language_item">
+                              <a class="" *ngIf="langOne.canRead == true">
+                                <clr-icon shape="check"></clr-icon>
+                              </a>
+                            </div>
+                            <div class="language_item">
+                              <a class="" *ngIf="langOne.canWrite == true">
+                                <clr-icon shape="check"></clr-icon>
+                              </a>
+                            </div>
+                            <div class="language_item">
+                              <a class="" *ngIf="langOne.canSpeak == true">
+                                <clr-icon shape="check"></clr-icon>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </clr-tab-content>
+                </ng-template>
+              </clr-tab>
+              <clr-tab>
+                <button clrTabLink>Documents</button>
+                <ng-template [(clrIfActive)]="docActive">
+                  <clr-tab-content>
+                    <div class="row doc-content">
+                      <div class="col-md-6 right-border">
+                        <div class="doc-container">
+                          <div class="border-line"></div>
+                          <div class="ident-cont cont">
+                            <div class="doc-header">Proof of identity</div>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon
+                              ><span class="desc">Passport</span>
+                            </a>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon
+                              ><span class="desc">Driving License</span>
+                            </a>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon
+                              ><span class="desc">PAN CARD</span>
+                            </a>
+                          </div>
+                          <div class="address-cont cont">
+                            <div class="doc-header">Proof of Address</div>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon>
+                              <span class="desc">Electricity Bill</span>
+                            </a>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon>
+                              <span class="desc"
+                                >Vehicle Registration Certificate</span
+                              >
+                            </a>
+                          </div>
+                          <div class="exp-cont cont">
+                            <div class="doc-header">Previous Experience</div>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon
+                              ><span class="desc"
+                                >Previous Experience Letter</span
+                              >
+                            </a>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon>
+                              <span class="desc">Relieving Letter</span>
+                            </a>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon>
+                              <span class="desc">Salary Slips</span>
+                            </a>
+                          </div>
+                          <div class="train-cont cont">
+                            <div class="doc-header">
+                              PSARA Training Certificate
+                            </div>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon> Jaguar
+                              Tranining Certificate
+                            </a>
+                            <a class="doc-links" (click)="showDocuments()">
+                              <clr-icon shape="attachment"></clr-icon> TISA
+                              Training Certificate
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 ">
+                        <div *ngIf="images && images.length > 0; else no_docs">
+                          <p-carousel [value]="images" numVisible="1">
+                            <ng-template let-item pTemplate="item">
+                              <img
+                                [src]="item.href"
+                                class="doc-img"
+                                width="100%"
+                                height="250px"
+                                alt=""
+                              />
+                            </ng-template>
+                          </p-carousel>
+                        </div>
+                        <ng-template #no_docs>
+                          <div class="no-doc">
+                            <span> No Documents Uploaded </span>
+                          </div>
+                        </ng-template>
+                      </div>
+                    </div>
+                  </clr-tab-content>
+                </ng-template>
+              </clr-tab>
+            </clr-tabs>
+          </div>
+        </div>
+      </div>
+    </div>
+  </clr-modal>
+</div>

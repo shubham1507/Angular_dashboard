@@ -1,0 +1,78 @@
+{
+  "broadcast": {
+    "modaltitle": "새로운 방송",
+    "autocompletetext": "사무실 위치 추가",
+    "writehere": "여기 쓰시 오",
+    "addTitle" : "제목 추가",
+    "saveSuccess" : "성공적으로 저장된 데이터 브로드 캐스트",
+    "saveFailure" : "브로드 캐스트 데이터 저장 중 오류가 발생했습니다. 다시 시도하십시오.",
+    "submit": "제출"
+  },
+  "briefing": {
+    "briefingReportText": "브리핑 보고서",
+    "chooseOfficeLocationText": "사무실 위치 선택",
+    "recentlySharedText": "최근 검색된",
+    "editText": "편집하다",
+    "updateText": "최신 정보",
+    "typeContentHereText": "여기에 유형 내용",
+    "searchForOfcLocText": "사무실 위치 검색",
+    "saveSuccess": "브리핑 보고서 저장 성공",
+    "lastUpdated": "마지막 업데이트"
+  },
+  "menusearch": {
+    "searchtext": "수색",
+    "loadingText": "로드 중",
+    "reportsText": "보고서"
+  },
+  "notif": {
+    "notificationsText": "알림",
+    "newText": "새로운",
+    "clearBtnText": "모두 지우기"
+  },
+  "timeline": {
+    "eventTimelineText": "이벤트 타임 라인",
+    "noDataTimelineText": "타임 라인에 데이터 없음",
+    "newEventText": "새로운 이벤트",
+    "toText": "에",
+    "createText": "몹시 떠들어 대다",
+    "addEventTitleText": "일정 제목 추가",
+    "addNewLocText": "새 위치 추가",
+    "writeHereText": "여기 쓰시 오"
+  },
+  "chart": {
+    "noDataText": "사용할 수있는 데이터가 없으므로 차트를 렌더링 할 수 없습니다."
+  },
+  "incidentDetails": {
+    "openIncidentDetailsText": "인시던트 세부 정보 열기",
+    "incidentTypeText": "인시던트 유형",
+    "areaText": "지역",
+    "floorText": "바닥",
+    "statusText": "지위",
+    "shiftText": "시프트",
+    "dateText": "날짜",
+    "startTimeText": "시작 시간",
+    "overrideStatusText": "재정의 상태",
+    "officeLocationText": "사무실 위치",
+    "regionText": "부위",
+    "additionalDescriptionText": "추가 설명",
+    "addCommentsText": "댓글 추가",
+    "staffText": "직원",
+    "activityLogText": "활동 로그"
+  },
+  "generateReport": {
+    "successMsg" : "보고서가 성공적으로 다운로드되었습니다."
+  },
+  "initialisingText" : "초기화 중",
+  "locationNotFound" : "위치를 찾을 수 없음",
+  "timeUnit": {
+    "now": "지금",
+    "min": "분",
+    "mins": "의사록",
+    "hour": "시간",
+    "hours": "시간",
+    "day": "일",
+    "days": "일",
+    "week": "주",
+    "weeks": "주"
+  }
+}

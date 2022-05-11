@@ -1,0 +1,12 @@
+{
+  "selectLanguageText" : "भाषा चुनिए",
+  "myDashboardText": "मेरा डैशबोर्ड",
+  "addLocationText": "स्थान जोड़ना",
+  "chooseLocationText": "स्थान का चयन",
+  "popOfcLocationText": "लोकप्रिय कार्यालय स्थान",
+  "searchForOfcLocText":"कार्यालय स्थान के लिए खोजें",
+  "logOutTitleText" : "लोग आउट",
+  "logOutMsgText" : "क्या आप वाकई अपनी प्रोफ़ाइल का लॉगआउट करना चाहते हैं",
+  "logOutYesOptText" : "हाँ",
+  "logOutNoOptText" : "नहीं"
+}

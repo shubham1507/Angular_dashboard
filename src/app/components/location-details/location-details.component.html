@@ -1,0 +1,101 @@
+
+<div class="location-main-wrapper" *ngIf="isAccessGranted;else nodata_content">
+<physicalsecurity-sidenav [loadedUserData]="userData" [loadedBuildingData]="officeLocations"></physicalsecurity-sidenav>
+  <div class="main-container">
+    <div class="content-container">
+      <div class="content-area">
+        <div class="location">
+          <div class="location-header">
+            <physicalsecurity-errorscomponent></physicalsecurity-errorscomponent>
+            <physicalsecurity-firebasenotification [loadedUserData]="userData"></physicalsecurity-firebasenotification>
+            <div class="location-title">
+              <div class=" location-city dropdown open">
+                <button type="button " class="dropdown-toggle btn btn-link" (click)="showLocationMenu($event)"
+                  (document:click)="hideLocationMenu()">
+                  <span>{{ selectedOfficeLocation }}</span>
+                  <clr-icon shape="caret down"></clr-icon>
+                </button>
+                <div class="dropdown-menu" *ngIf="openLocDropdown" (click)="showLocationMenu($event)">
+                  <h4 class="dropdown-header" l10nTranslate>
+                    officeLocationsText
+                  </h4>
+                  <div *ngFor="let ofcloc of officeLocations">
+                    <button type="button" class="dropdown-item" (click)="selectOfcLocation($event, ofcloc)">
+                      {{ ofcloc }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="search-bar-wrapper">
+                <div class="search-bar-container ">
+                  <!-- <div class="search-bar">
+                           <clr-icon shape="search" size="23" class="is-inverse search-icon"></clr-icon>
+                           <div class="keyword-wrapper">
+                              <physicalsecurity-menusearch></physicalsecurity-menusearch>
+                           </div>
+                        </div> -->
+                  <div class="header-btn-wrapper" (click)="openBroadcastModal()">
+                    <img src="assets/images/group.svg" class="header-btn header-btn-svg" alt="" />
+                  </div>
+                  <div class="header-btn-wrapper">
+                    <div class="header-btn" (click)="openBriefingModal()">
+                      <clr-icon shape="details" size="22" class="header-btn-icon is-inverse is-solid"></clr-icon>
+                    </div>
+                  </div>
+                  <div class="header-btn-wrapper notif-par-wrapper">
+                    <div class="header-btn" (click)="showNotifications($event)" (document:click)="hideNotifications()">
+                      <clr-icon shape="bell" size="22" class="header-btn-icon is-inverse is-solid"></clr-icon>
+                      <span *ngIf="hideBadge" class="badge badge-warning notif-badge">{{ notificationCount }}</span>
+                    </div>
+                    <physicalsecurity-notifications [notificationDataSubject]="notificationDataSubject"
+                      [notificationShowSubject]="notificationShowSubject" (notifCount)="getNotificationsCount($event)"></physicalsecurity-notifications>
+                      <div class="modal-backdrop" *ngIf="notifBackdrop"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="location-tabs">
+              <clr-tabs>
+                <clr-tab>
+                  <button clrTabLink l10nTranslate (click)="setSelectedTab('overview')">overviewtabtext</button>
+                  <ng-template [(clrIfActive)]="overviewActive">
+                    <clr-tab-content>
+                      <app-overview></app-overview>
+                    </clr-tab-content>
+                  </ng-template>
+                </clr-tab>
+                <clr-tab>
+                  <button clrTabLink l10nTranslate (click)="setSelectedTab('staff')">staffMgmttabtext</button>
+                  <ng-template [(clrIfActive)]="staffActive">
+                    <clr-tab-content>
+                      <app-staff></app-staff>
+                    </clr-tab-content>
+                  </ng-template>
+                </clr-tab>
+                <clr-tab>
+                  <button clrTabLink l10nTranslate (click)="setSelectedTab('reports')">reportstabtext</button>
+                  <ng-template [(clrIfActive)]="reportsActive">
+                    <clr-tab-content>
+                      <app-reports></app-reports>
+                    </clr-tab-content>
+                  </ng-template>
+                </clr-tab>
+              </clr-tabs>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <physicalsecurity-briefing-report [openBriefingModalSubject]="openBriefingModalSubject" [loadedUserData]="userData"
+    [loadedBuildingData]="officeLocations"></physicalsecurity-briefing-report>
+  <physicalsecurity-broadcast-location [openBroadcastModalSubject]="openBroadcastModalSubject" [loadedUserData]="userData"
+    [loadedBuildingData]="officeLocations"></physicalsecurity-broadcast-location>
+</div>
+
+<ng-template #nodata_content>
+    <div class="bar">
+        <div class="circle"></div>
+        <p l10nTranslate>initialisingText</p>
+    </div>
+</ng-template>

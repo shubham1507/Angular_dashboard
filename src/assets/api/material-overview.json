@@ -1,0 +1,12 @@
+{
+    "totalEntries": 974,
+    "issuesReported": 75,
+    "incompleteTransactions": 100,
+    "inwardMaterialEntries": 54,
+    "outwardMaterialEntries": 23,
+    "completeTransactions": 500,
+    "returnableItems": 453,
+    "nonreturnableItems": 345,
+    "consumableItems": 3,
+    "totalTransactions": 842
+}

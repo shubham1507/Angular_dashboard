@@ -1,0 +1,139 @@
+<div class="location-briefing">
+  <clr-modal [(clrModalOpen)]="locModalFlag" [clrModalSize]="'xl'">
+    <h3 class="modal-title" l10nTranslate>briefing.briefingReportText</h3>
+    <div class="modal-body">
+      <div>
+        <div *ngIf="showSuccessAlert" class="success-popup">
+          <clr-alert [clrAlertType]="'alert-success'">
+            <div class="alert-item">
+              <span class="alert-text" l10nTranslate>
+                briefing.saveSuccess
+              </span>
+            </div>
+          </clr-alert>
+        </div>
+        <div *ngIf="showErrorAlert" class="error-popup">
+          <clr-alert [clrAlertType]="'alert-danger'">
+            <div class="alert-item">
+              <span class="alert-text"> {{ locationErrorMsg }} </span>
+            </div>
+          </clr-alert>
+        </div>
+        <div [ngClass]="{ 'display-none': backToLocSelection }">
+          <p class="office-location-msg" l10nTranslate>
+            briefing.chooseOfficeLocationText
+          </p>
+          <label _ngcontent-c1="" class="searchbar-label">
+            <clr-icon class="" shape="search" size="20"> </clr-icon>
+            <div class="location-auto-complete">
+              <p-autoComplete
+                #addOfficeLocationInput
+                autoFocus
+                [(ngModel)]="officeLocation"
+                [suggestions]="filteredOfficeLocations"
+                (completeMethod)="filteredOfficeLocationComplete($event)"
+                field="name"
+                [size]="30"
+                placeholder="{{ searchForOfcLocText }}"
+                [minLength]="1"
+                (onSelect)="onOfficeLocationSelect($event)"
+                [emptyMessage]="emptyMessage"
+              ></p-autoComplete>
+            </div>
+          </label>
+        </div>
+        <div
+          class="table-container"
+          *ngIf="!backToLocSelection; else updateLocation"
+        >
+          <div class="row">
+            <div class="col-xs-12 col-md-12 col-lg-6 col-xl-12">
+              <p class="location-header-name" l10nTranslate>
+                briefing.recentlySharedText
+              </p>
+            </div>
+          </div>
+          <physicalsecurity-popular-locations
+            (locationClickCallBack)="populateSelectLocation($event)"
+          ></physicalsecurity-popular-locations>
+        </div>
+        <ng-template #updateLocation>
+          <div class="edit-location">
+            <div class="edit-location-header">
+              <div class="loc-header">
+                <clr-icon
+                  shape="angle"
+                  size="30"
+                  (click)="resetModal()"
+                ></clr-icon>
+                <span class="location-name">{{ officeLocation.name }}</span>
+              </div>
+            </div>
+            <div class="edit-location-content">
+              <div class="editBtns">
+                <button
+                  class="btn btn-primary"
+                  *ngIf="edited"
+                  (click)="showEditorToolBar()"
+                  l10nTranslate
+                >
+                <clr-icon shape="pencil" size="12"></clr-icon>&nbsp; briefing.editText
+                </button>
+                <button
+                  class="btn btn-primary"
+                  *ngIf="!edited"
+                  (click)="hideEditorToolBar()"
+                  l10nTranslate
+                >
+                  briefing.updateText
+                </button>
+                <div class="loader-wrapper" *ngIf="showSpinner">
+                  <span class="spinner spinner-sm spinner-inverse ">
+                    Loading...
+                  </span>
+                </div>
+                <div class="last-edited-text" *ngIf="lastUpdated">
+                  <span l10nTranslate>briefing.lastUpdated</span>: {{lastUpdated | l10nDate: defaultLocale:"longDate"}}
+                </div>
+              </div>
+              <div class="content-quill-editor">
+                <div class="html-edit-wrappper" *ngIf="!isReadOnly">
+                  <form class="clr-form">
+                    <div class="edit-container">
+                      <textarea
+                        [(ngModel)]="pastedHTML"
+                        [disabled]="enableHTMLEditor"
+                        (blur)="passHTMLToEditor($event)"
+                        placeholder="Paste Some HTML Code here"
+                        class="clr-textarea"
+                        name="pastedHTML"
+                      ></textarea>
+                      <button
+                        type="button"
+                        class="btn btn-icon btn-primary"
+                        (click)="initHTMLEditor()"
+                      >
+                        <clr-icon shape="code"></clr-icon>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div>
+                  <quill-editor
+                    [placeholder]="typeContentHereText"
+                    [(ngModel)]="breifingEditVal"
+                    [modules]="options"
+                    [readOnly]="isReadOnly"
+                    [sanitize]="true"
+                    (onEditorCreated)="editorInstance($event)"
+                  >
+                  </quill-editor>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </clr-modal>
+</div>
